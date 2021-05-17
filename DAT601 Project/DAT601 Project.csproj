@@ -46,12 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activity.cs" />
     <Compile Include="Add Vehicle Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Add Vehicle Form.Designer.cs">
       <DependentUpon>Add Vehicle Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Edit Vehicle Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit Vehicle Form.Designer.cs">
+      <DependentUpon>Edit Vehicle Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.cs" />
     <Compile Include="Main Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,8 +68,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vehicle.cs" />
     <EmbeddedResource Include="Add Vehicle Form.resx">
       <DependentUpon>Add Vehicle Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit Vehicle Form.resx">
+      <DependentUpon>Edit Vehicle Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main Form.resx">
       <DependentUpon>Main Form.cs</DependentUpon>
