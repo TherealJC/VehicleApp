@@ -53,7 +53,7 @@ namespace SDV601_Project
             // 
             // txt_registrationNumberActivityForm
             // 
-            this.txt_registrationNumberActivityForm.Location = new System.Drawing.Point(166, 64);
+            this.txt_registrationNumberActivityForm.Location = new System.Drawing.Point(211, 65);
             this.txt_registrationNumberActivityForm.Name = "txt_registrationNumberActivityForm";
             this.txt_registrationNumberActivityForm.Size = new System.Drawing.Size(178, 22);
             this.txt_registrationNumberActivityForm.TabIndex = 1;
@@ -68,7 +68,7 @@ namespace SDV601_Project
             // lbl_activityId
             // 
             this.lbl_activityId.AutoSize = true;
-            this.lbl_activityId.Location = new System.Drawing.Point(91, 31);
+            this.lbl_activityId.Location = new System.Drawing.Point(67, 31);
             this.lbl_activityId.Name = "lbl_activityId";
             this.lbl_activityId.Size = new System.Drawing.Size(69, 17);
             this.lbl_activityId.TabIndex = 5;
@@ -77,7 +77,7 @@ namespace SDV601_Project
             // lbl_registrationNumberActivityForm
             // 
             this.lbl_registrationNumberActivityForm.AutoSize = true;
-            this.lbl_registrationNumberActivityForm.Location = new System.Drawing.Point(28, 65);
+            this.lbl_registrationNumberActivityForm.Location = new System.Drawing.Point(67, 65);
             this.lbl_registrationNumberActivityForm.Name = "lbl_registrationNumberActivityForm";
             this.lbl_registrationNumberActivityForm.Size = new System.Drawing.Size(138, 17);
             this.lbl_registrationNumberActivityForm.TabIndex = 6;
@@ -86,7 +86,7 @@ namespace SDV601_Project
             // lbl_activityName
             // 
             this.lbl_activityName.AutoSize = true;
-            this.lbl_activityName.Location = new System.Drawing.Point(73, 101);
+            this.lbl_activityName.Location = new System.Drawing.Point(67, 101);
             this.lbl_activityName.Name = "lbl_activityName";
             this.lbl_activityName.Size = new System.Drawing.Size(93, 17);
             this.lbl_activityName.TabIndex = 7;
@@ -95,7 +95,7 @@ namespace SDV601_Project
             // lbl_activityDate
             // 
             this.lbl_activityDate.AutoSize = true;
-            this.lbl_activityDate.Location = new System.Drawing.Point(74, 136);
+            this.lbl_activityDate.Location = new System.Drawing.Point(67, 136);
             this.lbl_activityDate.Name = "lbl_activityDate";
             this.lbl_activityDate.Size = new System.Drawing.Size(86, 17);
             this.lbl_activityDate.TabIndex = 8;
@@ -122,7 +122,7 @@ namespace SDV601_Project
             // rbtn_relocation
             // 
             this.rbtn_relocation.AutoSize = true;
-            this.rbtn_relocation.Location = new System.Drawing.Point(70, 256);
+            this.rbtn_relocation.Location = new System.Drawing.Point(67, 256);
             this.rbtn_relocation.Name = "rbtn_relocation";
             this.rbtn_relocation.Size = new System.Drawing.Size(96, 21);
             this.rbtn_relocation.TabIndex = 11;
@@ -133,7 +133,7 @@ namespace SDV601_Project
             // rbtn_service
             // 
             this.rbtn_service.AutoSize = true;
-            this.rbtn_service.Location = new System.Drawing.Point(70, 229);
+            this.rbtn_service.Location = new System.Drawing.Point(67, 229);
             this.rbtn_service.Name = "rbtn_service";
             this.rbtn_service.Size = new System.Drawing.Size(76, 21);
             this.rbtn_service.TabIndex = 10;
@@ -144,7 +144,7 @@ namespace SDV601_Project
             // rbtn_hiring
             // 
             this.rbtn_hiring.AutoSize = true;
-            this.rbtn_hiring.Location = new System.Drawing.Point(70, 202);
+            this.rbtn_hiring.Location = new System.Drawing.Point(67, 202);
             this.rbtn_hiring.Name = "rbtn_hiring";
             this.rbtn_hiring.Size = new System.Drawing.Size(66, 21);
             this.rbtn_hiring.TabIndex = 9;

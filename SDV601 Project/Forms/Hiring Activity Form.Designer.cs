@@ -109,7 +109,7 @@ namespace SDV601_Project.Forms
             // 
             this.btn_submitHiringActivity.Location = new System.Drawing.Point(399, 533);
             this.btn_submitHiringActivity.Name = "btn_submitHiringActivity";
-            this.btn_submitHiringActivity.Size = new System.Drawing.Size(75, 23);
+            this.btn_submitHiringActivity.Size = new System.Drawing.Size(145, 45);
             this.btn_submitHiringActivity.TabIndex = 22;
             this.btn_submitHiringActivity.Text = "Submit";
             this.btn_submitHiringActivity.UseVisualStyleBackColor = true;
@@ -117,7 +117,7 @@ namespace SDV601_Project.Forms
             // Hiring_Activity_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(568, 643);
+            this.ClientSize = new System.Drawing.Size(568, 601);
             this.Controls.Add(this.btn_submitHiringActivity);
             this.Controls.Add(this.lbl_hiringCost);
             this.Controls.Add(this.txt_hiringCost);

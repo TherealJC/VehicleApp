@@ -44,7 +44,7 @@ namespace SDV601_Project
             set { _revenue = value; }
         }
 
-        /* public override string ToString()
+         public override string ToString()
         {
             return "-Registration Number " + _registrationNumber +
                 " -Make " + _make +
@@ -52,6 +52,5 @@ namespace SDV601_Project
                 " -Daily Hire Cost " + _dailyHireCost +
                 " -Revenue " + _revenue;
         }
-        */
     }
 }
