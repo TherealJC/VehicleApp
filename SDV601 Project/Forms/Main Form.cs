@@ -23,7 +23,6 @@ namespace SDV601_Project
             InitializeComponent();
         }
 
-
         private void btn_addVehicle_Click(object sender, EventArgs e)
         {
             // MessageBox.Show("Please Enter the new cars details");

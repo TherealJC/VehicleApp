@@ -12,7 +12,6 @@ namespace SDV601_Project
 {
     public partial class Add_Vehicle_Form : Form
     {
-
         Inventory myInventory = new Inventory();
         BindingSource vehicleInventoryBindingSource = new BindingSource();
 
@@ -21,7 +20,7 @@ namespace SDV601_Project
             InitializeComponent();
         }
 
-        private void btn_addVehicle_Click(object sender, EventArgs e)
+        public void btn_addVehicle_Click(object sender, EventArgs e)
         {
             Vehicle a = new Vehicle();
             myInventory.VehicleList.Add(a);

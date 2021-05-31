@@ -129,7 +129,7 @@ namespace SDV601_Project
             this.btn_addVehicle.Name = "btn_addVehicle";
             this.btn_addVehicle.Size = new System.Drawing.Size(150, 30);
             this.btn_addVehicle.TabIndex = 10;
-            this.btn_addVehicle.Text = "Add/Update Vehicle";
+            this.btn_addVehicle.Text = "Add New Vehicle";
             this.btn_addVehicle.UseVisualStyleBackColor = true;
             this.btn_addVehicle.Click += new System.EventHandler(this.btn_addVehicle_Click);
             // 

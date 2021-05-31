@@ -29,10 +29,7 @@ namespace SDV601_Project
         /// </summary>
         private void InitializeComponent()
         {
-            this.txt_activityId = new System.Windows.Forms.TextBox();
-            this.txt_registrationNumberActivityForm = new System.Windows.Forms.TextBox();
             this.txt_activityName = new System.Windows.Forms.TextBox();
-            this.lbl_activityId = new System.Windows.Forms.Label();
             this.lbl_registrationNumberActivityForm = new System.Windows.Forms.Label();
             this.lbl_activityName = new System.Windows.Forms.Label();
             this.lbl_activityDate = new System.Windows.Forms.Label();
@@ -42,42 +39,20 @@ namespace SDV601_Project
             this.rbtn_service = new System.Windows.Forms.RadioButton();
             this.rbtn_hiring = new System.Windows.Forms.RadioButton();
             this.dtp_activityDate = new System.Windows.Forms.DateTimePicker();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // txt_activityId
-            // 
-            this.txt_activityId.Location = new System.Drawing.Point(166, 28);
-            this.txt_activityId.Name = "txt_activityId";
-            this.txt_activityId.Size = new System.Drawing.Size(223, 22);
-            this.txt_activityId.TabIndex = 0;
-            // 
-            // txt_registrationNumberActivityForm
-            // 
-            this.txt_registrationNumberActivityForm.Location = new System.Drawing.Point(211, 65);
-            this.txt_registrationNumberActivityForm.Name = "txt_registrationNumberActivityForm";
-            this.txt_registrationNumberActivityForm.Size = new System.Drawing.Size(178, 22);
-            this.txt_registrationNumberActivityForm.TabIndex = 1;
             // 
             // txt_activityName
             // 
-            this.txt_activityName.Location = new System.Drawing.Point(166, 100);
+            this.txt_activityName.Location = new System.Drawing.Point(138, 68);
             this.txt_activityName.Name = "txt_activityName";
             this.txt_activityName.Size = new System.Drawing.Size(223, 22);
             this.txt_activityName.TabIndex = 2;
             // 
-            // lbl_activityId
-            // 
-            this.lbl_activityId.AutoSize = true;
-            this.lbl_activityId.Location = new System.Drawing.Point(67, 31);
-            this.lbl_activityId.Name = "lbl_activityId";
-            this.lbl_activityId.Size = new System.Drawing.Size(69, 17);
-            this.lbl_activityId.TabIndex = 5;
-            this.lbl_activityId.Text = "Activity ID";
-            // 
             // lbl_registrationNumberActivityForm
             // 
             this.lbl_registrationNumberActivityForm.AutoSize = true;
-            this.lbl_registrationNumberActivityForm.Location = new System.Drawing.Point(67, 65);
+            this.lbl_registrationNumberActivityForm.Location = new System.Drawing.Point(39, 33);
             this.lbl_registrationNumberActivityForm.Name = "lbl_registrationNumberActivityForm";
             this.lbl_registrationNumberActivityForm.Size = new System.Drawing.Size(138, 17);
             this.lbl_registrationNumberActivityForm.TabIndex = 6;
@@ -86,7 +61,7 @@ namespace SDV601_Project
             // lbl_activityName
             // 
             this.lbl_activityName.AutoSize = true;
-            this.lbl_activityName.Location = new System.Drawing.Point(67, 101);
+            this.lbl_activityName.Location = new System.Drawing.Point(39, 69);
             this.lbl_activityName.Name = "lbl_activityName";
             this.lbl_activityName.Size = new System.Drawing.Size(93, 17);
             this.lbl_activityName.TabIndex = 7;
@@ -95,7 +70,7 @@ namespace SDV601_Project
             // lbl_activityDate
             // 
             this.lbl_activityDate.AutoSize = true;
-            this.lbl_activityDate.Location = new System.Drawing.Point(67, 136);
+            this.lbl_activityDate.Location = new System.Drawing.Point(39, 104);
             this.lbl_activityDate.Name = "lbl_activityDate";
             this.lbl_activityDate.Size = new System.Drawing.Size(86, 17);
             this.lbl_activityDate.TabIndex = 8;
@@ -103,7 +78,7 @@ namespace SDV601_Project
             // 
             // btn_continue
             // 
-            this.btn_continue.Location = new System.Drawing.Point(441, 269);
+            this.btn_continue.Location = new System.Drawing.Point(358, 216);
             this.btn_continue.Name = "btn_continue";
             this.btn_continue.Size = new System.Drawing.Size(103, 36);
             this.btn_continue.TabIndex = 13;
@@ -113,7 +88,7 @@ namespace SDV601_Project
             // lbl_selectActivityType
             // 
             this.lbl_selectActivityType.AutoSize = true;
-            this.lbl_selectActivityType.Location = new System.Drawing.Point(67, 170);
+            this.lbl_selectActivityType.Location = new System.Drawing.Point(39, 138);
             this.lbl_selectActivityType.Name = "lbl_selectActivityType";
             this.lbl_selectActivityType.Size = new System.Drawing.Size(295, 17);
             this.lbl_selectActivityType.TabIndex = 12;
@@ -122,7 +97,7 @@ namespace SDV601_Project
             // rbtn_relocation
             // 
             this.rbtn_relocation.AutoSize = true;
-            this.rbtn_relocation.Location = new System.Drawing.Point(67, 256);
+            this.rbtn_relocation.Location = new System.Drawing.Point(39, 224);
             this.rbtn_relocation.Name = "rbtn_relocation";
             this.rbtn_relocation.Size = new System.Drawing.Size(96, 21);
             this.rbtn_relocation.TabIndex = 11;
@@ -133,7 +108,7 @@ namespace SDV601_Project
             // rbtn_service
             // 
             this.rbtn_service.AutoSize = true;
-            this.rbtn_service.Location = new System.Drawing.Point(67, 229);
+            this.rbtn_service.Location = new System.Drawing.Point(39, 197);
             this.rbtn_service.Name = "rbtn_service";
             this.rbtn_service.Size = new System.Drawing.Size(76, 21);
             this.rbtn_service.TabIndex = 10;
@@ -144,7 +119,7 @@ namespace SDV601_Project
             // rbtn_hiring
             // 
             this.rbtn_hiring.AutoSize = true;
-            this.rbtn_hiring.Location = new System.Drawing.Point(67, 202);
+            this.rbtn_hiring.Location = new System.Drawing.Point(39, 170);
             this.rbtn_hiring.Name = "rbtn_hiring";
             this.rbtn_hiring.Size = new System.Drawing.Size(66, 21);
             this.rbtn_hiring.TabIndex = 9;
@@ -154,16 +129,25 @@ namespace SDV601_Project
             // 
             // dtp_activityDate
             // 
-            this.dtp_activityDate.Location = new System.Drawing.Point(166, 136);
+            this.dtp_activityDate.Location = new System.Drawing.Point(138, 104);
             this.dtp_activityDate.Name = "dtp_activityDate";
-            this.dtp_activityDate.Size = new System.Drawing.Size(200, 22);
+            this.dtp_activityDate.Size = new System.Drawing.Size(223, 22);
             this.dtp_activityDate.TabIndex = 14;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(183, 30);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(178, 24);
+            this.comboBox1.TabIndex = 15;
             // 
             // Add_Activity_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 320);
+            this.ClientSize = new System.Drawing.Size(487, 275);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dtp_activityDate);
             this.Controls.Add(this.btn_continue);
             this.Controls.Add(this.lbl_selectActivityType);
@@ -173,10 +157,7 @@ namespace SDV601_Project
             this.Controls.Add(this.lbl_activityDate);
             this.Controls.Add(this.lbl_activityName);
             this.Controls.Add(this.lbl_registrationNumberActivityForm);
-            this.Controls.Add(this.lbl_activityId);
             this.Controls.Add(this.txt_activityName);
-            this.Controls.Add(this.txt_registrationNumberActivityForm);
-            this.Controls.Add(this.txt_activityId);
             this.Name = "Add_Activity_Form";
             this.Text = "Add Activity Form";
             this.ResumeLayout(false);
@@ -185,11 +166,7 @@ namespace SDV601_Project
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txt_activityId;
-        private System.Windows.Forms.TextBox txt_registrationNumberActivityForm;
         private System.Windows.Forms.TextBox txt_activityName;
-        private System.Windows.Forms.Label lbl_activityId;
         private System.Windows.Forms.Label lbl_registrationNumberActivityForm;
         private System.Windows.Forms.Label lbl_activityName;
         private System.Windows.Forms.Label lbl_activityDate;
@@ -199,5 +176,6 @@ namespace SDV601_Project
         private System.Windows.Forms.RadioButton rbtn_service;
         private System.Windows.Forms.RadioButton rbtn_hiring;
         private System.Windows.Forms.DateTimePicker dtp_activityDate;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
