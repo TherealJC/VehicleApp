@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleAppForms", "..\VehicleApp\VehicleAppForms\VehicleAppForms.csproj", "{F0A0E5E5-D1FE-497A-92FE-6BE8ED91089C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleAppForms", "VehicleAppForms\VehicleAppForms.csproj", "{F0A0E5E5-D1FE-497A-92FE-6BE8ED91089C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleAppLibrary", "..\VehicleApp\VehicleAppLibrary\VehicleAppLibrary.csproj", "{BD1B8694-85C1-429C-A430-23572E26285A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleAppLibrary", "VehicleAppLibrary\VehicleAppLibrary.csproj", "{BD1B8694-85C1-429C-A430-23572E26285A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
