@@ -30,7 +30,7 @@ namespace VehicleAppForms
                     txt_year.Text,
                     txt_dailyHireCost.Text);
 
-                //for each db connection (allows it to be saved to either a textFile, or a SQL Database)
+                //Allows it to be saved to either a textFile, or a SQL Database
                 GlobalConfig.Connection.CreateVehicle(model); //Create vehicle model (TextFile connection in app config).
 
                 //Reset the forms textbox values.
@@ -42,7 +42,7 @@ namespace VehicleAppForms
 
                 //Display successful data entry message
                 MessageBox.Show("The Vehicle has been successfully added to the TextFile Inventory");
-                Close(); //Close the form (returns to main form)
+                Application.Restart(); //Close the form (returns to main form)
             }
             else
             {

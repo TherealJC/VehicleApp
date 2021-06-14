@@ -16,20 +16,23 @@ namespace VehicleAppLibrary
         /// <summary>
         /// Saves the Vehicle Model to a Text File
         /// </summary>
-        /// <param name="model"> The Vehicle's Values </param>
+        /// <param name="model"> The Vehicle's Values to be saved to textfile </param>
         /// <returns> The Vehicle Information, including Registration </returns>
         public VehicleModel CreateVehicle(VehicleModel model)
         {
             List<VehicleModel> vehicles = VehicleFile.FullFilePath().LoadFile().ConvertToVehicleModel(); //load the text file, convert text to List of VehicleModels
 
-            vehicles.Add(model); //Add the new Vehicle record
+            vehicles.Add(model); //Add the new Vehicle record to the existing list of vehicles
 
             vehicles.SaveToVehicleFile(VehicleFile); //Save the list<string> to the text file
 
             return model;
         }
 
-        // For the Lists
+        /// <summary>
+        /// // Links the lists to display data from textfile
+        /// </summary>
+        /// <returns>Gets Full file path,  Loads the file, converts file contents to Vehicle Models</returns>
         public List<VehicleModel> GetVehicle_All()
         {
             return VehicleFile.FullFilePath().LoadFile().ConvertToVehicleModel();

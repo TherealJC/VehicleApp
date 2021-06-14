@@ -38,6 +38,12 @@ namespace VehicleAppLibrary.DataAccess.TextHelpers
         }
 
 
+        /// <summary>
+        /// Takes in a List of <strings> (lines) created from the LoadFile function and converts
+        /// the lines to a List of <VehicleModel>.
+        /// </summary>
+        /// <param name="lines"></param>
+        /// <returns></returns>
         public static List<VehicleModel> ConvertToVehicleModel(this List<string> lines)
         {
             List<VehicleModel> output = new List<VehicleModel>();
