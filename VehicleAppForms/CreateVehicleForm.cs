@@ -31,10 +31,10 @@ namespace VehicleAppForms
                     txt_year.Text,
                     txt_dailyHireCost.Text);
 
-                //for each db connection (allows it to be saved to both sql and a textFile)
-                GlobalConfig.Connection.CreateVehicle(model); //Create vehicle model in TextFile connection.
+                //for each db connection (allows it to be saved to either a textFile, or a SQL Database)
+                GlobalConfig.Connection.CreateVehicle(model); //Create vehicle model (TextFile connection in app config).
 
-                //Clear the forms textbox values.
+                //Reset the forms textbox values.
                 txt_registrationNumber.Text = "";
                 txt_make.Text = "";
                 txt_model.Text = "";
@@ -43,6 +43,7 @@ namespace VehicleAppForms
 
                 //Display successful data entry message
                 MessageBox.Show("The Vehicle has been successfully added to the TextFile Inventory");
+                Close(); //Close the form (returns to main form)
             }
             else
             {
@@ -56,8 +57,13 @@ namespace VehicleAppForms
         private bool ValidateForm()
         {
             bool output = true;
+
             decimal dailyHireCost = 0;
             bool dailyHireCostValidNumber = decimal.TryParse(txt_dailyHireCost.Text, out dailyHireCost);
+
+            int vehicleYear = 0;
+            bool vehicleYearValidNumber = int.TryParse(txt_dailyHireCost.Text, out vehicleYear);
+
 
             if (txt_registrationNumber.Text.Length == 0) //Check Rego #
             {
@@ -74,7 +80,7 @@ namespace VehicleAppForms
                 output = false;
             }
 
-            if (txt_year.Text.Length == 0) //Check Year
+            if (vehicleYear < 1) //Check Year
             {
                 output = false;
             }
@@ -88,15 +94,3 @@ namespace VehicleAppForms
         }
     }
 }
-
-/*
-const string message = "The Vehicle has been successfully added to the SQL Database";
-const string caption = "Form Closing";
-var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-
-if (result == DialogResult.Yes)
-{
-    this.Hide();
-    MainForm f1 = new MainForm();
-    f1.ShowDialog();
-} */

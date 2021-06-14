@@ -33,7 +33,7 @@ namespace VehicleAppForms
             this.btn_editVehicle = new System.Windows.Forms.Button();
             this.btn_deleteVehicle = new System.Windows.Forms.Button();
             this.lst_registration = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_quickView = new System.Windows.Forms.Label();
             this.lst_quickView = new System.Windows.Forms.ListBox();
             this.lbl_totalRevenue = new System.Windows.Forms.Label();
             this.lbl_displayTotalRevenue = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@ namespace VehicleAppForms
             // 
             // btn_createVehicle
             // 
-            this.btn_createVehicle.Location = new System.Drawing.Point(37, 49);
+            this.btn_createVehicle.Location = new System.Drawing.Point(23, 29);
             this.btn_createVehicle.Name = "btn_createVehicle";
             this.btn_createVehicle.Size = new System.Drawing.Size(156, 42);
             this.btn_createVehicle.TabIndex = 0;
@@ -52,7 +52,7 @@ namespace VehicleAppForms
             // 
             // btn_editVehicle
             // 
-            this.btn_editVehicle.Location = new System.Drawing.Point(37, 111);
+            this.btn_editVehicle.Location = new System.Drawing.Point(23, 91);
             this.btn_editVehicle.Name = "btn_editVehicle";
             this.btn_editVehicle.Size = new System.Drawing.Size(156, 42);
             this.btn_editVehicle.TabIndex = 1;
@@ -61,7 +61,7 @@ namespace VehicleAppForms
             // 
             // btn_deleteVehicle
             // 
-            this.btn_deleteVehicle.Location = new System.Drawing.Point(37, 192);
+            this.btn_deleteVehicle.Location = new System.Drawing.Point(23, 172);
             this.btn_deleteVehicle.Name = "btn_deleteVehicle";
             this.btn_deleteVehicle.Size = new System.Drawing.Size(156, 42);
             this.btn_deleteVehicle.TabIndex = 2;
@@ -72,19 +72,19 @@ namespace VehicleAppForms
             // 
             this.lst_registration.FormattingEnabled = true;
             this.lst_registration.ItemHeight = 20;
-            this.lst_registration.Location = new System.Drawing.Point(231, 49);
+            this.lst_registration.Location = new System.Drawing.Point(219, 29);
             this.lst_registration.Name = "lst_registration";
             this.lst_registration.Size = new System.Drawing.Size(238, 264);
             this.lst_registration.TabIndex = 3;
             // 
-            // label1
+            // lbl_quickView
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(205, 354);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Quick View";
+            this.lbl_quickView.AutoSize = true;
+            this.lbl_quickView.Location = new System.Drawing.Point(205, 354);
+            this.lbl_quickView.Name = "lbl_quickView";
+            this.lbl_quickView.Size = new System.Drawing.Size(82, 20);
+            this.lbl_quickView.TabIndex = 4;
+            this.lbl_quickView.Text = "Quick View";
             // 
             // lst_quickView
             // 
@@ -92,7 +92,7 @@ namespace VehicleAppForms
             this.lst_quickView.ItemHeight = 20;
             this.lst_quickView.Location = new System.Drawing.Point(23, 377);
             this.lst_quickView.Name = "lst_quickView";
-            this.lst_quickView.Size = new System.Drawing.Size(473, 144);
+            this.lst_quickView.Size = new System.Drawing.Size(434, 144);
             this.lst_quickView.TabIndex = 5;
             // 
             // lbl_totalRevenue
@@ -115,24 +115,24 @@ namespace VehicleAppForms
             // 
             // btn_viewActivityLog
             // 
-            this.btn_viewActivityLog.Location = new System.Drawing.Point(368, 527);
+            this.btn_viewActivityLog.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_viewActivityLog.Location = new System.Drawing.Point(329, 527);
             this.btn_viewActivityLog.Name = "btn_viewActivityLog";
             this.btn_viewActivityLog.Size = new System.Drawing.Size(128, 49);
             this.btn_viewActivityLog.TabIndex = 8;
             this.btn_viewActivityLog.Text = "View Activity Log";
-            this.btn_viewActivityLog.UseVisualStyleBackColor = true;
+            this.btn_viewActivityLog.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(526, 588);
+            this.ClientSize = new System.Drawing.Size(481, 588);
             this.Controls.Add(this.btn_viewActivityLog);
             this.Controls.Add(this.lbl_displayTotalRevenue);
             this.Controls.Add(this.lbl_totalRevenue);
             this.Controls.Add(this.lst_quickView);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_quickView);
             this.Controls.Add(this.lst_registration);
             this.Controls.Add(this.btn_deleteVehicle);
             this.Controls.Add(this.btn_editVehicle);
@@ -140,7 +140,8 @@ namespace VehicleAppForms
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainForm";
-            this.Text = "Main Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Vehicle Application Database - Main Form";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,7 +153,7 @@ namespace VehicleAppForms
         private System.Windows.Forms.Button btn_editVehicle;
         private System.Windows.Forms.Button btn_deleteVehicle;
         private System.Windows.Forms.ListBox lst_registration;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_quickView;
         private System.Windows.Forms.ListBox lst_quickView;
         private System.Windows.Forms.Label lbl_totalRevenue;
         private System.Windows.Forms.Label lbl_displayTotalRevenue;

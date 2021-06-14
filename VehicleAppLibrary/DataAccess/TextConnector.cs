@@ -16,7 +16,7 @@ namespace VehicleAppLibrary
         /// <summary>
         /// Saves the Vehicle Model to a Text File
         /// </summary>
-        /// <param name="model"> The Vehicle Values </param>
+        /// <param name="model"> The Vehicle's Values </param>
         /// <returns> The Vehicle Information, including Registration </returns>
         public VehicleModel CreateVehicle(VehicleModel model)
         {
