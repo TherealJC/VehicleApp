@@ -32,10 +32,7 @@ namespace VehicleAppForms
                     txt_dailyHireCost.Text);
 
                 //for each db connection (allows it to be saved to both sql and a textFile)
-                foreach (IDataConnection db in GlobalConfig.Connections)
-                {
-                    db.CreateVehicle(model); //Create vehicle model.
-                }
+                GlobalConfig.Connection.CreateVehicle(model); //Create vehicle model in TextFile connection.
 
                 //Clear the forms textbox values.
                 txt_registrationNumber.Text = "";
@@ -45,11 +42,11 @@ namespace VehicleAppForms
                 txt_dailyHireCost.Text = "";
 
                 //Display successful data entry message
-                MessageBox.Show("The Vehicle has been successfully added to the SQL Database");
+                MessageBox.Show("The Vehicle has been successfully added to the TextFile Inventory");
             }
             else
             {
-                //When Validator is not true, e.g improper data format, return the error message
+                //When Validator equals not true, e.g improper data format, return the error message
                 MessageBox.Show("This Form has invalid or missing information, Please check it and try again");
             }
 
@@ -91,3 +88,15 @@ namespace VehicleAppForms
         }
     }
 }
+
+/*
+const string message = "The Vehicle has been successfully added to the SQL Database";
+const string caption = "Form Closing";
+var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+
+if (result == DialogResult.Yes)
+{
+    this.Hide();
+    MainForm f1 = new MainForm();
+    f1.ShowDialog();
+} */

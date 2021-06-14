@@ -90,6 +90,7 @@ namespace VehicleAppForms
             // txt_registrationNumber
             // 
             this.txt_registrationNumber.Location = new System.Drawing.Point(190, 41);
+            this.txt_registrationNumber.MaxLength = 6;
             this.txt_registrationNumber.Name = "txt_registrationNumber";
             this.txt_registrationNumber.Size = new System.Drawing.Size(141, 27);
             this.txt_registrationNumber.TabIndex = 5;
@@ -111,6 +112,7 @@ namespace VehicleAppForms
             // txt_year
             // 
             this.txt_year.Location = new System.Drawing.Point(190, 184);
+            this.txt_year.MaxLength = 4;
             this.txt_year.Name = "txt_year";
             this.txt_year.Size = new System.Drawing.Size(173, 27);
             this.txt_year.TabIndex = 8;

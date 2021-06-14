@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VehicleAppLibrary;
 
 namespace VehicleAppForms
 {
@@ -17,8 +18,8 @@ namespace VehicleAppForms
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Initialize the Database connection
-            VehicleAppLibrary.GlobalConfig.InitializeConnections(true, true);
+            // Initialize the Database connection (This is where you choose Sql or Text connection)
+            VehicleAppLibrary.GlobalConfig.InitializeConnections(DatabaseType.TextFile);
 
             Application.Run(new MainForm());
         }
