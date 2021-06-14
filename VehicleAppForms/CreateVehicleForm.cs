@@ -13,7 +13,6 @@ namespace VehicleAppForms
 {
     public partial class CreateVehicleForm : Form
     {
-
         public CreateVehicleForm()
         {
             InitializeComponent();

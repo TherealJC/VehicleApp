@@ -31,5 +31,10 @@ namespace VehicleAppLibrary
                 return model;
             }
         }
+
+        public List<VehicleModel> GetVehicle_All()
+        {
+            throw new NotImplementedException(); //TO DO to be updated
+        }
     }
 }

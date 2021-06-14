@@ -28,5 +28,11 @@ namespace VehicleAppLibrary
 
             return model;
         }
+
+        // For the Lists
+        public List<VehicleModel> GetVehicle_All()
+        {
+            return VehicleFile.FullFilePath().LoadFile().ConvertToVehicleModel();
+        }
     }
 }

@@ -54,6 +54,7 @@ namespace VehicleAppLibrary.DataAccess.TextHelpers
                 v.DailyHireCost = decimal.Parse(columns[4]);
                 output.Add(v);  //Add vehicle values to output
             }
+
             return output; //return output (list of vehicle)
         }
 
@@ -62,7 +63,8 @@ namespace VehicleAppLibrary.DataAccess.TextHelpers
             List<string> lines = new List<string>();
             
             foreach (VehicleModel v in models)
-            {   //Loop through each line and create a List of strings representing all Vehicles/models
+            {   
+                //Loop through each line and create a List of strings representing all Vehicles/models
                 lines.Add($"{ v.RegistrationNumber }, { v.Make }, { v.Model }, { v.Year }, {v.DailyHireCost }");
             }
             //Write the new lines (overwrites old file)

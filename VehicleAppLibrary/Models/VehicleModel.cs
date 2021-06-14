@@ -17,6 +17,14 @@ namespace VehicleAppLibrary
         public int Year { get; set; }
         public decimal DailyHireCost { get; set; }
 
+        public string FullVehicleDetails
+        {
+            get
+            {
+                return $"{ RegistrationNumber } { Make }  { Model }  { Year }  { DailyHireCost }";
+            }
+        }
+
         public VehicleModel()
         {
 

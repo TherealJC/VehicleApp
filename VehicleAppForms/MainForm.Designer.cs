@@ -67,6 +67,7 @@ namespace VehicleAppForms
             this.btn_deleteVehicle.TabIndex = 2;
             this.btn_deleteVehicle.Text = "Delete Vehicle";
             this.btn_deleteVehicle.UseVisualStyleBackColor = false;
+            this.btn_deleteVehicle.Click += new System.EventHandler(this.btn_deleteVehicle_Click);
             // 
             // lst_registration
             // 
@@ -76,6 +77,7 @@ namespace VehicleAppForms
             this.lst_registration.Name = "lst_registration";
             this.lst_registration.Size = new System.Drawing.Size(238, 264);
             this.lst_registration.TabIndex = 3;
+            this.lst_registration.SelectedIndexChanged += new System.EventHandler(this.lst_registration_SelectedIndexChanged);
             // 
             // lbl_quickView
             // 
@@ -142,6 +144,7 @@ namespace VehicleAppForms
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vehicle Application Database - Main Form";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

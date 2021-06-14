@@ -9,5 +9,7 @@ namespace VehicleAppLibrary
     public interface IDataConnection
     {
         VehicleModel CreateVehicle(VehicleModel model);
+
+        List<VehicleModel> GetVehicle_All(); //retrieve all vehicle models
     }
 }
