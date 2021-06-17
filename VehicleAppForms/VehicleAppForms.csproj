@@ -46,11 +46,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreateVehicleForm.cs">
+    <Compile Include="Forms\ActivityLog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateVehicleForm.Designer.cs">
+    <Compile Include="Forms\ActivityLog.Designer.cs">
+      <DependentUpon>ActivityLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateVehicleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateVehicleForm.Designer.cs">
       <DependentUpon>CreateVehicleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HiringActivityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HiringActivityForm.Designer.cs">
+      <DependentUpon>HiringActivityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RelocationActivityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RelocationActivityForm.Designer.cs">
+      <DependentUpon>RelocationActivityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SelectActivityType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectActivityType.Designer.cs">
+      <DependentUpon>SelectActivityType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ServiceActivityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ServiceActivityForm.Designer.cs">
+      <DependentUpon>ServiceActivityForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -60,8 +90,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CreateVehicleForm.resx">
+    <EmbeddedResource Include="Forms\ActivityLog.resx">
+      <DependentUpon>ActivityLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateVehicleForm.resx">
       <DependentUpon>CreateVehicleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HiringActivityForm.resx">
+      <DependentUpon>HiringActivityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RelocationActivityForm.resx">
+      <DependentUpon>RelocationActivityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectActivityType.resx">
+      <DependentUpon>SelectActivityType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ServiceActivityForm.resx">
+      <DependentUpon>ServiceActivityForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

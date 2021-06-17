@@ -1,11 +1,7 @@
-﻿using Intercom.Core;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VehicleAppLibrary.DataAccess.TextHelpers
 {
@@ -32,18 +28,19 @@ namespace VehicleAppLibrary.DataAccess.TextHelpers
         {
             if (!File.Exists(file))  //If file does not exist
             {
-                return new List<string>();
+                return new List<string>(); //create a new list of string.
             }
-            return File.ReadAllLines(file).ToList();
+            return File.ReadAllLines(file).ToList(); //read all lines, convert to a list
         }
 
 
         /// <summary>
-        /// Takes in a List of <strings> (lines) created from the LoadFile function and converts
-        /// the lines to a List of <VehicleModel>.
+        /// Takes in a List of <strings> called 'lines' , 
+        /// 'this List<string>' is created when the LoadFile function is run,
+        /// This method then converts the lines to a List of <VehicleModel>.
         /// </summary>
-        /// <param name="lines"></param>
-        /// <returns></returns>
+        /// <param name="lines">A list of strings from the texfile</param>
+        /// <returns>A list of VehicleModel created from the lines in the textfile</returns>
         public static List<VehicleModel> ConvertToVehicleModel(this List<string> lines)
         {
             List<VehicleModel> output = new List<VehicleModel>();
