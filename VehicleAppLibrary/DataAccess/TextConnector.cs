@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using VehicleAppLibrary.DataAccess.TextHelpers;
+using System.Linq;
 
 namespace VehicleAppLibrary
 {
@@ -16,10 +12,10 @@ namespace VehicleAppLibrary
         private const string VehicleFile = "VehicleAppData.csv";
 
         /// <summary>
-        /// Saves the Vehicle Model to a Text File
+        /// Create VehicleModel from model, then saves the Vehicle Model to the Text File
         /// </summary>
-        /// <param name="model"> A model containing the current Vehicle's Values to be saved to textfile </param>
-        /// <returns> The Vehicle Information, including Registration </returns>
+        /// <param name="model"> A model containing the current Vehicle's Values(from createVehicleForm)</param>
+        /// <returns> The Vehicle's attributes</returns>
         public VehicleModel CreateVehicle(VehicleModel model)
         {
             //'vehicles' = A list containing all lines from the textfile as VehicleModels 
@@ -28,6 +24,12 @@ namespace VehicleAppLibrary
 
             vehicles.Add(model); //Add the new VehicleModel record to the existing list of vehicles
 
+            var ve = vehicles.FirstOrDefault(v => v.RegistrationNumber == "54654564");
+            if (ve != null)
+            {
+                //kjkljl
+                vehicles.Remove(ve);
+            }
             vehicles.SaveToVehicleFile(VehicleFile); //Save the list<string> to the text file.
 
             return model;

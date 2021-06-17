@@ -77,7 +77,6 @@ namespace VehicleAppForms
             this.lst_registration.Name = "lst_registration";
             this.lst_registration.Size = new System.Drawing.Size(238, 264);
             this.lst_registration.TabIndex = 3;
-            this.lst_registration.SelectedIndexChanged += new System.EventHandler(this.lst_registration_SelectedIndexChanged);
             // 
             // lbl_quickView
             // 

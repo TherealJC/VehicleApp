@@ -58,6 +58,8 @@ namespace VehicleAppLibrary.DataAccess.TextHelpers
                 output.Add(v);  //Add vehicle values to output
             }
 
+            //get properties
+
             return output; //return output (list of vehicle)
         }
 
