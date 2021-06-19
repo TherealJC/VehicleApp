@@ -41,7 +41,6 @@ C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\bin\Debug\
 C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\bin\Debug\VehicleAppLibrary.dll
 C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\bin\Debug\VehicleAppLibrary.pdb
 C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.csprojAssemblyReference.cache
-C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.Forms.ActivityLog.resources
 C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.CreateVehicleForm.resources
 C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.Forms.HiringActivityForm.resources
 C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.Forms.RelocationActivityForm.resources
@@ -54,3 +53,4 @@ C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\
 C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.csproj.CopyComplete
 C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.exe
 C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.pdb
+C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.ActivityLog.resources

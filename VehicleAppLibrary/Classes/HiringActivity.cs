@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VehicleAppLibrary.Models
 {
-    public class HiringActivityModel
+    public class HiringActivity
     {
         public string RegistrationNumber { get; set; }
         public string HiringActivityName { get; set; }

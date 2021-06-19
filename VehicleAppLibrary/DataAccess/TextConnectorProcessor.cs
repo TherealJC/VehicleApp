@@ -3,7 +3,7 @@ using System.Configuration;
 using System.IO;
 using System.Linq;
 
-namespace VehicleAppLibrary.DataAccess.TextHelpers
+namespace VehicleAppLibrary
 {
     public static class TextConnectorProcessor
     {
@@ -41,15 +41,15 @@ namespace VehicleAppLibrary.DataAccess.TextHelpers
         /// </summary>
         /// <param name="lines">A list of strings from the texfile</param>
         /// <returns>A list of VehicleModel created from the lines in the textfile</returns>
-        public static List<VehicleModel> ConvertToVehicleModel(this List<string> lines)
+        public static List<Vehicle> ConvertToVehicleModel(this List<string> lines)
         {
-            List<VehicleModel> output = new List<VehicleModel>();
+            List<Vehicle> output = new List<Vehicle>();
 
             foreach (string line in lines)
             {
                 string[] columns = line.Split(','); //Split/Separate entries(rows) by commas
 
-                VehicleModel v = new VehicleModel();   //Add the vehicles attributes
+                Vehicle v = new Vehicle();   //Add the vehicles attributes
                 v.RegistrationNumber = columns[0];
                 v.Make = columns[1];
                 v.Model = columns[2];
@@ -61,19 +61,6 @@ namespace VehicleAppLibrary.DataAccess.TextHelpers
             //get properties
 
             return output; //return output (list of vehicle)
-        }
-
-        public static void SaveToVehicleFile(this List<VehicleModel> models, string fileName)
-        {
-            List<string> lines = new List<string>();
-            
-            foreach (VehicleModel v in models)
-            {   
-                //Loop through each line and create a List of strings representing all Vehicles/models
-                lines.Add($"{ v.RegistrationNumber }, { v.Make }, { v.Model }, { v.Year }, {v.DailyHireCost }");
-            }
-            //Write the new lines (overwrites old file)
-            File.WriteAllLines(fileName.FullFilePath(), lines);
         }
     }
 }

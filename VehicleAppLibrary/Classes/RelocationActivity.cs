@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VehicleAppLibrary.Models
 {
-    class RelocationActivityModel
+    class RelocationActivity
     {
         public string RegistrationNumber { get; set; }
         public string RelocationActivityName { get; set; }

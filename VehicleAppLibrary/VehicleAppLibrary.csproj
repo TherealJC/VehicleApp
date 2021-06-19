@@ -60,12 +60,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccess\TextConnectorProcessor.cs" />
-    <Compile Include="Models\HiringActivityModel.cs" />
-    <Compile Include="Models\RelocationActivityModel.cs" />
-    <Compile Include="Models\ServiceActivityModel.cs" />
+    <Compile Include="Classes\HiringActivity.cs" />
+    <Compile Include="Classes\RelocationActivity.cs" />
+    <Compile Include="Classes\ServiceActivity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DataAccess\TextConnector.cs" />
-    <Compile Include="Models\VehicleModel.cs" />
+    <Compile Include="DataAccess\DataAccess.cs" />
+    <Compile Include="Classes\Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

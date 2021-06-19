@@ -9,7 +9,7 @@ namespace VehicleAppLibrary
     /// <summary>
     /// This class contains the static values for any Vehicle, Vehicle objects are created with these attributes
     /// </summary>
-    public class VehicleModel
+    public struct Vehicle
     {
         public string RegistrationNumber { get; set; }
         public string Make { get; set; }
@@ -25,10 +25,6 @@ namespace VehicleAppLibrary
             }
         }
 
-        public VehicleModel()
-        {
-
-        }
         /// <summary>
         /// 
         /// </summary>
@@ -37,7 +33,7 @@ namespace VehicleAppLibrary
         /// <param name="model">The model of the Vehicle e.g. 320i</param>
         /// <param name="year">The year that the Vehicle was made</param>
         /// <param name="dailyHireCost">The cost to hire the Vehicle per day</param>
-        public VehicleModel(string registrationNumber, string make, string model, string year, string dailyHireCost)
+        public Vehicle(string registrationNumber, string make, string model, string year, string dailyHireCost)
         {
             RegistrationNumber = registrationNumber;
             Make = make;

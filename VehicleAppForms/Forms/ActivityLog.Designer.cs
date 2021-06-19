@@ -1,5 +1,5 @@
 ﻿
-namespace VehicleAppForms.Forms
+namespace VehicleAppForms
 {
     partial class ActivityLog
     {
@@ -53,7 +53,7 @@ namespace VehicleAppForms.Forms
             // btn_addNewActivity
             // 
             this.btn_addNewActivity.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_addNewActivity.Location = new System.Drawing.Point(22, 51);
+            this.btn_addNewActivity.Location = new System.Drawing.Point(22, 20);
             this.btn_addNewActivity.Name = "btn_addNewActivity";
             this.btn_addNewActivity.Size = new System.Drawing.Size(158, 54);
             this.btn_addNewActivity.TabIndex = 1;
@@ -63,7 +63,7 @@ namespace VehicleAppForms.Forms
             // btn_editSelectedActivity
             // 
             this.btn_editSelectedActivity.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_editSelectedActivity.Location = new System.Drawing.Point(22, 111);
+            this.btn_editSelectedActivity.Location = new System.Drawing.Point(22, 80);
             this.btn_editSelectedActivity.Name = "btn_editSelectedActivity";
             this.btn_editSelectedActivity.Size = new System.Drawing.Size(158, 54);
             this.btn_editSelectedActivity.TabIndex = 2;
@@ -73,9 +73,9 @@ namespace VehicleAppForms.Forms
             // btn_deleteSelectedActivity
             // 
             this.btn_deleteSelectedActivity.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_deleteSelectedActivity.Location = new System.Drawing.Point(36, 195);
+            this.btn_deleteSelectedActivity.Location = new System.Drawing.Point(22, 155);
             this.btn_deleteSelectedActivity.Name = "btn_deleteSelectedActivity";
-            this.btn_deleteSelectedActivity.Size = new System.Drawing.Size(126, 40);
+            this.btn_deleteSelectedActivity.Size = new System.Drawing.Size(158, 49);
             this.btn_deleteSelectedActivity.TabIndex = 3;
             this.btn_deleteSelectedActivity.Text = "Delete Activity";
             this.btn_deleteSelectedActivity.UseVisualStyleBackColor = false;
@@ -144,7 +144,7 @@ namespace VehicleAppForms.Forms
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(725, 327);
+            this.ClientSize = new System.Drawing.Size(708, 327);
             this.Controls.Add(this.btn_closeActivityLog);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_sortBy);

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VehicleAppForms.Forms
+namespace VehicleAppForms
 {
     public partial class ActivityLog : Form
     {
