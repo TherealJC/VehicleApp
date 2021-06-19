@@ -4,14 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VehicleAppLibrary.Models
+namespace VehicleAppLibrary
 {
-    public class ServiceActivityModel
+    public class ServiceActivityModel : Activity
     {
-        public string RegistrationNumber { get; set; }
         public string ServiceActivityName { get; set; }
         public DateTime ServiceDate { get; set; }
         public string Description { get; set; }
         public decimal ServiceCost { get; set; }
+
+        public override string SaveString()
+        {
+            return $"{ActivityType.Service},{RegistrationNumber},{ServiceActivityName},{ServiceDate},{Description},{ServiceCost}";
+        }
     }
 }

@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Activity.cs" />
     <Compile Include="DataAccess\TextConnectorProcessor.cs" />
     <Compile Include="Classes\HiringActivity.cs" />
     <Compile Include="Classes\RelocationActivity.cs" />
