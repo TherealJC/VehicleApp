@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VehicleAppLibrary
 {
-    public class ServiceActivityModel : Activity
+    public class ServiceActivity : Activity
     {
         public string ServiceActivityName { get; set; }
         public DateTime ServiceDate { get; set; }
@@ -16,6 +16,16 @@ namespace VehicleAppLibrary
         public override string SaveString()
         {
             return $"{ActivityType.Service},{RegistrationNumber},{ServiceActivityName},{ServiceDate},{Description},{ServiceCost}";
+        }
+
+        protected override void LoadFromColumns(string[] columns)
+        {
+            base.LoadFromColumns(columns);
+            ServiceActivityName = columns[2];
+            ServiceDate = DateTime.Parse(columns[3]);
+            Description = (columns[4]);
+            ServiceCost = Decimal.Parse(columns[5]);
+
         }
     }
 }

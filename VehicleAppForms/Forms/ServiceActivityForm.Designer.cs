@@ -1,5 +1,5 @@
 ﻿
-namespace VehicleAppForms.Forms
+namespace VehicleAppForms
 {
     partial class ServiceActivityForm
     {

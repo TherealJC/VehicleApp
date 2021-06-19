@@ -64,6 +64,7 @@
     <Compile Include="Forms\HiringActivityForm.Designer.cs">
       <DependentUpon>HiringActivityForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\IActivityForm.cs" />
     <Compile Include="Forms\RelocationActivityForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -6,14 +7,33 @@ namespace VehicleAppLibrary
 {
     public static class DataAccess
     {
+        private readonly static string VehicleFile = $@"{Environment.CurrentDirectory}\VehicleAppData.csv";
+        private readonly static string ActivityFile = $@"{Environment.CurrentDirectory}\ActivityData.csv";
+
         /// <summary>
         /// Registration Number List, displays all of the Vehicles in Inventory (the textfile database).
         /// </summary>
-        private static List<Vehicle> vehicleInventory = GetVehicle_All();
-
+        private static List<Vehicle> vehicleInventory = LoadVehicleModels(VehicleFile);
         public static Vehicle[] VehicleInventory => vehicleInventory.ToArray();
 
-        private const string VehicleFile = "VehicleAppData.csv";
+        private static List<Activity> activityInventory = LoadActivityModels(ActivityFile);
+        public static Activity[] ActivityInventory => activityInventory.ToArray();
+
+        /// <summary>
+        /// Load the textfile, read all lines, create a list of all current models.
+        /// If file does not exist, create a new List<string>
+        /// </summary>
+        /// <param name="file"></param>
+        /// <returns>A list of all rows/entries in the text file</returns>
+        public static List<string> LoadFile(string file)
+        {
+            if (!File.Exists(file))  //If file does not exist
+            {
+                return new List<string>(); //create a new list of string.
+            }
+            return File.ReadAllLines(file).ToList(); //read all lines, convert to a list
+        }
+
 
         /// <summary>
         /// Create VehicleModel from model, then saves the Vehicle Model to the Text File
@@ -24,7 +44,7 @@ namespace VehicleAppLibrary
         {
             //'vehicles' = A list containing all lines from the textfile as VehicleModels 
             //Get full file path, Load the text file, convert all text entries (lines) to List of VehicleModels
-            vehicleInventory = VehicleFile.FullFilePath().LoadFile().ConvertToVehicleModel();
+            vehicleInventory = LoadVehicleModels(VehicleFile);
 
             bool vehicleExists = false;
             for(int i = 0; i < vehicleInventory.Count; i++)
@@ -72,16 +92,46 @@ namespace VehicleAppLibrary
                 lines.Add($"{v.RegistrationNumber },{ v.Make },{ v.Model },{ v.Year },{v.DailyHireCost }");
             }
             //Write the new lines (overwrites old file)
-            File.WriteAllLines(fileName.FullFilePath(), lines);
+            File.WriteAllLines(fileName, lines);
         }
 
-        /// <summary>
-        /// // Links the lists to display data from textfile
-        /// </summary>
-        /// <returns>Gets Full file path,  Loads the file, converts file contents (lines) to Vehicle Models</returns>
-        public static List<Vehicle> GetVehicle_All()
+        public static List<Vehicle> LoadVehicleModels(string file)
         {
-            return VehicleFile.FullFilePath().LoadFile().ConvertToVehicleModel();
+            List<string> lines = LoadFile(file);
+
+            List<Vehicle> output = new List<Vehicle>();
+
+            foreach (string line in lines)
+            {
+                string[] columns = line.Split(','); //Split/Separate entries(rows) by commas
+
+                Vehicle v = new Vehicle();   //Add the vehicles attributes
+                v.RegistrationNumber = columns[0];
+                v.Make = columns[1];
+                v.Model = columns[2];
+                v.Year = int.Parse(columns[3]);
+                v.DailyHireCost = decimal.Parse(columns[4]);
+                output.Add(v);  //Add vehicle values to output
+            }
+
+            return output; //return output (list of vehicle)
         }
+
+        public static List<Activity> LoadActivityModels(string file)
+        {
+            List<string> lines = LoadFile(file);
+
+            List<Activity> output = new List<Activity>();
+
+            foreach(string line in lines)
+            {
+                output.Add(Activity.LoadFromString(line));
+            }
+
+            return output;
+        }
+
+
+
     }
 }

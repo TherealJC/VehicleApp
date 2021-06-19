@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VehicleAppLibrary;
 
-namespace VehicleAppForms.Forms
+namespace VehicleAppForms
 {
-    public partial class RelocationActivityForm : Form
+    public partial class RelocationActivityForm : Form, IActivityForm
     {
         public RelocationActivityForm()
         {
             InitializeComponent();
+        }
+
+        public Activity ShowCreate()
+        {
+            return null;
         }
     }
 }

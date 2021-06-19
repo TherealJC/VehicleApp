@@ -1,5 +1,5 @@
 ﻿
-namespace VehicleAppForms.Forms
+namespace VehicleAppForms
 {
     partial class HiringActivityForm
     {
@@ -162,6 +162,7 @@ namespace VehicleAppForms.Forms
             this.btn_submitActivity.TabIndex = 14;
             this.btn_submitActivity.Text = "Submit Activity";
             this.btn_submitActivity.UseVisualStyleBackColor = false;
+            this.btn_submitActivity.Click += new System.EventHandler(this.btn_submitActivity_Click);
             // 
             // HiringActivityForm
             // 

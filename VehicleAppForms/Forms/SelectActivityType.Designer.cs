@@ -1,5 +1,5 @@
 ﻿
-namespace VehicleAppForms.Forms
+namespace VehicleAppForms
 {
     partial class SelectActivityType
     {
@@ -30,9 +30,9 @@ namespace VehicleAppForms.Forms
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.rbtn_hiring = new System.Windows.Forms.RadioButton();
+            this.rbtn_service = new System.Windows.Forms.RadioButton();
+            this.rbtn_relocation = new System.Windows.Forms.RadioButton();
             this.btn_continue = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -46,41 +46,41 @@ namespace VehicleAppForms.Forms
             this.label1.TabIndex = 0;
             this.label1.Text = "Please select the Activity Type that you want to create";
             // 
-            // radioButton1
+            // rbtn_hiring
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(48, 52);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(86, 29);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Hiring";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbtn_hiring.AutoSize = true;
+            this.rbtn_hiring.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtn_hiring.Location = new System.Drawing.Point(48, 52);
+            this.rbtn_hiring.Name = "rbtn_hiring";
+            this.rbtn_hiring.Size = new System.Drawing.Size(86, 29);
+            this.rbtn_hiring.TabIndex = 1;
+            this.rbtn_hiring.TabStop = true;
+            this.rbtn_hiring.Text = "Hiring";
+            this.rbtn_hiring.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbtn_service
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(163, 52);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(94, 29);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Service";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbtn_service.AutoSize = true;
+            this.rbtn_service.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtn_service.Location = new System.Drawing.Point(163, 52);
+            this.rbtn_service.Name = "rbtn_service";
+            this.rbtn_service.Size = new System.Drawing.Size(94, 29);
+            this.rbtn_service.TabIndex = 2;
+            this.rbtn_service.TabStop = true;
+            this.rbtn_service.Text = "Service";
+            this.rbtn_service.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rbtn_relocation
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(281, 52);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(125, 29);
-            this.radioButton3.TabIndex = 3;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Relocation";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbtn_relocation.AutoSize = true;
+            this.rbtn_relocation.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtn_relocation.Location = new System.Drawing.Point(281, 52);
+            this.rbtn_relocation.Name = "rbtn_relocation";
+            this.rbtn_relocation.Size = new System.Drawing.Size(125, 29);
+            this.rbtn_relocation.TabIndex = 3;
+            this.rbtn_relocation.TabStop = true;
+            this.rbtn_relocation.Text = "Relocation";
+            this.rbtn_relocation.UseVisualStyleBackColor = true;
             // 
             // btn_continue
             // 
@@ -92,6 +92,7 @@ namespace VehicleAppForms.Forms
             this.btn_continue.TabIndex = 4;
             this.btn_continue.Text = "Continue";
             this.btn_continue.UseVisualStyleBackColor = false;
+            this.btn_continue.Click += new System.EventHandler(this.btn_continue_Click);
             // 
             // SelectActivityType
             // 
@@ -99,9 +100,9 @@ namespace VehicleAppForms.Forms
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(446, 162);
             this.Controls.Add(this.btn_continue);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rbtn_relocation);
+            this.Controls.Add(this.rbtn_service);
+            this.Controls.Add(this.rbtn_hiring);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Name = "SelectActivityType";
@@ -114,9 +115,9 @@ namespace VehicleAppForms.Forms
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton rbtn_hiring;
+        private System.Windows.Forms.RadioButton rbtn_service;
+        private System.Windows.Forms.RadioButton rbtn_relocation;
         private System.Windows.Forms.Button btn_continue;
     }
 }

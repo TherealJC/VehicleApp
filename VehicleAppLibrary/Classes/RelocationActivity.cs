@@ -17,6 +17,13 @@ namespace VehicleAppLibrary
         {
             return $"{ActivityType.Relocation},{RegistrationNumber},{RelocationActivityName},{RelocationDate},{KmsUsed},{RelocationCost}";
         }
-
+        protected override void LoadFromColumns(string[] columns)
+        {
+            base.LoadFromColumns(columns);
+            RelocationActivityName = columns[2];
+            RelocationDate = DateTime.Parse(columns[3]);
+            KmsUsed = int.Parse(columns[4]);
+            RelocationCost = decimal.Parse(columns[5]);
+        }
     }
 }

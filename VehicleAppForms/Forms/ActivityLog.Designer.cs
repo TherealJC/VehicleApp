@@ -59,6 +59,7 @@ namespace VehicleAppForms
             this.btn_addNewActivity.TabIndex = 1;
             this.btn_addNewActivity.Text = "Add New Activity";
             this.btn_addNewActivity.UseVisualStyleBackColor = false;
+            this.btn_addNewActivity.Click += new System.EventHandler(this.btn_addNewActivity_Click);
             // 
             // btn_editSelectedActivity
             // 
@@ -139,6 +140,7 @@ namespace VehicleAppForms
             this.btn_closeActivityLog.TabIndex = 9;
             this.btn_closeActivityLog.Text = "Close";
             this.btn_closeActivityLog.UseVisualStyleBackColor = false;
+            this.btn_closeActivityLog.Click += new System.EventHandler(this.btn_closeActivityLog_Click);
             // 
             // ActivityLog
             // 

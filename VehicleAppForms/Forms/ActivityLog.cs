@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VehicleAppLibrary;
 
 namespace VehicleAppForms
 {
@@ -15,6 +16,16 @@ namespace VehicleAppForms
         public ActivityLog()
         {
             InitializeComponent();
+        }
+
+        private void btn_closeActivityLog_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btn_addNewActivity_Click(object sender, EventArgs e)
+        {
+            if (SelectActivityType.ShowCreate() is Activity activity);
         }
     }
 }

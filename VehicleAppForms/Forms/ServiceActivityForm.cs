@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VehicleAppLibrary;
 
-namespace VehicleAppForms.Forms
+namespace VehicleAppForms
 {
-    public partial class ServiceActivityForm : Form
+    public partial class ServiceActivityForm : Form, IActivityForm
     {
         public ServiceActivityForm()
         {
             InitializeComponent();
+        }
+
+        public Activity ShowCreate()
+        {
+            return null;
         }
     }
 }

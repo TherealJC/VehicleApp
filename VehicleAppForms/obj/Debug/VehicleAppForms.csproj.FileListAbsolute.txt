@@ -42,10 +42,6 @@ C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\bin\Debug\
 C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\bin\Debug\VehicleAppLibrary.pdb
 C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.csprojAssemblyReference.cache
 C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.CreateVehicleForm.resources
-C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.Forms.HiringActivityForm.resources
-C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.Forms.RelocationActivityForm.resources
-C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.Forms.SelectActivityType.resources
-C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.Forms.ServiceActivityForm.resources
 C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.MainForm.resources
 C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.Properties.Resources.resources
 C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.csproj.GenerateResource.cache
@@ -54,3 +50,7 @@ C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\
 C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.exe
 C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.pdb
 C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.ActivityLog.resources
+C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.SelectActivityType.resources
+C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.HiringActivityForm.resources
+C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.RelocationActivityForm.resources
+C:\Users\64273\Desktop\sdv601-s1-21-project-TherealJC\VehicleAppForms\obj\Debug\VehicleAppForms.ServiceActivityForm.resources
