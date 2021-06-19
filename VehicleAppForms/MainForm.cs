@@ -10,7 +10,7 @@ namespace VehicleAppForms
         /// <summary>
         /// Registration Number List, displays all of the Vehicles in Inventory (the textfile database).
         /// </summary>
-        private List<VehicleModel> vehicleInventory = GlobalConfig.Connection.GetVehicle_All();
+        private List<VehicleModel> vehicleInventory = TextConnector.GetVehicle_All();
 
         /// <summary>
         /// Quick view list, displays highlighted registration numbers Vehicle details
@@ -42,7 +42,7 @@ namespace VehicleAppForms
         {
             CreateVehicleForm newCvForm = new CreateVehicleForm();
             newCvForm.ShowDialog();
-            vehicleInventory = GlobalConfig.Connection.GetVehicle_All();
+            vehicleInventory = TextConnector.GetVehicle_All();
             ConnectLists();
         }
 

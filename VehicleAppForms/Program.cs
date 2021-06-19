@@ -18,9 +18,6 @@ namespace VehicleAppForms
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Initialize the Database connection (This is where you choose Sql or Text connection)
-            VehicleAppLibrary.GlobalConfig.InitializeConnections(DatabaseType.TextFile);
-
             Application.Run(new MainForm());
         }
     }

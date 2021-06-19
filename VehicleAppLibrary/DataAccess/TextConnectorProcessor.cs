@@ -15,7 +15,7 @@ namespace VehicleAppLibrary.DataAccess.TextHelpers
         /// <returns>A string of the Full filepaths location</returns>
         public static string FullFilePath(this string fileName)
         {                                              //escape '\', then escape the escape '\'.
-            return $"{ConfigurationManager.AppSettings["filePath"]}\\{fileName}";
+            return $@"{ConfigurationManager.AppSettings["filePath"]}\{fileName}";
         }
 
         /// <summary>

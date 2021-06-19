@@ -25,7 +25,7 @@ namespace VehicleAppForms
 
 
                 //Allows it to be saved to either a textFile, or a SQL Database
-                GlobalConfig.Connection.CreateVehicle(model); //Create vehicle model (TextFile connection in app config).
+                TextConnector.CreateVehicle(model); //Create vehicle model (TextFile connection in app config).
 
                 //Reset the forms textbox values.
                 txt_registrationNumber.Text = "";
@@ -36,14 +36,13 @@ namespace VehicleAppForms
 
                 //Display successful data entry message
                 MessageBox.Show("The Vehicle has been successfully added to the TextFile Inventory");
-                //Application.Restart(); //Close the form (returns to main form)
+                Close();
             }
             else
             {
                 //When Validator equals not true, e.g improper data format, return the error message
                 MessageBox.Show("This Form has invalid or missing information, Please check it and try again");
             }
-            Close();
         }
 
         //Validate the user's input data against these rules
