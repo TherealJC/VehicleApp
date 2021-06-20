@@ -29,12 +29,12 @@ namespace VehicleAppForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_registrationNumber = new System.Windows.Forms.Label();
+            this.lbl_activityID = new System.Windows.Forms.Label();
             this.lbl_activityName = new System.Windows.Forms.Label();
             this.lbl_relocationDate = new System.Windows.Forms.Label();
             this.lbl_kmsUsed = new System.Windows.Forms.Label();
             this.lbl_relocationCost = new System.Windows.Forms.Label();
-            this.txt_registrationNumber = new System.Windows.Forms.TextBox();
+            this.txt_activityID = new System.Windows.Forms.TextBox();
             this.txt_activityName = new System.Windows.Forms.TextBox();
             this.txt_kmsUsed = new System.Windows.Forms.TextBox();
             this.txt_relocationCost = new System.Windows.Forms.TextBox();
@@ -42,15 +42,15 @@ namespace VehicleAppForms
             this.btn_submitActivity = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lbl_registrationNumber
+            // lbl_activityID
             // 
-            this.lbl_registrationNumber.AutoSize = true;
-            this.lbl_registrationNumber.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lbl_registrationNumber.Location = new System.Drawing.Point(20, 19);
-            this.lbl_registrationNumber.Name = "lbl_registrationNumber";
-            this.lbl_registrationNumber.Size = new System.Drawing.Size(169, 23);
-            this.lbl_registrationNumber.TabIndex = 0;
-            this.lbl_registrationNumber.Text = "Registration Number";
+            this.lbl_activityID.AutoSize = true;
+            this.lbl_activityID.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lbl_activityID.Location = new System.Drawing.Point(102, 22);
+            this.lbl_activityID.Name = "lbl_activityID";
+            this.lbl_activityID.Size = new System.Drawing.Size(87, 23);
+            this.lbl_activityID.TabIndex = 0;
+            this.lbl_activityID.Text = "Activity ID";
             // 
             // lbl_activityName
             // 
@@ -92,12 +92,13 @@ namespace VehicleAppForms
             this.lbl_relocationCost.TabIndex = 4;
             this.lbl_relocationCost.Text = "Relocation Cost";
             // 
-            // txt_registrationNumber
+            // txt_activityID
             // 
-            this.txt_registrationNumber.Location = new System.Drawing.Point(195, 18);
-            this.txt_registrationNumber.Name = "txt_registrationNumber";
-            this.txt_registrationNumber.Size = new System.Drawing.Size(164, 27);
-            this.txt_registrationNumber.TabIndex = 5;
+            this.txt_activityID.Location = new System.Drawing.Point(195, 18);
+            this.txt_activityID.Name = "txt_activityID";
+            this.txt_activityID.ReadOnly = true;
+            this.txt_activityID.Size = new System.Drawing.Size(164, 27);
+            this.txt_activityID.TabIndex = 5;
             // 
             // txt_activityName
             // 
@@ -148,12 +149,12 @@ namespace VehicleAppForms
             this.Controls.Add(this.txt_relocationCost);
             this.Controls.Add(this.txt_kmsUsed);
             this.Controls.Add(this.txt_activityName);
-            this.Controls.Add(this.txt_registrationNumber);
+            this.Controls.Add(this.txt_activityID);
             this.Controls.Add(this.lbl_relocationCost);
             this.Controls.Add(this.lbl_kmsUsed);
             this.Controls.Add(this.lbl_relocationDate);
             this.Controls.Add(this.lbl_activityName);
-            this.Controls.Add(this.lbl_registrationNumber);
+            this.Controls.Add(this.lbl_activityID);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Name = "RelocationActivityForm";
             this.Text = "New Relocation Activity";
@@ -164,12 +165,12 @@ namespace VehicleAppForms
 
         #endregion
 
-        private System.Windows.Forms.Label lbl_registrationNumber;
+        private System.Windows.Forms.Label lbl_activityID;
         private System.Windows.Forms.Label lbl_activityName;
         private System.Windows.Forms.Label lbl_relocationDate;
         private System.Windows.Forms.Label lbl_kmsUsed;
         private System.Windows.Forms.Label lbl_relocationCost;
-        private System.Windows.Forms.TextBox txt_registrationNumber;
+        private System.Windows.Forms.TextBox txt_activityID;
         private System.Windows.Forms.TextBox txt_activityName;
         private System.Windows.Forms.TextBox txt_kmsUsed;
         private System.Windows.Forms.TextBox txt_relocationCost;

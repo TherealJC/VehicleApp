@@ -29,42 +29,43 @@ namespace VehicleAppForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lbl_registrationNumber = new System.Windows.Forms.Label();
+            this.txt_activityID = new System.Windows.Forms.TextBox();
+            this.txt_activityName = new System.Windows.Forms.TextBox();
+            this.lbl_activityID = new System.Windows.Forms.Label();
             this.lbl_activityName = new System.Windows.Forms.Label();
             this.lbl_serviceDate = new System.Windows.Forms.Label();
             this.lbl_description = new System.Windows.Forms.Label();
             this.lbl_serviceCost = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.dtp_serviceDate = new System.Windows.Forms.DateTimePicker();
+            this.txt_description = new System.Windows.Forms.TextBox();
+            this.txt_serviceCost = new System.Windows.Forms.TextBox();
             this.btn_submitActivity = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txt_activityID
             // 
-            this.textBox1.Location = new System.Drawing.Point(194, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 27);
-            this.textBox1.TabIndex = 0;
+            this.txt_activityID.Location = new System.Drawing.Point(194, 24);
+            this.txt_activityID.Name = "txt_activityID";
+            this.txt_activityID.ReadOnly = true;
+            this.txt_activityID.Size = new System.Drawing.Size(157, 27);
+            this.txt_activityID.TabIndex = 0;
             // 
-            // textBox2
+            // txt_activityName
             // 
-            this.textBox2.Location = new System.Drawing.Point(194, 74);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(157, 27);
-            this.textBox2.TabIndex = 1;
+            this.txt_activityName.Location = new System.Drawing.Point(194, 74);
+            this.txt_activityName.Name = "txt_activityName";
+            this.txt_activityName.Size = new System.Drawing.Size(157, 27);
+            this.txt_activityName.TabIndex = 1;
             // 
-            // lbl_registrationNumber
+            // lbl_activityID
             // 
-            this.lbl_registrationNumber.AutoSize = true;
-            this.lbl_registrationNumber.Font = new System.Drawing.Font("Segoe UI", 9.8F);
-            this.lbl_registrationNumber.Location = new System.Drawing.Point(19, 24);
-            this.lbl_registrationNumber.Name = "lbl_registrationNumber";
-            this.lbl_registrationNumber.Size = new System.Drawing.Size(169, 23);
-            this.lbl_registrationNumber.TabIndex = 2;
-            this.lbl_registrationNumber.Text = "Registration Number";
+            this.lbl_activityID.AutoSize = true;
+            this.lbl_activityID.Font = new System.Drawing.Font("Segoe UI", 9.8F);
+            this.lbl_activityID.Location = new System.Drawing.Point(90, 26);
+            this.lbl_activityID.Name = "lbl_activityID";
+            this.lbl_activityID.Size = new System.Drawing.Size(87, 23);
+            this.lbl_activityID.TabIndex = 2;
+            this.lbl_activityID.Text = "Activity ID";
             // 
             // lbl_activityName
             // 
@@ -106,26 +107,26 @@ namespace VehicleAppForms
             this.lbl_serviceCost.TabIndex = 6;
             this.lbl_serviceCost.Text = "Service Cost";
             // 
-            // dateTimePicker1
+            // dtp_serviceDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(194, 124);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(257, 27);
-            this.dateTimePicker1.TabIndex = 7;
+            this.dtp_serviceDate.Location = new System.Drawing.Point(194, 124);
+            this.dtp_serviceDate.Name = "dtp_serviceDate";
+            this.dtp_serviceDate.Size = new System.Drawing.Size(257, 27);
+            this.dtp_serviceDate.TabIndex = 7;
             // 
-            // textBox3
+            // txt_description
             // 
-            this.textBox3.Location = new System.Drawing.Point(194, 174);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(157, 27);
-            this.textBox3.TabIndex = 8;
+            this.txt_description.Location = new System.Drawing.Point(194, 174);
+            this.txt_description.Name = "txt_description";
+            this.txt_description.Size = new System.Drawing.Size(157, 27);
+            this.txt_description.TabIndex = 8;
             // 
-            // textBox4
+            // txt_serviceCost
             // 
-            this.textBox4.Location = new System.Drawing.Point(194, 224);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(157, 27);
-            this.textBox4.TabIndex = 9;
+            this.txt_serviceCost.Location = new System.Drawing.Point(194, 224);
+            this.txt_serviceCost.Name = "txt_serviceCost";
+            this.txt_serviceCost.Size = new System.Drawing.Size(157, 27);
+            this.txt_serviceCost.TabIndex = 9;
             // 
             // btn_submitActivity
             // 
@@ -144,16 +145,16 @@ namespace VehicleAppForms
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(511, 338);
             this.Controls.Add(this.btn_submitActivity);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.txt_serviceCost);
+            this.Controls.Add(this.txt_description);
+            this.Controls.Add(this.dtp_serviceDate);
             this.Controls.Add(this.lbl_serviceCost);
             this.Controls.Add(this.lbl_description);
             this.Controls.Add(this.lbl_serviceDate);
             this.Controls.Add(this.lbl_activityName);
-            this.Controls.Add(this.lbl_registrationNumber);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lbl_activityID);
+            this.Controls.Add(this.txt_activityName);
+            this.Controls.Add(this.txt_activityID);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Name = "ServiceActivityForm";
             this.Text = "New Service Activity";
@@ -164,16 +165,16 @@ namespace VehicleAppForms
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label lbl_registrationNumber;
+        private System.Windows.Forms.TextBox txt_activityID;
+        private System.Windows.Forms.TextBox txt_activityName;
+        private System.Windows.Forms.Label lbl_activityID;
         private System.Windows.Forms.Label lbl_activityName;
         private System.Windows.Forms.Label lbl_serviceDate;
         private System.Windows.Forms.Label lbl_description;
         private System.Windows.Forms.Label lbl_serviceCost;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.DateTimePicker dtp_serviceDate;
+        private System.Windows.Forms.TextBox txt_description;
+        private System.Windows.Forms.TextBox txt_serviceCost;
         private System.Windows.Forms.Button btn_submitActivity;
     }
 }

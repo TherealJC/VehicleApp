@@ -17,8 +17,16 @@ namespace VehicleAppForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Run();
+        }
 
-            Application.Run(new MainForm());
+        //Moving Application.Run into a separate method
+        //stops the MainForm instance from being instantiated
+        //before Application.SetCompatibleTextRenderingDefault
+        static void Run()
+        {
+            //Runs the instance set on Main Form
+            Application.Run(MainForm.Instance);
         }
     }
 }

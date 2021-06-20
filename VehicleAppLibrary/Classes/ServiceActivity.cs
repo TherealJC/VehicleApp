@@ -8,24 +8,32 @@ namespace VehicleAppLibrary
 {
     public class ServiceActivity : Activity
     {
-        public string ServiceActivityName { get; set; }
         public DateTime ServiceDate { get; set; }
         public string Description { get; set; }
-        public decimal ServiceCost { get; set; }
 
         public override string SaveString()
         {
-            return $"{ActivityType.Service},{RegistrationNumber},{ServiceActivityName},{ServiceDate},{Description},{ServiceCost}";
+            return $"{(int)ActivityType.Service},{ActivityID},{RegistrationNumber},{ActivityName},{Cost},{ServiceDate},{Description}";
         }
 
         protected override void LoadFromColumns(string[] columns)
         {
             base.LoadFromColumns(columns);
-            ServiceActivityName = columns[2];
-            ServiceDate = DateTime.Parse(columns[3]);
-            Description = (columns[4]);
-            ServiceCost = Decimal.Parse(columns[5]);
+            int startingPoint = 5;
+            ServiceDate = DateTime.Parse(columns[startingPoint++]);
+            Description = (columns[startingPoint++]);
+        }
 
+
+
+        public override DateTime GetDate()
+        {
+            return ServiceDate;
+        }
+
+        public override decimal GetTotalRevenue()
+        {
+            return -Cost;
         }
     }
 }

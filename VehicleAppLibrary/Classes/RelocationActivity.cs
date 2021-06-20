@@ -6,24 +6,36 @@ using System.Threading.Tasks;
 
 namespace VehicleAppLibrary
 {
-    class RelocationActivity : Activity
+    public class RelocationActivity : Activity
     {
-        public string RelocationActivityName { get; set; }
         public DateTime RelocationDate { get; set; }
         public int KmsUsed { get; set; }
-        public decimal RelocationCost { get; set; }
 
         public override string SaveString()
         {
-            return $"{ActivityType.Relocation},{RegistrationNumber},{RelocationActivityName},{RelocationDate},{KmsUsed},{RelocationCost}";
+            return $"{(int)ActivityType.Relocation},{ActivityID},{RegistrationNumber},{ActivityName},{Cost},{RelocationDate},{KmsUsed}";
         }
         protected override void LoadFromColumns(string[] columns)
         {
             base.LoadFromColumns(columns);
-            RelocationActivityName = columns[2];
-            RelocationDate = DateTime.Parse(columns[3]);
-            KmsUsed = int.Parse(columns[4]);
-            RelocationCost = decimal.Parse(columns[5]);
+            int startingPoint = 5;
+            RelocationDate = DateTime.Parse(columns[startingPoint++]);
+            KmsUsed = int.Parse(columns[startingPoint++]);
+        }
+
+        public override string ToString()
+        {
+            return $"{ActivityType.Relocation} | Activity Name: {ActivityName}  |  Relocation Date: {RelocationDate.ToShortDateString()} | Kms Used: {KmsUsed} |  Cost: {Cost}";
+        }
+
+        public override DateTime GetDate()
+        {
+            return RelocationDate;
+        }
+
+        public override decimal GetTotalRevenue()
+        {
+            return -Cost;
         }
     }
 }

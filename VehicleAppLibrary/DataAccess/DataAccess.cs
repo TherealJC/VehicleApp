@@ -16,8 +16,44 @@ namespace VehicleAppLibrary
         private static List<Vehicle> vehicleInventory = LoadVehicleModels(VehicleFile);
         public static Vehicle[] VehicleInventory => vehicleInventory.ToArray();
 
-        private static List<Activity> activityInventory = LoadActivityModels(ActivityFile);
+        private static List<Activity> activityInventory = LoadActivityModels();
         public static Activity[] ActivityInventory => activityInventory.ToArray();
+
+        public static void CreateActivity(Activity model)
+        {
+            List<Activity> database = LoadActivityModels();
+
+            bool activityExists = false;
+            for (int i = 0; i < database.Count; i++)
+            {
+                Activity existing = database[i];
+                if (existing.ActivityID == model.ActivityID)
+                {
+                    activityExists = true;
+                    database[i] = model;
+                    break;
+                }
+            }
+
+            if (!activityExists)
+            database.Add(model);
+            SaveActivitiesToFile(database, ActivityFile);
+        }
+
+        public static void DeleteActivity(int ActivityID)
+        {
+            List<Activity> database = LoadActivityModels();
+            for(int i = 0; i < database.Count; ++i)
+            {
+                Activity a = database[i];
+                if (a.ActivityID == ActivityID)
+                {
+                    database.RemoveAt(i);
+                    break;
+                }
+            }
+            SaveActivitiesToFile(database, ActivityFile);
+        }
 
         /// <summary>
         /// Load the textfile, read all lines, create a list of all current models.
@@ -63,7 +99,7 @@ namespace VehicleAppLibrary
                 vehicleInventory.Add(model);
             }
 
-            SaveToDatabase(vehicleInventory, VehicleFile); //Save the list<string> to the text file.
+            SaveVehiclesToFile(vehicleInventory, VehicleFile); //Save the list<string> to the text file.
 
             return model;
         }
@@ -79,10 +115,10 @@ namespace VehicleAppLibrary
                     break;
                 }
             }
-            SaveToDatabase(vehicleInventory, VehicleFile);
+            SaveVehiclesToFile(vehicleInventory, VehicleFile);
         }
 
-        public static void SaveToDatabase(List<Vehicle> models, string fileName)
+        private static void SaveVehiclesToFile(List<Vehicle> models, string fileName)
         {
             List<string> lines = new List<string>();
 
@@ -90,6 +126,19 @@ namespace VehicleAppLibrary
             {
                 //Loop through each line and create a List of strings representing all Vehicles/models
                 lines.Add($"{v.RegistrationNumber },{ v.Make },{ v.Model },{ v.Year },{v.DailyHireCost }");
+            }
+            //Write the new lines (overwrites old file)
+            File.WriteAllLines(fileName, lines);
+        }
+
+        private static void SaveActivitiesToFile(List<Activity> models, string fileName)
+        {
+            List<string> lines = new List<string>();
+
+            foreach (Activity a in models)
+            {
+                //Loop through each line and create a List of strings representing all Vehicles/models
+                lines.Add(a.SaveString());
             }
             //Write the new lines (overwrites old file)
             File.WriteAllLines(fileName, lines);
@@ -117,9 +166,9 @@ namespace VehicleAppLibrary
             return output; //return output (list of vehicle)
         }
 
-        public static List<Activity> LoadActivityModels(string file)
+        public static List<Activity> LoadActivityModels()
         {
-            List<string> lines = LoadFile(file);
+            List<string> lines = LoadFile(ActivityFile);
 
             List<Activity> output = new List<Activity>();
 
@@ -131,7 +180,28 @@ namespace VehicleAppLibrary
             return output;
         }
 
+        public static List<Activity> GetVehicleActivities(string registration)
+        {
+            List<Activity> output = new List<Activity>();
 
+            foreach (Activity a in LoadActivityModels())
+            {
+                if (a.RegistrationNumber == registration)
+                    output.Add(a);
+            }
 
+            return output;
+        }
+
+        public static int GetNextActivityID()
+        {
+            int highest = 0;
+            foreach (Activity a in LoadActivityModels())
+            {
+                if (a.ActivityID > highest)
+                    highest = a.ActivityID;
+            }
+            return highest + 1;
+        }
     }
 }

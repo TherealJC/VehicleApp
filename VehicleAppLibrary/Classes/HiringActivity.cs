@@ -8,26 +8,36 @@ namespace VehicleAppLibrary
 {
     public class HiringActivity : Activity
     {
-        public string HiringActivityName { get; set; }
         public string CustomerName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public decimal HiringCost { get; set; }
 
         public override string SaveString()
         {
-            return $"{ActivityType.Hiring},{RegistrationNumber},{CustomerName},{StartDate},{EndDate},{HiringCost}";
+            return $"{(int)ActivityType.Hiring},{ActivityID},{RegistrationNumber},{ActivityName},{Cost},{CustomerName},{StartDate},{EndDate}";
         }
 
         protected override void LoadFromColumns(string[] columns)
         {
             base.LoadFromColumns(columns);
-            HiringActivityName = columns[2];
-            CustomerName = columns[3];
-            StartDate = DateTime.Parse(columns[4]);
-            EndDate = DateTime.Parse(columns[5]);
-            HiringCost = Decimal.Parse(columns[6]);
+            int startingPoint = 5;
+            CustomerName = columns[startingPoint++];
+            StartDate = DateTime.Parse(columns[startingPoint++]);
+            EndDate = DateTime.Parse(columns[startingPoint++]);
+        }
 
+        public override string ToString()
+        {
+           return $"{ActivityType.Hiring} | Activity Name: {ActivityName}  |  Customer: {CustomerName} | Start Date: {StartDate.ToShortDateString()} | End Date: {EndDate.ToShortDateString()}  |  Cost: {Cost}";
+        }
+        public override DateTime GetDate()
+        {
+            return StartDate;
+        }
+
+        public override decimal GetTotalRevenue()
+        {
+            return Cost;
         }
     }
 }

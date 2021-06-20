@@ -47,7 +47,7 @@ namespace VehicleAppForms
             this.lst_activityLog.ItemHeight = 20;
             this.lst_activityLog.Location = new System.Drawing.Point(214, 51);
             this.lst_activityLog.Name = "lst_activityLog";
-            this.lst_activityLog.Size = new System.Drawing.Size(469, 184);
+            this.lst_activityLog.Size = new System.Drawing.Size(663, 184);
             this.lst_activityLog.TabIndex = 0;
             // 
             // btn_addNewActivity
@@ -70,6 +70,7 @@ namespace VehicleAppForms
             this.btn_editSelectedActivity.TabIndex = 2;
             this.btn_editSelectedActivity.Text = "Modify Activity";
             this.btn_editSelectedActivity.UseVisualStyleBackColor = false;
+            this.btn_editSelectedActivity.Click += new System.EventHandler(this.btn_editSelectedActivity_Click);
             // 
             // btn_deleteSelectedActivity
             // 
@@ -80,6 +81,7 @@ namespace VehicleAppForms
             this.btn_deleteSelectedActivity.TabIndex = 3;
             this.btn_deleteSelectedActivity.Text = "Delete Activity";
             this.btn_deleteSelectedActivity.UseVisualStyleBackColor = false;
+            this.btn_deleteSelectedActivity.Click += new System.EventHandler(this.btn_deleteSelectedActivity_Click);
             // 
             // lbl_vehiclesActivityRevenue
             // 
@@ -105,7 +107,8 @@ namespace VehicleAppForms
             // 
             this.txt_vehicleActivityRevenueAmount.Location = new System.Drawing.Point(426, 248);
             this.txt_vehicleActivityRevenueAmount.Name = "txt_vehicleActivityRevenueAmount";
-            this.txt_vehicleActivityRevenueAmount.Size = new System.Drawing.Size(100, 27);
+            this.txt_vehicleActivityRevenueAmount.ReadOnly = true;
+            this.txt_vehicleActivityRevenueAmount.Size = new System.Drawing.Size(142, 27);
             this.txt_vehicleActivityRevenueAmount.TabIndex = 6;
             // 
             // cmb_sortBy
@@ -115,11 +118,13 @@ namespace VehicleAppForms
             "Name",
             "Date",
             "Max Revenue",
-            "Activity Type"});
+            "Activity Type",
+            "Activity ID"});
             this.cmb_sortBy.Location = new System.Drawing.Point(278, 17);
             this.cmb_sortBy.Name = "cmb_sortBy";
             this.cmb_sortBy.Size = new System.Drawing.Size(121, 28);
             this.cmb_sortBy.TabIndex = 7;
+            this.cmb_sortBy.SelectedIndexChanged += new System.EventHandler(this.cmb_sortBy_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -134,7 +139,7 @@ namespace VehicleAppForms
             // btn_closeActivityLog
             // 
             this.btn_closeActivityLog.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_closeActivityLog.Location = new System.Drawing.Point(564, 280);
+            this.btn_closeActivityLog.Location = new System.Drawing.Point(758, 293);
             this.btn_closeActivityLog.Name = "btn_closeActivityLog";
             this.btn_closeActivityLog.Size = new System.Drawing.Size(119, 35);
             this.btn_closeActivityLog.TabIndex = 9;
@@ -146,7 +151,7 @@ namespace VehicleAppForms
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(708, 327);
+            this.ClientSize = new System.Drawing.Size(912, 349);
             this.Controls.Add(this.btn_closeActivityLog);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_sortBy);

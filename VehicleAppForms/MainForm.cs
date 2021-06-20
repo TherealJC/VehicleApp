@@ -7,8 +7,12 @@ namespace VehicleAppForms
 {
     public partial class MainForm : Form
     {
+        //Singleton instance
+        public static readonly MainForm Instance = new MainForm();
 
-        public MainForm()
+        //gets selected vehicle of the singleton instance
+        public static Vehicle SelectedVehicle => (Vehicle)Instance.lst_registration.SelectedItem;
+        private MainForm()
         {
             InitializeComponent();
 
@@ -20,6 +24,14 @@ namespace VehicleAppForms
             lst_registration.DataSource = null;
             lst_registration.DataSource = DataAccess.VehicleInventory;
             lst_registration.DisplayMember = "RegistrationNumber";
+
+            decimal total = 0;
+            foreach (Activity a in DataAccess.LoadActivityModels())
+            {
+                total += a.GetTotalRevenue();
+            }
+
+            lbl_displayTotalRevenue.Text = total.ToString();
         }
 
 
@@ -90,6 +102,7 @@ namespace VehicleAppForms
         private void btn_viewActivityLog_Click(object sender, EventArgs e)
         {
             new ActivityLog().ShowDialog();
+            ConnectLists();
         }
     }
 }
