@@ -7,6 +7,7 @@ namespace VehicleAppForms
     public partial class RelocationActivityForm : Form, IActivityForm
     {
         Activity currentActivity;
+        private string resultMessage = ("The Relocation Activity has been successfully added to the database");
 
         public RelocationActivityForm()
         {
@@ -34,6 +35,10 @@ namespace VehicleAppForms
             dtp_relocationDate.Value = activity.RelocationDate;
             txt_kmsUsed.Text = activity.KmsUsed.ToString();
             txt_relocationCost.Text = activity.Cost.ToString();
+
+            btn_submitActivity.Text = "Update Activity";
+            Text = "Edit Relocation Activity";
+            resultMessage = "Vehicles relocation activity entry has been updated successfully";
         }
 
         private void btn_submitActivity_Click(object sender, EventArgs e)
@@ -50,6 +55,7 @@ namespace VehicleAppForms
                     Cost = decimal.Parse(txt_relocationCost.Text)
                 };
 
+                MessageBox.Show(resultMessage);
                 DialogResult = DialogResult.OK;
             }
             else
@@ -61,6 +67,26 @@ namespace VehicleAppForms
         private bool ValidateForm()
         {
             bool output = true;
+            decimal relocationCost = 0;
+            bool hiringCostValidNumber = decimal.TryParse(txt_relocationCost.Text, out relocationCost);
+
+            int kmCheck = 0;
+            bool kmCheckIfValid = int.TryParse(txt_kmsUsed.Text, out kmCheck);
+
+            if (txt_activityName.Text.Length == 0)
+            {
+                output = false;
+            }
+
+            if (kmCheck <= 0)
+            {
+                output = false;
+            }
+
+            if (relocationCost <= 0)
+            {
+                output = false;
+            }
 
             return output;
         }

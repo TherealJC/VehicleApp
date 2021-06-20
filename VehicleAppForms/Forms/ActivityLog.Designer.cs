@@ -45,7 +45,7 @@ namespace VehicleAppForms
             // 
             this.lst_activityLog.FormattingEnabled = true;
             this.lst_activityLog.ItemHeight = 20;
-            this.lst_activityLog.Location = new System.Drawing.Point(214, 51);
+            this.lst_activityLog.Location = new System.Drawing.Point(214, 52);
             this.lst_activityLog.Name = "lst_activityLog";
             this.lst_activityLog.Size = new System.Drawing.Size(663, 184);
             this.lst_activityLog.TabIndex = 0;
@@ -87,7 +87,7 @@ namespace VehicleAppForms
             // 
             this.lbl_vehiclesActivityRevenue.AutoSize = true;
             this.lbl_vehiclesActivityRevenue.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_vehiclesActivityRevenue.Location = new System.Drawing.Point(210, 248);
+            this.lbl_vehiclesActivityRevenue.Location = new System.Drawing.Point(210, 245);
             this.lbl_vehiclesActivityRevenue.Name = "lbl_vehiclesActivityRevenue";
             this.lbl_vehiclesActivityRevenue.Size = new System.Drawing.Size(189, 20);
             this.lbl_vehiclesActivityRevenue.TabIndex = 4;
@@ -97,7 +97,7 @@ namespace VehicleAppForms
             // 
             this.lbl_activityDollarSign.AutoSize = true;
             this.lbl_activityDollarSign.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lbl_activityDollarSign.Location = new System.Drawing.Point(396, 244);
+            this.lbl_activityDollarSign.Location = new System.Drawing.Point(396, 241);
             this.lbl_activityDollarSign.Name = "lbl_activityDollarSign";
             this.lbl_activityDollarSign.Size = new System.Drawing.Size(24, 28);
             this.lbl_activityDollarSign.TabIndex = 5;
@@ -105,7 +105,7 @@ namespace VehicleAppForms
             // 
             // txt_vehicleActivityRevenueAmount
             // 
-            this.txt_vehicleActivityRevenueAmount.Location = new System.Drawing.Point(426, 248);
+            this.txt_vehicleActivityRevenueAmount.Location = new System.Drawing.Point(426, 241);
             this.txt_vehicleActivityRevenueAmount.Name = "txt_vehicleActivityRevenueAmount";
             this.txt_vehicleActivityRevenueAmount.ReadOnly = true;
             this.txt_vehicleActivityRevenueAmount.Size = new System.Drawing.Size(142, 27);
@@ -130,7 +130,7 @@ namespace VehicleAppForms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(212, 20);
+            this.label1.Location = new System.Drawing.Point(210, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 8;
@@ -139,7 +139,7 @@ namespace VehicleAppForms
             // btn_closeActivityLog
             // 
             this.btn_closeActivityLog.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_closeActivityLog.Location = new System.Drawing.Point(758, 293);
+            this.btn_closeActivityLog.Location = new System.Drawing.Point(758, 254);
             this.btn_closeActivityLog.Name = "btn_closeActivityLog";
             this.btn_closeActivityLog.Size = new System.Drawing.Size(119, 35);
             this.btn_closeActivityLog.TabIndex = 9;
@@ -151,7 +151,7 @@ namespace VehicleAppForms
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(912, 349);
+            this.ClientSize = new System.Drawing.Size(900, 309);
             this.Controls.Add(this.btn_closeActivityLog);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_sortBy);
@@ -164,6 +164,7 @@ namespace VehicleAppForms
             this.Controls.Add(this.lst_activityLog);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Name = "ActivityLog";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vehicles Activity Log";
             this.ResumeLayout(false);
             this.PerformLayout();

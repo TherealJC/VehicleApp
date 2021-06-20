@@ -106,6 +106,7 @@ namespace VehicleAppForms
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Name = "SelectActivityType";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Select Activity Type";
             this.ResumeLayout(false);
             this.PerformLayout();

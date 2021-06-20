@@ -90,9 +90,9 @@ namespace VehicleAppForms
             this.lbl_hiringCost.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lbl_hiringCost.Location = new System.Drawing.Point(77, 248);
             this.lbl_hiringCost.Name = "lbl_hiringCost";
-            this.lbl_hiringCost.Size = new System.Drawing.Size(95, 23);
+            this.lbl_hiringCost.Size = new System.Drawing.Size(109, 23);
             this.lbl_hiringCost.TabIndex = 5;
-            this.lbl_hiringCost.Text = "Hiring Cost";
+            this.lbl_hiringCost.Text = "Hiring Cost $";
             // 
             // txt_activityName
             // 
@@ -138,7 +138,7 @@ namespace VehicleAppForms
             // 
             this.btn_submitActivity.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_submitActivity.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btn_submitActivity.Location = new System.Drawing.Point(341, 288);
+            this.btn_submitActivity.Location = new System.Drawing.Point(328, 282);
             this.btn_submitActivity.Name = "btn_submitActivity";
             this.btn_submitActivity.Size = new System.Drawing.Size(147, 44);
             this.btn_submitActivity.TabIndex = 14;
@@ -149,7 +149,7 @@ namespace VehicleAppForms
             // lbl_activityID
             // 
             this.lbl_activityID.AutoSize = true;
-            this.lbl_activityID.Location = new System.Drawing.Point(77, 33);
+            this.lbl_activityID.Location = new System.Drawing.Point(96, 29);
             this.lbl_activityID.Name = "lbl_activityID";
             this.lbl_activityID.Size = new System.Drawing.Size(77, 20);
             this.lbl_activityID.TabIndex = 15;
@@ -157,7 +157,7 @@ namespace VehicleAppForms
             // 
             // txt_activityID
             // 
-            this.txt_activityID.Location = new System.Drawing.Point(185, 32);
+            this.txt_activityID.Location = new System.Drawing.Point(186, 26);
             this.txt_activityID.Name = "txt_activityID";
             this.txt_activityID.ReadOnly = true;
             this.txt_activityID.Size = new System.Drawing.Size(145, 27);
@@ -167,7 +167,7 @@ namespace VehicleAppForms
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(516, 362);
+            this.ClientSize = new System.Drawing.Size(490, 337);
             this.Controls.Add(this.txt_activityID);
             this.Controls.Add(this.lbl_activityID);
             this.Controls.Add(this.btn_submitActivity);
@@ -183,6 +183,7 @@ namespace VehicleAppForms
             this.Controls.Add(this.lbl_activityName);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Name = "HiringActivityForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Hiring Activity";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -86,11 +86,11 @@ namespace VehicleAppForms
             // 
             this.lbl_relocationCost.AutoSize = true;
             this.lbl_relocationCost.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lbl_relocationCost.Location = new System.Drawing.Point(60, 219);
+            this.lbl_relocationCost.Location = new System.Drawing.Point(46, 219);
             this.lbl_relocationCost.Name = "lbl_relocationCost";
-            this.lbl_relocationCost.Size = new System.Drawing.Size(129, 23);
+            this.lbl_relocationCost.Size = new System.Drawing.Size(143, 23);
             this.lbl_relocationCost.TabIndex = 4;
-            this.lbl_relocationCost.Text = "Relocation Cost";
+            this.lbl_relocationCost.Text = "Relocation Cost $";
             // 
             // txt_activityID
             // 
@@ -104,7 +104,7 @@ namespace VehicleAppForms
             // 
             this.txt_activityName.Location = new System.Drawing.Point(195, 68);
             this.txt_activityName.Name = "txt_activityName";
-            this.txt_activityName.Size = new System.Drawing.Size(164, 27);
+            this.txt_activityName.Size = new System.Drawing.Size(264, 27);
             this.txt_activityName.TabIndex = 6;
             // 
             // txt_kmsUsed
@@ -144,7 +144,7 @@ namespace VehicleAppForms
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(537, 303);
+            this.ClientSize = new System.Drawing.Size(537, 301);
             this.Controls.Add(this.btn_submitActivity);
             this.Controls.Add(this.dtp_relocationDate);
             this.Controls.Add(this.txt_relocationCost);
@@ -158,6 +158,7 @@ namespace VehicleAppForms
             this.Controls.Add(this.lbl_activityID);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Name = "RelocationActivityForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "New Relocation Activity";
             this.ResumeLayout(false);
             this.PerformLayout();

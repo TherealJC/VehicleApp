@@ -63,7 +63,7 @@ namespace VehicleAppForms
             // btn_editVehicle
             // 
             this.btn_editVehicle.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_editVehicle.Location = new System.Drawing.Point(23, 91);
+            this.btn_editVehicle.Location = new System.Drawing.Point(23, 99);
             this.btn_editVehicle.Name = "btn_editVehicle";
             this.btn_editVehicle.Size = new System.Drawing.Size(156, 42);
             this.btn_editVehicle.TabIndex = 1;
@@ -84,11 +84,12 @@ namespace VehicleAppForms
             // 
             // lst_registration
             // 
+            this.lst_registration.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lst_registration.FormattingEnabled = true;
             this.lst_registration.ItemHeight = 20;
             this.lst_registration.Location = new System.Drawing.Point(219, 29);
             this.lst_registration.Name = "lst_registration";
-            this.lst_registration.Size = new System.Drawing.Size(196, 244);
+            this.lst_registration.Size = new System.Drawing.Size(170, 224);
             this.lst_registration.TabIndex = 3;
             this.lst_registration.SelectedValueChanged += new System.EventHandler(this.lst_registration_SelectedValueChanged);
             // 
@@ -105,29 +106,31 @@ namespace VehicleAppForms
             // lbl_totalRevenue
             // 
             this.lbl_totalRevenue.AutoSize = true;
-            this.lbl_totalRevenue.Location = new System.Drawing.Point(215, 281);
+            this.lbl_totalRevenue.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_totalRevenue.Location = new System.Drawing.Point(190, 264);
             this.lbl_totalRevenue.Name = "lbl_totalRevenue";
-            this.lbl_totalRevenue.Size = new System.Drawing.Size(122, 20);
+            this.lbl_totalRevenue.Size = new System.Drawing.Size(179, 23);
             this.lbl_totalRevenue.TabIndex = 6;
-            this.lbl_totalRevenue.Text = "Total Revenue   $";
+            this.lbl_totalRevenue.Text = "Total Fleet Revenue  $";
             // 
             // lbl_displayTotalRevenue
             // 
             this.lbl_displayTotalRevenue.AutoSize = true;
-            this.lbl_displayTotalRevenue.Location = new System.Drawing.Point(355, 281);
+            this.lbl_displayTotalRevenue.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_displayTotalRevenue.Location = new System.Drawing.Point(375, 264);
             this.lbl_displayTotalRevenue.Name = "lbl_displayTotalRevenue";
-            this.lbl_displayTotalRevenue.Size = new System.Drawing.Size(36, 20);
+            this.lbl_displayTotalRevenue.Size = new System.Drawing.Size(41, 23);
             this.lbl_displayTotalRevenue.TabIndex = 7;
             this.lbl_displayTotalRevenue.Text = "0.00";
             // 
             // btn_viewActivityLog
             // 
             this.btn_viewActivityLog.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_viewActivityLog.Location = new System.Drawing.Point(23, 267);
+            this.btn_viewActivityLog.Location = new System.Drawing.Point(36, 252);
             this.btn_viewActivityLog.Name = "btn_viewActivityLog";
             this.btn_viewActivityLog.Size = new System.Drawing.Size(128, 49);
             this.btn_viewActivityLog.TabIndex = 8;
-            this.btn_viewActivityLog.Text = "View Activity Log";
+            this.btn_viewActivityLog.Text = "View Vehicles Activity Log";
             this.btn_viewActivityLog.UseVisualStyleBackColor = false;
             this.btn_viewActivityLog.Click += new System.EventHandler(this.btn_viewActivityLog_Click);
             // 
@@ -221,7 +224,7 @@ namespace VehicleAppForms
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(459, 577);
+            this.ClientSize = new System.Drawing.Size(432, 577);
             this.Controls.Add(this.txt_dailyHireCost);
             this.Controls.Add(this.txt_year);
             this.Controls.Add(this.txt_model);

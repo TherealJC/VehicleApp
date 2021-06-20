@@ -7,6 +7,7 @@ namespace VehicleAppForms
     public partial class HiringActivityForm : Form, IActivityForm
     {
         Activity currentActivity;
+        private string resultMessage = ("The Hiring Activity has been successfully added to the database");
 
         public HiringActivityForm()
         {
@@ -35,6 +36,10 @@ namespace VehicleAppForms
             dtp_startDate.Value = activity.StartDate;
             dtp_endDate.Value = activity.EndDate;
             txt_hiringCost.Text = activity.Cost.ToString();
+
+            btn_submitActivity.Text = "Update Activity";
+            Text = "Edit Hiring Activity";
+            resultMessage = "Vehicles hiring activity entry has been updated successfully";
         }
 
         private void btn_submitActivity_Click(object sender, EventArgs e)
@@ -52,6 +57,7 @@ namespace VehicleAppForms
                    Cost = decimal.Parse(txt_hiringCost.Text)
                 };
 
+                MessageBox.Show(resultMessage);
                 DialogResult = DialogResult.OK;
             }
             else
