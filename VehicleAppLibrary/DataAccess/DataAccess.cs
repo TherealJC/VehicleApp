@@ -104,6 +104,22 @@ namespace VehicleAppLibrary
             return model;
         }
 
+        public static bool CheckVehicleExists(string registration)
+        {
+            bool vehicleExists = false;
+            for (int i = 0; i < vehicleInventory.Count; i++)
+            {
+                Vehicle existing = vehicleInventory[i];
+                if (existing.RegistrationNumber == registration)
+                {
+                    vehicleExists = true;
+                    break;
+                }
+            }
+            return vehicleExists;
+        }
+
+
         public static void DeleteVehicle(Vehicle model)
         {
             for (int i = 0; i < vehicleInventory.Count; i++)
@@ -116,6 +132,7 @@ namespace VehicleAppLibrary
                 }
             }
             SaveVehiclesToFile(vehicleInventory, VehicleFile);
+            SaveActivitiesToFile(LoadActivityModels().Where(a => a.RegistrationNumber != model.RegistrationNumber).ToList(), ActivityFile);
         }
 
         private static void SaveVehiclesToFile(List<Vehicle> models, string fileName)

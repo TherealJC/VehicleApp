@@ -39,6 +39,7 @@ namespace VehicleAppForms
             this.cmb_sortBy = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_closeActivityLog = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lst_activityLog
@@ -120,7 +121,7 @@ namespace VehicleAppForms
             "Max Revenue",
             "Activity Type",
             "Activity ID"});
-            this.cmb_sortBy.Location = new System.Drawing.Point(278, 17);
+            this.cmb_sortBy.Location = new System.Drawing.Point(756, 17);
             this.cmb_sortBy.Name = "cmb_sortBy";
             this.cmb_sortBy.Size = new System.Drawing.Size(121, 28);
             this.cmb_sortBy.TabIndex = 7;
@@ -130,7 +131,7 @@ namespace VehicleAppForms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(210, 20);
+            this.label1.Location = new System.Drawing.Point(688, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 8;
@@ -147,11 +148,22 @@ namespace VehicleAppForms
             this.btn_closeActivityLog.UseVisualStyleBackColor = false;
             this.btn_closeActivityLog.Click += new System.EventHandler(this.btn_closeActivityLog_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(210, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 19);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Activity Type";
+            // 
             // ActivityLog
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 309);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_closeActivityLog);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_sortBy);
@@ -183,5 +195,6 @@ namespace VehicleAppForms
         private System.Windows.Forms.ComboBox cmb_sortBy;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_closeActivityLog;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -7,6 +7,7 @@ namespace VehicleAppForms
     public partial class CreateVehicleForm : Form
     {
         string resultMessage = ("The Vehicle has been successfully added to the TextFile Inventory");
+        string errorMessage = ("This Form has invalid or missing information, Please check it and try again");
 
         private Vehicle vehicle;
         private CreateVehicleForm()
@@ -67,7 +68,7 @@ namespace VehicleAppForms
             else
             {
                 //When Validator equals not true, e.g improper data format, return the error message
-                MessageBox.Show("This Form has invalid or missing information, Please check it and try again");
+                MessageBox.Show(errorMessage);
             }
         }
 
@@ -75,6 +76,12 @@ namespace VehicleAppForms
         private bool ValidateForm()
         {
             bool output = true;
+
+            if (DataAccess.CheckVehicleExists(txt_registrationNumber.Text))
+            {
+                output = false;
+                errorMessage = ("ERROR: A vehicle with this registration number already exists");
+            }
 
             decimal dailyHireCost = 0;
             bool dailyHireCostValidNumber = decimal.TryParse(txt_dailyHireCost.Text, out dailyHireCost);
@@ -85,31 +92,37 @@ namespace VehicleAppForms
             if (txt_registrationNumber.Text.Length == 0) //Check Rego #
             {
                 output = false;
+                errorMessage = ("Please enter a registration number for the Vehicle");
             }
 
             if (txt_model.Text.Length == 0) //Check Model
             {
                 output = false;
+                errorMessage = ("Please enter a Model for the Vehicle");
             }
 
             if (txt_make.Text.Length == 0) //Check Make
             {
                 output = false;
+                errorMessage = ("Please enter a Make for the Vehicle");
             }
 
             if (vehicleYear < 1800) //Check Year
             {
                 output = false;
+                errorMessage = ("Please enter The Year that the Vehicle was made (Cannot be more than 200 years ago)");
             }
 
             if (vehicleYear >= 2022) //Check Year
             {
                 output = false;
+                errorMessage = ("Please enter a valid Year for the Vehicle (Vehicle cannot exist before its creation date)");
             }
 
             if (dailyHireCost < 1) //if input value is less than 1
             {
                 output = false;
+                errorMessage = "Please enter the daily hiring cost for this vehicle (Must be more than 0)";
             }
 
             return output;
