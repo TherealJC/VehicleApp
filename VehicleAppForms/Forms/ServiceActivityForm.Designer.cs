@@ -118,7 +118,7 @@ namespace VehicleAppForms
             // 
             this.txt_description.Location = new System.Drawing.Point(194, 174);
             this.txt_description.Name = "txt_description";
-            this.txt_description.Size = new System.Drawing.Size(157, 27);
+            this.txt_description.Size = new System.Drawing.Size(257, 27);
             this.txt_description.TabIndex = 8;
             // 
             // txt_serviceCost
@@ -138,6 +138,7 @@ namespace VehicleAppForms
             this.btn_submitActivity.TabIndex = 10;
             this.btn_submitActivity.Text = "Submit Activity";
             this.btn_submitActivity.UseVisualStyleBackColor = false;
+            this.btn_submitActivity.Click += new System.EventHandler(this.btn_submitActivity_Click);
             // 
             // ServiceActivityForm
             // 

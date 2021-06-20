@@ -97,7 +97,12 @@ namespace VehicleAppForms
                 output = false;
             }
 
-            if (vehicleYear < 1) //Check Year
+            if (vehicleYear < 1800) //Check Year
+            {
+                output = false;
+            }
+
+            if (vehicleYear >= 2022) //Check Year
             {
                 output = false;
             }

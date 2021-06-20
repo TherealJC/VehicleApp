@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using VehicleAppLibrary;
 
@@ -46,7 +39,7 @@ namespace VehicleAppForms
 
         private void btn_submitActivity_Click(object sender, EventArgs e)
         {
-            if(ValidateForm())
+            if (ValidateForm())
             {
                 currentActivity = new HiringActivity()
                 {
@@ -63,14 +56,30 @@ namespace VehicleAppForms
             }
             else
             {
-
+                MessageBox.Show("This Form has invalid or missing information, Please check it and try again");
             }
-
         }
 
         private bool ValidateForm()
         {
             bool output = true;
+            decimal hiringCost = 0;
+            bool hiringCostValidNumber = decimal.TryParse(txt_hiringCost.Text, out hiringCost);
+
+            if (txt_activityName.Text.Length == 0)
+            {
+                output = false;
+            }
+
+            if (txt_customerName.Text.Length == 0)
+            {
+                output = false;
+            }
+
+            if (hiringCost <= 0)
+            {
+                output = false;
+            }
 
             return output;
         }

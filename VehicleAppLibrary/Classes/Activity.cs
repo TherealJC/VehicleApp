@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VehicleAppLibrary
 {
@@ -47,18 +43,16 @@ namespace VehicleAppLibrary
                     Activity a = new HiringActivity();
                     a.LoadFromColumns(columns);
                     return a;
-                case ActivityType.Relocation:
-                    Activity b = new RelocationActivity();
+                case ActivityType.Service:
+                    Activity b = new ServiceActivity();
                     b.LoadFromColumns(columns);
                     return b;
-                case ActivityType.Service:
-                    Activity c = new ServiceActivity();
+                case ActivityType.Relocation:
+                    Activity c = new RelocationActivity();
                     c.LoadFromColumns(columns);
                     return c;
                 default:
                     return null;
-                    break;
-
             }
         }
 

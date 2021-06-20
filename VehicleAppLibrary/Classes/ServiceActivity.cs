@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VehicleAppLibrary
 {
@@ -24,7 +20,10 @@ namespace VehicleAppLibrary
             Description = (columns[startingPoint++]);
         }
 
-
+        public override string ToString()
+        {
+            return $"{ActivityType.Service} | {ActivityName} |  Cost: {Cost}  |  Service Date: {ServiceDate.ToShortDateString()} | Description: {Description}";
+        }
 
         public override DateTime GetDate()
         {

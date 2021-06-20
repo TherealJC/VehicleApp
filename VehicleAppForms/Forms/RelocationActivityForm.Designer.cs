@@ -138,6 +138,7 @@ namespace VehicleAppForms
             this.btn_submitActivity.TabIndex = 10;
             this.btn_submitActivity.Text = "Submit Activity";
             this.btn_submitActivity.UseVisualStyleBackColor = false;
+            this.btn_submitActivity.Click += new System.EventHandler(this.btn_submitActivity_Click);
             // 
             // RelocationActivityForm
             // 

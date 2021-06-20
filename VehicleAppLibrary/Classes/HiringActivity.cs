@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VehicleAppLibrary
 {
@@ -28,7 +24,7 @@ namespace VehicleAppLibrary
 
         public override string ToString()
         {
-           return $"{ActivityType.Hiring} | Activity Name: {ActivityName}  |  Customer: {CustomerName} | Start Date: {StartDate.ToShortDateString()} | End Date: {EndDate.ToShortDateString()}  |  Cost: {Cost}";
+           return $"{ActivityType.Hiring} | {ActivityName}  |  Customer: {CustomerName} | Cost: {Cost}  |  Start Date: {StartDate.ToShortDateString()} | End Date: {EndDate.ToShortDateString()}";
         }
         public override DateTime GetDate()
         {

@@ -60,9 +60,21 @@ namespace VehicleAppForms
                         ConnectLists();
                     }
                     break;
+
                 case ServiceActivity activity:
+                    if (new ServiceActivityForm().ShowEdit(activity) is Activity b)
+                    {
+                        DataAccess.CreateActivity(b);
+                        ConnectLists();
+                    }
                     break;
+
                 case RelocationActivity activity:
+                    if (new RelocationActivityForm().ShowEdit(activity) is Activity c)
+                    {
+                        DataAccess.CreateActivity(c);
+                        ConnectLists();
+                    }
                     break;
             }
         }
