@@ -15,8 +15,8 @@ namespace VehicleAppForms
         public static Activity ShowCreate()
         {
             SelectActivityType form = new SelectActivityType();
-            form.ShowDialog();
-            return form._newActivity;
+            form.ShowDialog(); //Open form depending on which activity types is selected
+            return form._newActivity; //On forms close, _currentActivity is set to _newActivity
         }
 
         private void Btn_Continue_Click(object sender, EventArgs e)
