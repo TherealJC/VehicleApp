@@ -118,7 +118,7 @@ namespace VehicleAppForms
             this.cmb_sortBy.Items.AddRange(new object[] {
             "Name",
             "Date",
-            "Max Revenue",
+            "Highest Cost",
             "Activity Type",
             "Activity ID"});
             this.cmb_sortBy.Location = new System.Drawing.Point(756, 17);

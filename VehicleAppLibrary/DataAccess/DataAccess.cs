@@ -1,12 +1,13 @@
-﻿using System;
+﻿using System; //Allow access to File locations on device
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
+using System.Linq; //For ToList(), and .Where
 
 namespace VehicleAppLibrary
 {
     public static class DataAccess
     {
+
         private readonly static string VehicleFile = $@"{Environment.CurrentDirectory}\VehicleAppData.csv";
         private readonly static string ActivityFile = $@"{Environment.CurrentDirectory}\ActivityData.csv";
 
@@ -18,6 +19,7 @@ namespace VehicleAppLibrary
 
         private static List<Activity> activityInventory = LoadActivityModels();
         public static Activity[] ActivityInventory => activityInventory.ToArray();
+
 
         public static void CreateActivity(Activity model)
         {
@@ -40,6 +42,8 @@ namespace VehicleAppLibrary
             SaveActivitiesToFile(database, ActivityFile);
         }
 
+
+
         public static void DeleteActivity(int ActivityID)
         {
             List<Activity> database = LoadActivityModels();
@@ -55,12 +59,8 @@ namespace VehicleAppLibrary
             SaveActivitiesToFile(database, ActivityFile);
         }
 
-        /// <summary>
-        /// Load the textfile, read all lines, create a list of all current models.
-        /// If file does not exist, create a new List<string>
-        /// </summary>
-        /// <param name="file"></param>
-        /// <returns>A list of all rows/entries in the text file</returns>
+
+
         public static List<string> LoadFile(string file)
         {
             if (!File.Exists(file))  //If file does not exist
@@ -71,11 +71,7 @@ namespace VehicleAppLibrary
         }
 
 
-        /// <summary>
-        /// Create VehicleModel from model, then saves the Vehicle Model to the Text File
-        /// </summary>
-        /// <param name="model"> A model containing the current Vehicle's Values(from createVehicleForm)</param>
-        /// <returns> The Vehicle's attributes</returns>
+
         public static Vehicle CreateVehicle(Vehicle model)
         {
             //'vehicles' = A list containing all lines from the textfile as VehicleModels 

@@ -44,7 +44,7 @@ namespace VehicleAppForms
             // 
             // txt_activityID
             // 
-            this.txt_activityID.Location = new System.Drawing.Point(152, 21);
+            this.txt_activityID.Location = new System.Drawing.Point(164, 21);
             this.txt_activityID.Name = "txt_activityID";
             this.txt_activityID.ReadOnly = true;
             this.txt_activityID.Size = new System.Drawing.Size(157, 27);
@@ -52,16 +52,17 @@ namespace VehicleAppForms
             // 
             // txt_activityName
             // 
-            this.txt_activityName.Location = new System.Drawing.Point(152, 71);
+            this.txt_activityName.Location = new System.Drawing.Point(164, 69);
+            this.txt_activityName.MaxLength = 30;
             this.txt_activityName.Name = "txt_activityName";
-            this.txt_activityName.Size = new System.Drawing.Size(227, 27);
+            this.txt_activityName.Size = new System.Drawing.Size(257, 27);
             this.txt_activityName.TabIndex = 1;
             // 
             // lbl_activityID
             // 
             this.lbl_activityID.AutoSize = true;
             this.lbl_activityID.Font = new System.Drawing.Font("Segoe UI", 9.8F);
-            this.lbl_activityID.Location = new System.Drawing.Point(48, 23);
+            this.lbl_activityID.Location = new System.Drawing.Point(73, 23);
             this.lbl_activityID.Name = "lbl_activityID";
             this.lbl_activityID.Size = new System.Drawing.Size(87, 23);
             this.lbl_activityID.TabIndex = 2;
@@ -71,17 +72,17 @@ namespace VehicleAppForms
             // 
             this.lbl_activityName.AutoSize = true;
             this.lbl_activityName.Font = new System.Drawing.Font("Segoe UI", 9.8F);
-            this.lbl_activityName.Location = new System.Drawing.Point(19, 71);
+            this.lbl_activityName.Location = new System.Drawing.Point(12, 71);
             this.lbl_activityName.Name = "lbl_activityName";
-            this.lbl_activityName.Size = new System.Drawing.Size(116, 23);
+            this.lbl_activityName.Size = new System.Drawing.Size(148, 23);
             this.lbl_activityName.TabIndex = 3;
-            this.lbl_activityName.Text = "Activity Name";
+            this.lbl_activityName.Text = "Workshop/Garage";
             // 
             // lbl_serviceDate
             // 
             this.lbl_serviceDate.AutoSize = true;
             this.lbl_serviceDate.Font = new System.Drawing.Font("Segoe UI", 9.8F);
-            this.lbl_serviceDate.Location = new System.Drawing.Point(31, 121);
+            this.lbl_serviceDate.Location = new System.Drawing.Point(54, 119);
             this.lbl_serviceDate.Name = "lbl_serviceDate";
             this.lbl_serviceDate.Size = new System.Drawing.Size(104, 23);
             this.lbl_serviceDate.TabIndex = 4;
@@ -91,7 +92,7 @@ namespace VehicleAppForms
             // 
             this.lbl_description.AutoSize = true;
             this.lbl_description.Font = new System.Drawing.Font("Segoe UI", 9.8F);
-            this.lbl_description.Location = new System.Drawing.Point(39, 171);
+            this.lbl_description.Location = new System.Drawing.Point(62, 169);
             this.lbl_description.Name = "lbl_description";
             this.lbl_description.Size = new System.Drawing.Size(96, 23);
             this.lbl_description.TabIndex = 5;
@@ -101,7 +102,7 @@ namespace VehicleAppForms
             // 
             this.lbl_serviceCost.AutoSize = true;
             this.lbl_serviceCost.Font = new System.Drawing.Font("Segoe UI", 9.8F);
-            this.lbl_serviceCost.Location = new System.Drawing.Point(33, 276);
+            this.lbl_serviceCost.Location = new System.Drawing.Point(56, 274);
             this.lbl_serviceCost.Name = "lbl_serviceCost";
             this.lbl_serviceCost.Size = new System.Drawing.Size(102, 23);
             this.lbl_serviceCost.TabIndex = 6;
@@ -109,14 +110,15 @@ namespace VehicleAppForms
             // 
             // dtp_serviceDate
             // 
-            this.dtp_serviceDate.Location = new System.Drawing.Point(152, 121);
+            this.dtp_serviceDate.Location = new System.Drawing.Point(164, 119);
             this.dtp_serviceDate.Name = "dtp_serviceDate";
             this.dtp_serviceDate.Size = new System.Drawing.Size(257, 27);
             this.dtp_serviceDate.TabIndex = 7;
             // 
             // txt_description
             // 
-            this.txt_description.Location = new System.Drawing.Point(152, 171);
+            this.txt_description.Location = new System.Drawing.Point(164, 169);
+            this.txt_description.MaxLength = 200;
             this.txt_description.Multiline = true;
             this.txt_description.Name = "txt_description";
             this.txt_description.Size = new System.Drawing.Size(257, 86);
@@ -124,7 +126,8 @@ namespace VehicleAppForms
             // 
             // txt_serviceCost
             // 
-            this.txt_serviceCost.Location = new System.Drawing.Point(152, 276);
+            this.txt_serviceCost.Location = new System.Drawing.Point(164, 274);
+            this.txt_serviceCost.MaxLength = 7;
             this.txt_serviceCost.Name = "txt_serviceCost";
             this.txt_serviceCost.Size = new System.Drawing.Size(157, 27);
             this.txt_serviceCost.TabIndex = 9;
@@ -133,7 +136,7 @@ namespace VehicleAppForms
             // 
             this.btn_submitActivity.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_submitActivity.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btn_submitActivity.Location = new System.Drawing.Point(280, 331);
+            this.btn_submitActivity.Location = new System.Drawing.Point(280, 319);
             this.btn_submitActivity.Name = "btn_submitActivity";
             this.btn_submitActivity.Size = new System.Drawing.Size(153, 48);
             this.btn_submitActivity.TabIndex = 10;
@@ -145,7 +148,7 @@ namespace VehicleAppForms
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(445, 396);
+            this.ClientSize = new System.Drawing.Size(459, 385);
             this.Controls.Add(this.btn_submitActivity);
             this.Controls.Add(this.txt_serviceCost);
             this.Controls.Add(this.txt_description);

@@ -6,8 +6,8 @@ namespace VehicleAppForms
 {
     public partial class CreateVehicleForm : Form
     {
-        string resultMessage = ("The Vehicle has been successfully added to the TextFile Inventory");
-        string errorMessage = ("This Form has invalid or missing information, Please check it and try again");
+        private string resultMessage = ("The Vehicle has been successfully added to the TextFile Inventory");
+        private string errorMessage = ("This Form has invalid or missing information, Please check it and try again");
 
         private Vehicle vehicle;
         private CreateVehicleForm()
@@ -15,7 +15,7 @@ namespace VehicleAppForms
             InitializeComponent();
         }
 
-        //Takes a Vehicle and fills in the tex boxes
+        //Takes a Vehicle and fills in the text boxes. This is used for modify/edit Vehicle
         private void FillForm(Vehicle vm)
         {
             txt_registrationNumber.Enabled = false;
@@ -54,7 +54,7 @@ namespace VehicleAppForms
         {
             if (ValidateForm())    //If the validation has succeeded e.g. no improper data input
             {
-                vehicle = new Vehicle(  //Create the vehicle model from user input
+                vehicle = new Vehicle(  //Create a new vehicle from user input
                     txt_registrationNumber.Text,
                     txt_make.Text,
                     txt_model.Text,

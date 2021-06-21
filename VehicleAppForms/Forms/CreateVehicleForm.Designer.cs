@@ -105,6 +105,7 @@ namespace VehicleAppForms
             // txt_make
             // 
             this.txt_make.Location = new System.Drawing.Point(190, 87);
+            this.txt_make.MaxLength = 30;
             this.txt_make.Name = "txt_make";
             this.txt_make.Size = new System.Drawing.Size(193, 27);
             this.txt_make.TabIndex = 6;
@@ -112,6 +113,7 @@ namespace VehicleAppForms
             // txt_model
             // 
             this.txt_model.Location = new System.Drawing.Point(190, 131);
+            this.txt_model.MaxLength = 30;
             this.txt_model.Name = "txt_model";
             this.txt_model.Size = new System.Drawing.Size(193, 27);
             this.txt_model.TabIndex = 7;
@@ -127,6 +129,7 @@ namespace VehicleAppForms
             // txt_dailyHireCost
             // 
             this.txt_dailyHireCost.Location = new System.Drawing.Point(190, 229);
+            this.txt_dailyHireCost.MaxLength = 6;
             this.txt_dailyHireCost.Name = "txt_dailyHireCost";
             this.txt_dailyHireCost.Size = new System.Drawing.Size(141, 27);
             this.txt_dailyHireCost.TabIndex = 9;

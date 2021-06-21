@@ -48,7 +48,7 @@ namespace VehicleAppForms
             // 
             this.lbl_activityName.AutoSize = true;
             this.lbl_activityName.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lbl_activityName.Location = new System.Drawing.Point(56, 68);
+            this.lbl_activityName.Location = new System.Drawing.Point(56, 72);
             this.lbl_activityName.Name = "lbl_activityName";
             this.lbl_activityName.Size = new System.Drawing.Size(116, 23);
             this.lbl_activityName.TabIndex = 1;
@@ -97,7 +97,8 @@ namespace VehicleAppForms
             // txt_activityName
             // 
             this.txt_activityName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_activityName.Location = new System.Drawing.Point(186, 68);
+            this.txt_activityName.Location = new System.Drawing.Point(186, 71);
+            this.txt_activityName.MaxLength = 30;
             this.txt_activityName.Name = "txt_activityName";
             this.txt_activityName.Size = new System.Drawing.Size(230, 27);
             this.txt_activityName.TabIndex = 7;
@@ -106,6 +107,7 @@ namespace VehicleAppForms
             // 
             this.txt_customerName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_customerName.Location = new System.Drawing.Point(186, 115);
+            this.txt_customerName.MaxLength = 30;
             this.txt_customerName.Name = "txt_customerName";
             this.txt_customerName.Size = new System.Drawing.Size(230, 27);
             this.txt_customerName.TabIndex = 8;
@@ -114,6 +116,7 @@ namespace VehicleAppForms
             // 
             this.txt_hiringCost.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_hiringCost.Location = new System.Drawing.Point(186, 248);
+            this.txt_hiringCost.MaxLength = 8;
             this.txt_hiringCost.Name = "txt_hiringCost";
             this.txt_hiringCost.Size = new System.Drawing.Size(113, 27);
             this.txt_hiringCost.TabIndex = 11;

@@ -22,7 +22,7 @@ namespace VehicleAppLibrary
 
         public override string ToString()
         {
-            return $"{ActivityType.Service} | {ActivityName} |  Cost: {Cost}  |  Service Date: {ServiceDate.ToShortDateString()} | Description: {Description}";
+            return $"{ActivityType.Service} | Workshop: {ActivityName} |  Cost: {Cost}  |  Service Date: {ServiceDate.ToShortDateString()} | Description: {Description}";
         }
 
         public override DateTime GetDate()

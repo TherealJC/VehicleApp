@@ -47,6 +47,7 @@ namespace VehicleAppForms
             this.txt_model = new System.Windows.Forms.TextBox();
             this.txt_year = new System.Windows.Forms.TextBox();
             this.txt_dailyHireCost = new System.Windows.Forms.TextBox();
+            this.lbl_vehicleInventory = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_createVehicle
@@ -63,7 +64,7 @@ namespace VehicleAppForms
             // btn_editVehicle
             // 
             this.btn_editVehicle.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_editVehicle.Location = new System.Drawing.Point(23, 99);
+            this.btn_editVehicle.Location = new System.Drawing.Point(23, 88);
             this.btn_editVehicle.Name = "btn_editVehicle";
             this.btn_editVehicle.Size = new System.Drawing.Size(156, 42);
             this.btn_editVehicle.TabIndex = 1;
@@ -74,7 +75,7 @@ namespace VehicleAppForms
             // btn_deleteVehicle
             // 
             this.btn_deleteVehicle.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_deleteVehicle.Location = new System.Drawing.Point(23, 172);
+            this.btn_deleteVehicle.Location = new System.Drawing.Point(23, 146);
             this.btn_deleteVehicle.Name = "btn_deleteVehicle";
             this.btn_deleteVehicle.Size = new System.Drawing.Size(156, 42);
             this.btn_deleteVehicle.TabIndex = 2;
@@ -97,7 +98,7 @@ namespace VehicleAppForms
             // 
             this.lbl_quickView.AutoSize = true;
             this.lbl_quickView.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_quickView.Location = new System.Drawing.Point(173, 337);
+            this.lbl_quickView.Location = new System.Drawing.Point(200, 330);
             this.lbl_quickView.Name = "lbl_quickView";
             this.lbl_quickView.Size = new System.Drawing.Size(86, 20);
             this.lbl_quickView.TabIndex = 4;
@@ -107,7 +108,7 @@ namespace VehicleAppForms
             // 
             this.lbl_totalRevenue.AutoSize = true;
             this.lbl_totalRevenue.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_totalRevenue.Location = new System.Drawing.Point(201, 264);
+            this.lbl_totalRevenue.Location = new System.Drawing.Point(200, 265);
             this.lbl_totalRevenue.Name = "lbl_totalRevenue";
             this.lbl_totalRevenue.Size = new System.Drawing.Size(174, 23);
             this.lbl_totalRevenue.TabIndex = 6;
@@ -117,7 +118,7 @@ namespace VehicleAppForms
             // 
             this.lbl_displayTotalRevenue.AutoSize = true;
             this.lbl_displayTotalRevenue.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_displayTotalRevenue.Location = new System.Drawing.Point(379, 264);
+            this.lbl_displayTotalRevenue.Location = new System.Drawing.Point(345, 265);
             this.lbl_displayTotalRevenue.Name = "lbl_displayTotalRevenue";
             this.lbl_displayTotalRevenue.Size = new System.Drawing.Size(41, 23);
             this.lbl_displayTotalRevenue.TabIndex = 7;
@@ -126,7 +127,7 @@ namespace VehicleAppForms
             // btn_viewActivityLog
             // 
             this.btn_viewActivityLog.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_viewActivityLog.Location = new System.Drawing.Point(36, 252);
+            this.btn_viewActivityLog.Location = new System.Drawing.Point(36, 204);
             this.btn_viewActivityLog.Name = "btn_viewActivityLog";
             this.btn_viewActivityLog.Size = new System.Drawing.Size(128, 49);
             this.btn_viewActivityLog.TabIndex = 8;
@@ -137,7 +138,7 @@ namespace VehicleAppForms
             // lbl_registrationNumber
             // 
             this.lbl_registrationNumber.AutoSize = true;
-            this.lbl_registrationNumber.Location = new System.Drawing.Point(17, 373);
+            this.lbl_registrationNumber.Location = new System.Drawing.Point(42, 366);
             this.lbl_registrationNumber.Name = "lbl_registrationNumber";
             this.lbl_registrationNumber.Size = new System.Drawing.Size(147, 20);
             this.lbl_registrationNumber.TabIndex = 9;
@@ -146,7 +147,7 @@ namespace VehicleAppForms
             // lbl_make
             // 
             this.lbl_make.AutoSize = true;
-            this.lbl_make.Location = new System.Drawing.Point(119, 414);
+            this.lbl_make.Location = new System.Drawing.Point(144, 407);
             this.lbl_make.Name = "lbl_make";
             this.lbl_make.Size = new System.Drawing.Size(45, 20);
             this.lbl_make.TabIndex = 10;
@@ -155,7 +156,7 @@ namespace VehicleAppForms
             // lbl_model
             // 
             this.lbl_model.AutoSize = true;
-            this.lbl_model.Location = new System.Drawing.Point(112, 453);
+            this.lbl_model.Location = new System.Drawing.Point(137, 446);
             this.lbl_model.Name = "lbl_model";
             this.lbl_model.Size = new System.Drawing.Size(52, 20);
             this.lbl_model.TabIndex = 11;
@@ -164,7 +165,7 @@ namespace VehicleAppForms
             // lbl_year
             // 
             this.lbl_year.AutoSize = true;
-            this.lbl_year.Location = new System.Drawing.Point(127, 492);
+            this.lbl_year.Location = new System.Drawing.Point(152, 485);
             this.lbl_year.Name = "lbl_year";
             this.lbl_year.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbl_year.Size = new System.Drawing.Size(37, 20);
@@ -174,7 +175,7 @@ namespace VehicleAppForms
             // lbl_dailyHireCost
             // 
             this.lbl_dailyHireCost.AutoSize = true;
-            this.lbl_dailyHireCost.Location = new System.Drawing.Point(56, 529);
+            this.lbl_dailyHireCost.Location = new System.Drawing.Point(81, 522);
             this.lbl_dailyHireCost.Name = "lbl_dailyHireCost";
             this.lbl_dailyHireCost.Size = new System.Drawing.Size(108, 20);
             this.lbl_dailyHireCost.TabIndex = 13;
@@ -182,7 +183,7 @@ namespace VehicleAppForms
             // 
             // txt_registrationNumber
             // 
-            this.txt_registrationNumber.Location = new System.Drawing.Point(179, 370);
+            this.txt_registrationNumber.Location = new System.Drawing.Point(204, 363);
             this.txt_registrationNumber.Name = "txt_registrationNumber";
             this.txt_registrationNumber.ReadOnly = true;
             this.txt_registrationNumber.Size = new System.Drawing.Size(141, 27);
@@ -190,7 +191,7 @@ namespace VehicleAppForms
             // 
             // txt_make
             // 
-            this.txt_make.Location = new System.Drawing.Point(179, 411);
+            this.txt_make.Location = new System.Drawing.Point(204, 404);
             this.txt_make.Name = "txt_make";
             this.txt_make.ReadOnly = true;
             this.txt_make.Size = new System.Drawing.Size(195, 27);
@@ -198,7 +199,7 @@ namespace VehicleAppForms
             // 
             // txt_model
             // 
-            this.txt_model.Location = new System.Drawing.Point(179, 450);
+            this.txt_model.Location = new System.Drawing.Point(204, 443);
             this.txt_model.Name = "txt_model";
             this.txt_model.ReadOnly = true;
             this.txt_model.Size = new System.Drawing.Size(195, 27);
@@ -206,7 +207,7 @@ namespace VehicleAppForms
             // 
             // txt_year
             // 
-            this.txt_year.Location = new System.Drawing.Point(179, 492);
+            this.txt_year.Location = new System.Drawing.Point(204, 485);
             this.txt_year.Name = "txt_year";
             this.txt_year.ReadOnly = true;
             this.txt_year.Size = new System.Drawing.Size(165, 27);
@@ -214,17 +215,27 @@ namespace VehicleAppForms
             // 
             // txt_dailyHireCost
             // 
-            this.txt_dailyHireCost.Location = new System.Drawing.Point(179, 529);
+            this.txt_dailyHireCost.Location = new System.Drawing.Point(204, 522);
             this.txt_dailyHireCost.Name = "txt_dailyHireCost";
             this.txt_dailyHireCost.ReadOnly = true;
             this.txt_dailyHireCost.Size = new System.Drawing.Size(141, 27);
             this.txt_dailyHireCost.TabIndex = 18;
             // 
+            // lbl_vehicleInventory
+            // 
+            this.lbl_vehicleInventory.AutoSize = true;
+            this.lbl_vehicleInventory.Location = new System.Drawing.Point(248, 9);
+            this.lbl_vehicleInventory.Name = "lbl_vehicleInventory";
+            this.lbl_vehicleInventory.Size = new System.Drawing.Size(121, 20);
+            this.lbl_vehicleInventory.TabIndex = 19;
+            this.lbl_vehicleInventory.Text = "Vehicle Inventory";
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(432, 577);
+            this.ClientSize = new System.Drawing.Size(453, 584);
+            this.Controls.Add(this.lbl_vehicleInventory);
             this.Controls.Add(this.txt_dailyHireCost);
             this.Controls.Add(this.txt_year);
             this.Controls.Add(this.txt_model);
@@ -274,6 +285,7 @@ namespace VehicleAppForms
         private System.Windows.Forms.TextBox txt_model;
         private System.Windows.Forms.TextBox txt_year;
         private System.Windows.Forms.TextBox txt_dailyHireCost;
+        private System.Windows.Forms.Label lbl_vehicleInventory;
     }
 }
 

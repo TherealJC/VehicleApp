@@ -21,7 +21,7 @@ namespace VehicleAppLibrary
 
         public override string ToString()
         {
-            return $"{ActivityType.Relocation} | {ActivityName}  |  Relocation Date: {RelocationDate.ToShortDateString()} | Kms Used: {KmsUsed} |  Cost: {Cost}";
+            return $"{ActivityType.Relocation} | Location From/To: {ActivityName}  |  Relocation Date: {RelocationDate.ToShortDateString()} | Kms Used: {KmsUsed} |  Cost: {Cost}";
         }
 
         public override DateTime GetDate()

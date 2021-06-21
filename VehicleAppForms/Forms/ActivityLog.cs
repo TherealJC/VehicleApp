@@ -28,7 +28,7 @@ namespace VehicleAppForms
             {"Activity ID", (a, b ) => a.ActivityID.CompareTo(b.ActivityID) },
             {"Name", (a, b ) => a.ActivityName.CompareTo(b.ActivityName) },
             {"Date", (a, b ) => a.GetDate().CompareTo(b.GetDate()) },
-            {"Max Revenue", (a, b ) => b.Cost.CompareTo(a.Cost) },
+            {"Highest Cost", (a, b ) => b.Cost.CompareTo(a.Cost) },
             {"Activity Type", (a, b ) => Activity.GetActivityType(a).CompareTo(Activity.GetActivityType(b))}
         };
 

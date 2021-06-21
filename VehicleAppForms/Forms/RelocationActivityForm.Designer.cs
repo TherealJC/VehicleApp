@@ -56,11 +56,11 @@ namespace VehicleAppForms
             // 
             this.lbl_activityName.AutoSize = true;
             this.lbl_activityName.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lbl_activityName.Location = new System.Drawing.Point(73, 69);
+            this.lbl_activityName.Location = new System.Drawing.Point(46, 72);
             this.lbl_activityName.Name = "lbl_activityName";
-            this.lbl_activityName.Size = new System.Drawing.Size(116, 23);
+            this.lbl_activityName.Size = new System.Drawing.Size(143, 23);
             this.lbl_activityName.TabIndex = 1;
-            this.lbl_activityName.Text = "Activity Name";
+            this.lbl_activityName.Text = "Location From/To";
             // 
             // lbl_relocationDate
             // 
@@ -102,7 +102,8 @@ namespace VehicleAppForms
             // 
             // txt_activityName
             // 
-            this.txt_activityName.Location = new System.Drawing.Point(195, 68);
+            this.txt_activityName.Location = new System.Drawing.Point(195, 71);
+            this.txt_activityName.MaxLength = 30;
             this.txt_activityName.Name = "txt_activityName";
             this.txt_activityName.Size = new System.Drawing.Size(264, 27);
             this.txt_activityName.TabIndex = 6;
@@ -110,6 +111,7 @@ namespace VehicleAppForms
             // txt_kmsUsed
             // 
             this.txt_kmsUsed.Location = new System.Drawing.Point(195, 168);
+            this.txt_kmsUsed.MaxLength = 5;
             this.txt_kmsUsed.Name = "txt_kmsUsed";
             this.txt_kmsUsed.Size = new System.Drawing.Size(164, 27);
             this.txt_kmsUsed.TabIndex = 7;
@@ -117,6 +119,7 @@ namespace VehicleAppForms
             // txt_relocationCost
             // 
             this.txt_relocationCost.Location = new System.Drawing.Point(195, 218);
+            this.txt_relocationCost.MaxLength = 7;
             this.txt_relocationCost.Name = "txt_relocationCost";
             this.txt_relocationCost.Size = new System.Drawing.Size(164, 27);
             this.txt_relocationCost.TabIndex = 8;
