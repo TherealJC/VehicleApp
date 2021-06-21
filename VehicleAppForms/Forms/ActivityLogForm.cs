@@ -9,7 +9,7 @@ namespace VehicleAppForms
     {
         private readonly Dictionary<string, Comparison<Activity>> _sortMethods;
 
-        private Comparison<Activity> currentSortMethod;
+        private Comparison<Activity> _currentSortMethod;
 
         public ActivityLog()
         {
@@ -79,7 +79,7 @@ namespace VehicleAppForms
         {
             Lst_ActivityLog.DataSource = null;
             List<Activity> source = DataAccess.GetVehicleActivities(MainForm.SelectedVehicle.RegistrationNumber);
-            source.Sort(currentSortMethod);
+            source.Sort(_currentSortMethod);
             Lst_ActivityLog.DataSource = source;
 
             decimal total = 0;
@@ -95,7 +95,7 @@ namespace VehicleAppForms
         private void Cmb_SortBy_SelectedIndexChanged(object sender, EventArgs e) // Sort by selected sorting method
         {
             string sortType = (string)Cmb_SortBy.SelectedItem;
-            currentSortMethod = _sortMethods[sortType];
+            _currentSortMethod = _sortMethods[sortType];
             ConnectLists();
         }
 

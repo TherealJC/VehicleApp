@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\ActivityLog.cs">
+    <Compile Include="Forms\ActivityLogForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ActivityLog.Designer.cs">
-      <DependentUpon>ActivityLog.cs</DependentUpon>
+    <Compile Include="Forms\ActivityLogForm.Designer.cs">
+      <DependentUpon>ActivityLogForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CreateVehicleForm.cs">
       <SubType>Form</SubType>
@@ -71,11 +71,11 @@
     <Compile Include="Forms\RelocationActivityForm.Designer.cs">
       <DependentUpon>RelocationActivityForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SelectActivityType.cs">
+    <Compile Include="Forms\SelectActivityTypeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SelectActivityType.Designer.cs">
-      <DependentUpon>SelectActivityType.cs</DependentUpon>
+    <Compile Include="Forms\SelectActivityTypeForm.Designer.cs">
+      <DependentUpon>SelectActivityTypeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ServiceActivityForm.cs">
       <SubType>Form</SubType>
@@ -91,8 +91,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\ActivityLog.resx">
-      <DependentUpon>ActivityLog.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ActivityLogForm.resx">
+      <DependentUpon>ActivityLogForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateVehicleForm.resx">
       <DependentUpon>CreateVehicleForm.cs</DependentUpon>
@@ -103,8 +103,8 @@
     <EmbeddedResource Include="Forms\RelocationActivityForm.resx">
       <DependentUpon>RelocationActivityForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SelectActivityType.resx">
-      <DependentUpon>SelectActivityType.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\SelectActivityTypeForm.resx">
+      <DependentUpon>SelectActivityTypeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServiceActivityForm.resx">
       <DependentUpon>ServiceActivityForm.cs</DependentUpon>

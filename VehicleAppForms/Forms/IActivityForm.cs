@@ -4,6 +4,6 @@ namespace VehicleAppForms
 {
     interface IActivityForm
     {
-        Activity ShowCreate(); //Every form that is an IActivityForm must use this method, used to show (edit) or create (new) an activity
+        Activity ShowCreate(); //Eeac form that inherits from IActivityForm must use this method, used to show activity form based on which Activity type is selected
     }
 }

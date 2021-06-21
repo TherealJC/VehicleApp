@@ -107,7 +107,7 @@ namespace VehicleAppForms
             this.Txt_Make.Location = new System.Drawing.Point(190, 87);
             this.Txt_Make.MaxLength = 30;
             this.Txt_Make.Name = "Txt_Make";
-            this.Txt_Make.Size = new System.Drawing.Size(193, 27);
+            this.Txt_Make.Size = new System.Drawing.Size(226, 27);
             this.Txt_Make.TabIndex = 6;
             // 
             // Txt_Model
@@ -115,7 +115,7 @@ namespace VehicleAppForms
             this.Txt_Model.Location = new System.Drawing.Point(190, 131);
             this.Txt_Model.MaxLength = 30;
             this.Txt_Model.Name = "Txt_Model";
-            this.Txt_Model.Size = new System.Drawing.Size(193, 27);
+            this.Txt_Model.Size = new System.Drawing.Size(226, 27);
             this.Txt_Model.TabIndex = 7;
             // 
             // Txt_Year

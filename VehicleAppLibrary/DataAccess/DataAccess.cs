@@ -16,10 +16,10 @@ namespace VehicleAppLibrary
         public static Vehicle[] VehicleInventory => _vehicleInventory.ToArray();
 
         // Loads activity models, used for activity List. 
-        private static List<Activity> activityInventory = LoadActivityModels();
-        public static Activity[] ActivityInventory => activityInventory.ToArray();
+        private static readonly List<Activity> _activityInventory = LoadActivityModels();
+        public static Activity[] ActivityInventory => _activityInventory.ToArray();
 
-
+        
 
         /// <summary>
         /// Load file (if exists, otherwise create new file), read all lines, convert to list.

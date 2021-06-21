@@ -6,7 +6,7 @@ namespace VehicleAppForms
 {
     public partial class RelocationActivityForm : Form, IActivityForm
     {
-        Activity currentActivity;
+        private Activity _currentActivity;
 
         private string _resultMessage = ("The Relocation Activity has been successfully added to the database");
         private string _errorMessage = ("This Form has invalid or missing information, Please check it and try again");
@@ -20,14 +20,14 @@ namespace VehicleAppForms
         {
             Txt_ActivityID.Text = DataAccess.GetNextActivityID().ToString();
             ShowDialog();
-            return currentActivity;
+            return _currentActivity;
         }
 
         public Activity ShowEdit(RelocationActivity activity) // For opening a form to edit the selected activity
         {
             FillForm(activity);
             ShowDialog();
-            return currentActivity;
+            return _currentActivity;
         }
 
         private void FillForm(RelocationActivity activity) // Fills the form with the selected activities values
@@ -47,7 +47,7 @@ namespace VehicleAppForms
         {
             if (ValidateForm())
             {
-                currentActivity = new RelocationActivity()
+                _currentActivity = new RelocationActivity()
                 {
                     ActivityID = int.Parse(Txt_ActivityID.Text),
                     RegistrationNumber = MainForm.SelectedVehicle.RegistrationNumber,

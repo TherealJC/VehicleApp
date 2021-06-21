@@ -34,7 +34,7 @@ namespace VehicleAppForms
             this.Btn_EditSelectedActivity = new System.Windows.Forms.Button();
             this.Btn_DeleteSelectedActivity = new System.Windows.Forms.Button();
             this.Lbl_VehiclesActivityRevenue = new System.Windows.Forms.Label();
-            this.Lbl_activityDollarSign = new System.Windows.Forms.Label();
+            this.Lbl_VehiclesActivityDollarSign = new System.Windows.Forms.Label();
             this.Txt_VehicleActivityRevenueAmount = new System.Windows.Forms.TextBox();
             this.Cmb_SortBy = new System.Windows.Forms.ComboBox();
             this.Lbl_SortBy = new System.Windows.Forms.Label();
@@ -94,15 +94,15 @@ namespace VehicleAppForms
             this.Lbl_VehiclesActivityRevenue.TabIndex = 4;
             this.Lbl_VehiclesActivityRevenue.Text = "Vehicle\'s Activity Revenue";
             // 
-            // Lbl_activityDollarSign
+            // Lbl_VehiclesActivityDollarSign
             // 
-            this.Lbl_activityDollarSign.AutoSize = true;
-            this.Lbl_activityDollarSign.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.Lbl_activityDollarSign.Location = new System.Drawing.Point(396, 241);
-            this.Lbl_activityDollarSign.Name = "Lbl_activityDollarSign";
-            this.Lbl_activityDollarSign.Size = new System.Drawing.Size(24, 28);
-            this.Lbl_activityDollarSign.TabIndex = 5;
-            this.Lbl_activityDollarSign.Text = "$";
+            this.Lbl_VehiclesActivityDollarSign.AutoSize = true;
+            this.Lbl_VehiclesActivityDollarSign.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.Lbl_VehiclesActivityDollarSign.Location = new System.Drawing.Point(396, 241);
+            this.Lbl_VehiclesActivityDollarSign.Name = "Lbl_VehiclesActivityDollarSign";
+            this.Lbl_VehiclesActivityDollarSign.Size = new System.Drawing.Size(24, 28);
+            this.Lbl_VehiclesActivityDollarSign.TabIndex = 5;
+            this.Lbl_VehiclesActivityDollarSign.Text = "$";
             // 
             // Txt_VehicleActivityRevenueAmount
             // 
@@ -168,7 +168,7 @@ namespace VehicleAppForms
             this.Controls.Add(this.Lbl_SortBy);
             this.Controls.Add(this.Cmb_SortBy);
             this.Controls.Add(this.Txt_VehicleActivityRevenueAmount);
-            this.Controls.Add(this.Lbl_activityDollarSign);
+            this.Controls.Add(this.Lbl_VehiclesActivityDollarSign);
             this.Controls.Add(this.Lbl_VehiclesActivityRevenue);
             this.Controls.Add(this.Btn_DeleteSelectedActivity);
             this.Controls.Add(this.Btn_EditSelectedActivity);
@@ -190,7 +190,7 @@ namespace VehicleAppForms
         private System.Windows.Forms.Button Btn_EditSelectedActivity;
         private System.Windows.Forms.Button Btn_DeleteSelectedActivity;
         private System.Windows.Forms.Label Lbl_VehiclesActivityRevenue;
-        private System.Windows.Forms.Label Lbl_activityDollarSign;
+        private System.Windows.Forms.Label Lbl_VehiclesActivityDollarSign;
         private System.Windows.Forms.TextBox Txt_VehicleActivityRevenueAmount;
         private System.Windows.Forms.ComboBox Cmb_SortBy;
         private System.Windows.Forms.Label Lbl_SortBy;

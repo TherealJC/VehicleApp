@@ -15,7 +15,7 @@ namespace VehicleAppLibrary
         public decimal DailyHireCost { get; set; }
 
         /// <summary>
-        /// Constructor, Used in CreateVehicleForm for creating a Vehicle
+        /// Used in CreateVehicleForm for creating a Vehicle from users input, convert input strings to actual values (int/decimal)
         /// </summary>
         /// <param name="registrationNumber">The registration number of the Vehicle object, only 6 characters allowed</param>
         /// <param name="make">The make of the Vehicle object e.g. BMW</param>

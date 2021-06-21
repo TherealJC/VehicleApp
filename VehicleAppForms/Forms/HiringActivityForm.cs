@@ -6,7 +6,7 @@ namespace VehicleAppForms
 {
     public partial class HiringActivityForm : Form, IActivityForm
     {
-        Activity currentActivity;
+        private Activity _currentActivity;
 
         private string _resultMessage = ("The Hiring Activity has been successfully added to the database");
         private string _errorMessage = ("This Form has invalid or missing information, Please check it and try again");
@@ -20,14 +20,14 @@ namespace VehicleAppForms
         {
             Txt_ActivityID.Text = DataAccess.GetNextActivityID().ToString();
             ShowDialog();
-            return currentActivity;
+            return _currentActivity;
         }
 
         public Activity ShowEdit(HiringActivity activity) // For opening a form to edit selected activity
         {
             FillForm(activity);
             ShowDialog();
-            return currentActivity;
+            return _currentActivity;
         }
 
         private void FillForm(HiringActivity activity) // Fill form textboxes with selected activities values
@@ -48,7 +48,7 @@ namespace VehicleAppForms
         {
             if (ValidateForm()) // If validate form returns true
             {
-                currentActivity = new HiringActivity() //create new hiring activity from input
+                _currentActivity = new HiringActivity() //create new hiring activity from input
                 {
                    ActivityID = int.Parse(Txt_ActivityID.Text),
                    RegistrationNumber = MainForm.SelectedVehicle.RegistrationNumber, //Get Vehicles registration number from main forms selected Vehicle

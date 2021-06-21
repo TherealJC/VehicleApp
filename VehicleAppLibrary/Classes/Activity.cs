@@ -10,6 +10,7 @@ namespace VehicleAppLibrary
         public decimal Cost { get; set; }
 
         public abstract string SaveString(); //Gets overridden by sub classes with activity values
+        public abstract decimal GetTotalRevenue(); //Calculates the vehicle revenue, each activity type overrides this with the cost upon creation
 
         public enum ActivityType //Used for GetActivityType, Lists each type of activity (plus Error at 0/default)
         {
@@ -19,15 +20,16 @@ namespace VehicleAppLibrary
             Relocation
         }
 
-        public abstract decimal GetTotalRevenue(); //Calculates the vehicle revenue, each activity type overrides this with the cost upon creation
-
         public static ActivityType GetActivityType(Activity activity) //Adds an activity type attribute (depending on which activity form has been selected)
         {
             switch(activity)
             {
-                case HiringActivity a: return ActivityType.Hiring; //If activity is HiringActivity, ActivityType = Hiring
-                case ServiceActivity b: return ActivityType.Service; //If activity is ServiceActivity, ActivityType = Service
-                case RelocationActivity c: return ActivityType.Relocation; //If activity is RelocationActivity, ActivityType = Relocation
+                case HiringActivity _:
+                    return ActivityType.Hiring; //If activity is HiringActivity, ActivityType = Hiring
+                case ServiceActivity _:
+                    return ActivityType.Service; //If activity is ServiceActivity, ActivityType = Service
+                case RelocationActivity _:
+                    return ActivityType.Relocation; //If activity is RelocationActivity, ActivityType = Relocation
                 default: return ActivityType.Error; //Otherwise (should not be able to get here) activity type = Error
             }
         }

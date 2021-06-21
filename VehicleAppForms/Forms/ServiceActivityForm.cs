@@ -6,7 +6,7 @@ namespace VehicleAppForms
 {
     public partial class ServiceActivityForm : Form, IActivityForm
     {
-        Activity currentActivity;
+        private Activity _currentActivity;
 
         private string _resultMessage = ("The Service Activity has been successfully added to the database");
         private string _errorMessage = ("This Form has invalid or missing information, Please check it and try again");
@@ -20,14 +20,14 @@ namespace VehicleAppForms
         {
             Txt_ActivityID.Text = DataAccess.GetNextActivityID().ToString();
             ShowDialog();
-            return currentActivity;
+            return _currentActivity;
         }
 
         public Activity ShowEdit(ServiceActivity activity) // For opening an existing activity to edit
         {
             FillForm(activity);
             ShowDialog();
-            return currentActivity;
+            return _currentActivity;
         }
 
         private void FillForm(ServiceActivity activity) // Fill the 'Edit' form with the selected activities values
@@ -47,7 +47,7 @@ namespace VehicleAppForms
         {
             if (ValidateForm())
             {
-                currentActivity = new ServiceActivity() // sets activity to service activity
+                _currentActivity = new ServiceActivity() // sets activity to service activity
                 {
                     ActivityID = int.Parse(Txt_ActivityID.Text),
                     RegistrationNumber = MainForm.SelectedVehicle.RegistrationNumber,

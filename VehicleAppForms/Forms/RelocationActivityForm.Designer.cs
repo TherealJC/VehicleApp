@@ -33,7 +33,7 @@ namespace VehicleAppForms
             this.Lbl_ActivityName = new System.Windows.Forms.Label();
             this.Lbl_RelocationDate = new System.Windows.Forms.Label();
             this.Lbl_KmsUsed = new System.Windows.Forms.Label();
-            this.Lbl_relocationCost = new System.Windows.Forms.Label();
+            this.Lbl_RelocationCost = new System.Windows.Forms.Label();
             this.Txt_ActivityID = new System.Windows.Forms.TextBox();
             this.Txt_ActivityName = new System.Windows.Forms.TextBox();
             this.Txt_KmsUsed = new System.Windows.Forms.TextBox();
@@ -82,15 +82,15 @@ namespace VehicleAppForms
             this.Lbl_KmsUsed.TabIndex = 3;
             this.Lbl_KmsUsed.Text = "Kilometres Used";
             // 
-            // Lbl_relocationCost
+            // Lbl_RelocationCost
             // 
-            this.Lbl_relocationCost.AutoSize = true;
-            this.Lbl_relocationCost.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.Lbl_relocationCost.Location = new System.Drawing.Point(46, 219);
-            this.Lbl_relocationCost.Name = "Lbl_relocationCost";
-            this.Lbl_relocationCost.Size = new System.Drawing.Size(143, 23);
-            this.Lbl_relocationCost.TabIndex = 4;
-            this.Lbl_relocationCost.Text = "Relocation Cost $";
+            this.Lbl_RelocationCost.AutoSize = true;
+            this.Lbl_RelocationCost.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Lbl_RelocationCost.Location = new System.Drawing.Point(46, 219);
+            this.Lbl_RelocationCost.Name = "Lbl_RelocationCost";
+            this.Lbl_RelocationCost.Size = new System.Drawing.Size(143, 23);
+            this.Lbl_RelocationCost.TabIndex = 4;
+            this.Lbl_RelocationCost.Text = "Relocation Cost $";
             // 
             // Txt_ActivityID
             // 
@@ -154,7 +154,7 @@ namespace VehicleAppForms
             this.Controls.Add(this.Txt_KmsUsed);
             this.Controls.Add(this.Txt_ActivityName);
             this.Controls.Add(this.Txt_ActivityID);
-            this.Controls.Add(this.Lbl_relocationCost);
+            this.Controls.Add(this.Lbl_RelocationCost);
             this.Controls.Add(this.Lbl_KmsUsed);
             this.Controls.Add(this.Lbl_RelocationDate);
             this.Controls.Add(this.Lbl_ActivityName);
@@ -174,7 +174,7 @@ namespace VehicleAppForms
         private System.Windows.Forms.Label Lbl_ActivityName;
         private System.Windows.Forms.Label Lbl_RelocationDate;
         private System.Windows.Forms.Label Lbl_KmsUsed;
-        private System.Windows.Forms.Label Lbl_relocationCost;
+        private System.Windows.Forms.Label Lbl_RelocationCost;
         private System.Windows.Forms.TextBox Txt_ActivityID;
         private System.Windows.Forms.TextBox Txt_ActivityName;
         private System.Windows.Forms.TextBox Txt_KmsUsed;
