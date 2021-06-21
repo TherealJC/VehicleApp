@@ -7,7 +7,7 @@ namespace VehicleAppLibrary
         public DateTime ServiceDate { get; set; }
         public string Description { get; set; }
 
-        public override string SaveString()
+        public override string SaveString()  //Used to save the activity string to file (overrides abstract SaveString() in paretn class 'Activity'
         {
             return $"{(int)ActivityType.Service},{ActivityID},{RegistrationNumber},{ActivityName},{Cost},{ServiceDate},{Description}";
         }

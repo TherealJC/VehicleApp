@@ -7,7 +7,7 @@ namespace VehicleAppLibrary
         public DateTime RelocationDate { get; set; }
         public int KmsUsed { get; set; }
 
-        public override string SaveString()
+        public override string SaveString()  //Used to save the activity string to file (overrides abstract SaveString() in paretn class 'Activity'
         {
             return $"{(int)ActivityType.Relocation},{ActivityID},{RegistrationNumber},{ActivityName},{Cost},{RelocationDate},{KmsUsed}";
         }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 using VehicleAppLibrary;
 
@@ -11,7 +10,7 @@ namespace VehicleAppForms
         public static readonly MainForm Instance = new MainForm();
 
         //gets selected vehicle of the singleton instance
-        public static Vehicle SelectedVehicle => (Vehicle)Instance.lst_registration.SelectedItem;
+        public static Vehicle SelectedVehicle => (Vehicle)Instance.Lst_Registration.SelectedItem;
         private MainForm()
         {
             InitializeComponent();
@@ -19,23 +18,23 @@ namespace VehicleAppForms
             ConnectLists();
         }
 
-        private void ConnectLists()
+        private void ConnectLists() // Used to connect listboxes, and to update lists upon new data entry
         {
-            lst_registration.DataSource = null;
-            lst_registration.DataSource = DataAccess.VehicleInventory;
-            lst_registration.DisplayMember = "RegistrationNumber";
+            Lst_Registration.DataSource = null;
+            Lst_Registration.DataSource = DataAccess.VehicleInventory;
+            Lst_Registration.DisplayMember = "RegistrationNumber";
 
             decimal total = 0;
             foreach (Activity a in DataAccess.LoadActivityModels())
             {
-                total += a.GetTotalRevenue();
+                total += a.GetTotalRevenue(); //Calculate the total revenue of all saved vehicles/activities
             }
 
-            lbl_displayTotalRevenue.Text = total.ToString();
+            Lbl_DisplayTotalRevenue.Text = total.ToString(); // Display the total revenue
         }
 
 
-        private void btn_createVehicle_Click(object sender, EventArgs e)
+        private void Btn_CreateVehicle_Click(object sender, EventArgs e) // Create Vehicle click event
         {
             //The is expression handles the null check and creates a local variable
             if (CreateVehicleForm.ShowCreate() is Vehicle vm)
@@ -45,12 +44,12 @@ namespace VehicleAppForms
             }
         }
 
-        private void btn_editVehicle_Click(object sender, EventArgs e)
+        private void Btn_EditVehicle_Click(object sender, EventArgs e) // Edit Vehicle button event
         {
-            if (lst_registration.SelectedItem != null)
+            if (Lst_Registration.SelectedItem != null)
             {
                 //The is expression handles the null check and creates a local variable
-                if (CreateVehicleForm.ShowEdit((Vehicle)lst_registration.SelectedItem) is Vehicle vm)
+                if (CreateVehicleForm.ShowEdit((Vehicle)Lst_Registration.SelectedItem) is Vehicle vm)
                 {
                     DataAccess.CreateVehicle(vm);
                     ConnectLists();
@@ -58,12 +57,12 @@ namespace VehicleAppForms
             }
         }
 
-        private void btn_deleteVehicle_Click(object sender, EventArgs e)
+        private void Btn_DeleteVehicle_Click(object sender, EventArgs e) // Delete Vehicle button event
         {
-            if (lst_registration.SelectedItem != null)
+            if (Lst_Registration.SelectedItem != null) // Makes sure a vehicle is selected
             {
-                DataAccess.DeleteVehicle((Vehicle)lst_registration.SelectedItem);
-                ConnectLists();
+                DataAccess.DeleteVehicle((Vehicle)Lst_Registration.SelectedItem); //Delete the selected vehicle
+                ConnectLists(); // re-bind lists
             }
             else
             {
@@ -71,38 +70,40 @@ namespace VehicleAppForms
             }
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            ConnectLists(); //Call the function to connect List Box to Data source/display member
-            lst_registration.Refresh();
-        }
-
-        private void lst_registration_SelectedValueChanged(object sender, EventArgs e)
-        {
-
-            if (lst_registration.SelectedItem != null)
-            {
-                Vehicle vm = (Vehicle)lst_registration.SelectedItem;
-                txt_registrationNumber.Text = vm.RegistrationNumber;
-                txt_make.Text = vm.Make;
-                txt_model.Text = vm.Model;
-                txt_year.Text = vm.Year.ToString();
-                txt_dailyHireCost.Text = vm.DailyHireCost.ToString();
-            }
-
-            else {
-                txt_registrationNumber.Text = "";
-                txt_make.Text = "";
-                txt_model.Text = "";
-                txt_year.Text = "";
-                txt_dailyHireCost.Text = "";
-            }
-        }
-
-        private void btn_viewActivityLog_Click(object sender, EventArgs e)
+        private void Btn_ViewActivityLog_Click(object sender, EventArgs e) // Opens the selected Vehicles activity log
         {
             new ActivityLog().ShowDialog();
             ConnectLists();
         }
+
+        private void Lst_Registration_SelectedValueChanged(object sender, EventArgs e) //Updates Quick View values to match selected Vehicle
+        {
+
+            if (Lst_Registration.SelectedItem != null)
+            {
+                Vehicle vm = (Vehicle)Lst_Registration.SelectedItem;
+                Txt_RegistrationNumber.Text = vm.RegistrationNumber;
+                Txt_Make.Text = vm.Make;
+                Txt_Model.Text = vm.Model;
+                Txt_Year.Text = vm.Year.ToString();
+                Txt_DailyHireCost.Text = vm.DailyHireCost.ToString();
+            }
+
+            else
+            {
+                Txt_RegistrationNumber.Text = "";
+                Txt_Make.Text = "";
+                Txt_Model.Text = "";
+                Txt_Year.Text = "";
+                Txt_DailyHireCost.Text = "";
+            }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            ConnectLists(); //Call the function to connect List Box to Data source/display member
+            Lst_Registration.Refresh();
+        }
+
     }
 }

@@ -29,136 +29,136 @@ namespace VehicleAppForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_activityID = new System.Windows.Forms.Label();
-            this.lbl_activityName = new System.Windows.Forms.Label();
-            this.lbl_relocationDate = new System.Windows.Forms.Label();
-            this.lbl_kmsUsed = new System.Windows.Forms.Label();
-            this.lbl_relocationCost = new System.Windows.Forms.Label();
-            this.txt_activityID = new System.Windows.Forms.TextBox();
-            this.txt_activityName = new System.Windows.Forms.TextBox();
-            this.txt_kmsUsed = new System.Windows.Forms.TextBox();
-            this.txt_relocationCost = new System.Windows.Forms.TextBox();
-            this.dtp_relocationDate = new System.Windows.Forms.DateTimePicker();
-            this.btn_submitActivity = new System.Windows.Forms.Button();
+            this.Lbl_ActivityID = new System.Windows.Forms.Label();
+            this.Lbl_ActivityName = new System.Windows.Forms.Label();
+            this.Lbl_RelocationDate = new System.Windows.Forms.Label();
+            this.Lbl_KmsUsed = new System.Windows.Forms.Label();
+            this.Lbl_relocationCost = new System.Windows.Forms.Label();
+            this.Txt_ActivityID = new System.Windows.Forms.TextBox();
+            this.Txt_ActivityName = new System.Windows.Forms.TextBox();
+            this.Txt_KmsUsed = new System.Windows.Forms.TextBox();
+            this.Txt_RelocationCost = new System.Windows.Forms.TextBox();
+            this.Dtp_RelocationDate = new System.Windows.Forms.DateTimePicker();
+            this.Btn_SubmitActivity = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lbl_activityID
+            // Lbl_ActivityID
             // 
-            this.lbl_activityID.AutoSize = true;
-            this.lbl_activityID.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lbl_activityID.Location = new System.Drawing.Point(102, 22);
-            this.lbl_activityID.Name = "lbl_activityID";
-            this.lbl_activityID.Size = new System.Drawing.Size(87, 23);
-            this.lbl_activityID.TabIndex = 0;
-            this.lbl_activityID.Text = "Activity ID";
+            this.Lbl_ActivityID.AutoSize = true;
+            this.Lbl_ActivityID.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Lbl_ActivityID.Location = new System.Drawing.Point(102, 22);
+            this.Lbl_ActivityID.Name = "Lbl_ActivityID";
+            this.Lbl_ActivityID.Size = new System.Drawing.Size(87, 23);
+            this.Lbl_ActivityID.TabIndex = 0;
+            this.Lbl_ActivityID.Text = "Activity ID";
             // 
-            // lbl_activityName
+            // Lbl_ActivityName
             // 
-            this.lbl_activityName.AutoSize = true;
-            this.lbl_activityName.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lbl_activityName.Location = new System.Drawing.Point(46, 72);
-            this.lbl_activityName.Name = "lbl_activityName";
-            this.lbl_activityName.Size = new System.Drawing.Size(143, 23);
-            this.lbl_activityName.TabIndex = 1;
-            this.lbl_activityName.Text = "Location From/To";
+            this.Lbl_ActivityName.AutoSize = true;
+            this.Lbl_ActivityName.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Lbl_ActivityName.Location = new System.Drawing.Point(46, 72);
+            this.Lbl_ActivityName.Name = "Lbl_ActivityName";
+            this.Lbl_ActivityName.Size = new System.Drawing.Size(143, 23);
+            this.Lbl_ActivityName.TabIndex = 1;
+            this.Lbl_ActivityName.Text = "Location From/To";
             // 
-            // lbl_relocationDate
+            // Lbl_RelocationDate
             // 
-            this.lbl_relocationDate.AutoSize = true;
-            this.lbl_relocationDate.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lbl_relocationDate.Location = new System.Drawing.Point(58, 119);
-            this.lbl_relocationDate.Name = "lbl_relocationDate";
-            this.lbl_relocationDate.Size = new System.Drawing.Size(131, 23);
-            this.lbl_relocationDate.TabIndex = 2;
-            this.lbl_relocationDate.Text = "Relocation Date";
+            this.Lbl_RelocationDate.AutoSize = true;
+            this.Lbl_RelocationDate.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Lbl_RelocationDate.Location = new System.Drawing.Point(58, 119);
+            this.Lbl_RelocationDate.Name = "Lbl_RelocationDate";
+            this.Lbl_RelocationDate.Size = new System.Drawing.Size(131, 23);
+            this.Lbl_RelocationDate.TabIndex = 2;
+            this.Lbl_RelocationDate.Text = "Relocation Date";
             // 
-            // lbl_kmsUsed
+            // Lbl_KmsUsed
             // 
-            this.lbl_kmsUsed.AutoSize = true;
-            this.lbl_kmsUsed.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lbl_kmsUsed.Location = new System.Drawing.Point(56, 169);
-            this.lbl_kmsUsed.Name = "lbl_kmsUsed";
-            this.lbl_kmsUsed.Size = new System.Drawing.Size(133, 23);
-            this.lbl_kmsUsed.TabIndex = 3;
-            this.lbl_kmsUsed.Text = "Kilometres Used";
+            this.Lbl_KmsUsed.AutoSize = true;
+            this.Lbl_KmsUsed.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Lbl_KmsUsed.Location = new System.Drawing.Point(56, 169);
+            this.Lbl_KmsUsed.Name = "Lbl_KmsUsed";
+            this.Lbl_KmsUsed.Size = new System.Drawing.Size(133, 23);
+            this.Lbl_KmsUsed.TabIndex = 3;
+            this.Lbl_KmsUsed.Text = "Kilometres Used";
             // 
-            // lbl_relocationCost
+            // Lbl_relocationCost
             // 
-            this.lbl_relocationCost.AutoSize = true;
-            this.lbl_relocationCost.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lbl_relocationCost.Location = new System.Drawing.Point(46, 219);
-            this.lbl_relocationCost.Name = "lbl_relocationCost";
-            this.lbl_relocationCost.Size = new System.Drawing.Size(143, 23);
-            this.lbl_relocationCost.TabIndex = 4;
-            this.lbl_relocationCost.Text = "Relocation Cost $";
+            this.Lbl_relocationCost.AutoSize = true;
+            this.Lbl_relocationCost.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Lbl_relocationCost.Location = new System.Drawing.Point(46, 219);
+            this.Lbl_relocationCost.Name = "Lbl_relocationCost";
+            this.Lbl_relocationCost.Size = new System.Drawing.Size(143, 23);
+            this.Lbl_relocationCost.TabIndex = 4;
+            this.Lbl_relocationCost.Text = "Relocation Cost $";
             // 
-            // txt_activityID
+            // Txt_ActivityID
             // 
-            this.txt_activityID.Location = new System.Drawing.Point(195, 18);
-            this.txt_activityID.Name = "txt_activityID";
-            this.txt_activityID.ReadOnly = true;
-            this.txt_activityID.Size = new System.Drawing.Size(164, 27);
-            this.txt_activityID.TabIndex = 5;
+            this.Txt_ActivityID.Location = new System.Drawing.Point(195, 18);
+            this.Txt_ActivityID.Name = "Txt_ActivityID";
+            this.Txt_ActivityID.ReadOnly = true;
+            this.Txt_ActivityID.Size = new System.Drawing.Size(164, 27);
+            this.Txt_ActivityID.TabIndex = 5;
             // 
-            // txt_activityName
+            // Txt_ActivityName
             // 
-            this.txt_activityName.Location = new System.Drawing.Point(195, 71);
-            this.txt_activityName.MaxLength = 30;
-            this.txt_activityName.Name = "txt_activityName";
-            this.txt_activityName.Size = new System.Drawing.Size(264, 27);
-            this.txt_activityName.TabIndex = 6;
+            this.Txt_ActivityName.Location = new System.Drawing.Point(195, 71);
+            this.Txt_ActivityName.MaxLength = 30;
+            this.Txt_ActivityName.Name = "Txt_ActivityName";
+            this.Txt_ActivityName.Size = new System.Drawing.Size(264, 27);
+            this.Txt_ActivityName.TabIndex = 6;
             // 
-            // txt_kmsUsed
+            // Txt_KmsUsed
             // 
-            this.txt_kmsUsed.Location = new System.Drawing.Point(195, 168);
-            this.txt_kmsUsed.MaxLength = 5;
-            this.txt_kmsUsed.Name = "txt_kmsUsed";
-            this.txt_kmsUsed.Size = new System.Drawing.Size(164, 27);
-            this.txt_kmsUsed.TabIndex = 7;
+            this.Txt_KmsUsed.Location = new System.Drawing.Point(195, 168);
+            this.Txt_KmsUsed.MaxLength = 5;
+            this.Txt_KmsUsed.Name = "Txt_KmsUsed";
+            this.Txt_KmsUsed.Size = new System.Drawing.Size(164, 27);
+            this.Txt_KmsUsed.TabIndex = 7;
             // 
-            // txt_relocationCost
+            // Txt_RelocationCost
             // 
-            this.txt_relocationCost.Location = new System.Drawing.Point(195, 218);
-            this.txt_relocationCost.MaxLength = 7;
-            this.txt_relocationCost.Name = "txt_relocationCost";
-            this.txt_relocationCost.Size = new System.Drawing.Size(164, 27);
-            this.txt_relocationCost.TabIndex = 8;
+            this.Txt_RelocationCost.Location = new System.Drawing.Point(195, 218);
+            this.Txt_RelocationCost.MaxLength = 10;
+            this.Txt_RelocationCost.Name = "Txt_RelocationCost";
+            this.Txt_RelocationCost.Size = new System.Drawing.Size(164, 27);
+            this.Txt_RelocationCost.TabIndex = 8;
             // 
-            // dtp_relocationDate
+            // Dtp_RelocationDate
             // 
-            this.dtp_relocationDate.Location = new System.Drawing.Point(195, 118);
-            this.dtp_relocationDate.Name = "dtp_relocationDate";
-            this.dtp_relocationDate.Size = new System.Drawing.Size(264, 27);
-            this.dtp_relocationDate.TabIndex = 9;
+            this.Dtp_RelocationDate.Location = new System.Drawing.Point(195, 118);
+            this.Dtp_RelocationDate.Name = "Dtp_RelocationDate";
+            this.Dtp_RelocationDate.Size = new System.Drawing.Size(264, 27);
+            this.Dtp_RelocationDate.TabIndex = 9;
             // 
-            // btn_submitActivity
+            // Btn_SubmitActivity
             // 
-            this.btn_submitActivity.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_submitActivity.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btn_submitActivity.Location = new System.Drawing.Point(380, 245);
-            this.btn_submitActivity.Name = "btn_submitActivity";
-            this.btn_submitActivity.Size = new System.Drawing.Size(145, 42);
-            this.btn_submitActivity.TabIndex = 10;
-            this.btn_submitActivity.Text = "Submit Activity";
-            this.btn_submitActivity.UseVisualStyleBackColor = false;
-            this.btn_submitActivity.Click += new System.EventHandler(this.btn_submitActivity_Click);
+            this.Btn_SubmitActivity.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_SubmitActivity.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Btn_SubmitActivity.Location = new System.Drawing.Point(380, 245);
+            this.Btn_SubmitActivity.Name = "Btn_SubmitActivity";
+            this.Btn_SubmitActivity.Size = new System.Drawing.Size(145, 42);
+            this.Btn_SubmitActivity.TabIndex = 10;
+            this.Btn_SubmitActivity.Text = "Submit Activity";
+            this.Btn_SubmitActivity.UseVisualStyleBackColor = false;
+            this.Btn_SubmitActivity.Click += new System.EventHandler(this.Btn_SubmitActivity_Click);
             // 
             // RelocationActivityForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(537, 301);
-            this.Controls.Add(this.btn_submitActivity);
-            this.Controls.Add(this.dtp_relocationDate);
-            this.Controls.Add(this.txt_relocationCost);
-            this.Controls.Add(this.txt_kmsUsed);
-            this.Controls.Add(this.txt_activityName);
-            this.Controls.Add(this.txt_activityID);
-            this.Controls.Add(this.lbl_relocationCost);
-            this.Controls.Add(this.lbl_kmsUsed);
-            this.Controls.Add(this.lbl_relocationDate);
-            this.Controls.Add(this.lbl_activityName);
-            this.Controls.Add(this.lbl_activityID);
+            this.Controls.Add(this.Btn_SubmitActivity);
+            this.Controls.Add(this.Dtp_RelocationDate);
+            this.Controls.Add(this.Txt_RelocationCost);
+            this.Controls.Add(this.Txt_KmsUsed);
+            this.Controls.Add(this.Txt_ActivityName);
+            this.Controls.Add(this.Txt_ActivityID);
+            this.Controls.Add(this.Lbl_relocationCost);
+            this.Controls.Add(this.Lbl_KmsUsed);
+            this.Controls.Add(this.Lbl_RelocationDate);
+            this.Controls.Add(this.Lbl_ActivityName);
+            this.Controls.Add(this.Lbl_ActivityID);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Name = "RelocationActivityForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -170,16 +170,16 @@ namespace VehicleAppForms
 
         #endregion
 
-        private System.Windows.Forms.Label lbl_activityID;
-        private System.Windows.Forms.Label lbl_activityName;
-        private System.Windows.Forms.Label lbl_relocationDate;
-        private System.Windows.Forms.Label lbl_kmsUsed;
-        private System.Windows.Forms.Label lbl_relocationCost;
-        private System.Windows.Forms.TextBox txt_activityID;
-        private System.Windows.Forms.TextBox txt_activityName;
-        private System.Windows.Forms.TextBox txt_kmsUsed;
-        private System.Windows.Forms.TextBox txt_relocationCost;
-        private System.Windows.Forms.DateTimePicker dtp_relocationDate;
-        private System.Windows.Forms.Button btn_submitActivity;
+        private System.Windows.Forms.Label Lbl_ActivityID;
+        private System.Windows.Forms.Label Lbl_ActivityName;
+        private System.Windows.Forms.Label Lbl_RelocationDate;
+        private System.Windows.Forms.Label Lbl_KmsUsed;
+        private System.Windows.Forms.Label Lbl_relocationCost;
+        private System.Windows.Forms.TextBox Txt_ActivityID;
+        private System.Windows.Forms.TextBox Txt_ActivityName;
+        private System.Windows.Forms.TextBox Txt_KmsUsed;
+        private System.Windows.Forms.TextBox Txt_RelocationCost;
+        private System.Windows.Forms.DateTimePicker Dtp_RelocationDate;
+        private System.Windows.Forms.Button Btn_SubmitActivity;
     }
 }

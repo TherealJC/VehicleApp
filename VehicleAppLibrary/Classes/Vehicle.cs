@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// Vehicle has been set as a struct, structs can be used to hold small data values that do not require inheritance 
+// e.g. key-value pairs, and complex data structure. This suits what we need for the 'Vehicle'
 
 namespace VehicleAppLibrary
 {
@@ -17,16 +14,8 @@ namespace VehicleAppLibrary
         public int Year { get; set; }
         public decimal DailyHireCost { get; set; }
 
-        public string FullVehicleDetails
-        {
-            get
-            {
-                return $"{ RegistrationNumber } { Make }  { Model }  { Year }  { DailyHireCost }";
-            }
-        }
-
         /// <summary>
-        /// 
+        /// Constructor, Used in CreateVehicleForm for creating a Vehicle
         /// </summary>
         /// <param name="registrationNumber">The registration number of the Vehicle object, only 6 characters allowed</param>
         /// <param name="make">The make of the Vehicle object e.g. BMW</param>
@@ -39,12 +28,10 @@ namespace VehicleAppLibrary
             Make = make;
             Model = model;
 
-            int vehicleYearValue = 0; //convert string to int
-            int.TryParse(year, out vehicleYearValue);
+            int.TryParse(year, out int vehicleYearValue);
             Year = vehicleYearValue;
 
-            decimal dailyHireCostValue = 0; //convert string to decimal
-            decimal.TryParse(dailyHireCost, out dailyHireCostValue);
+            decimal.TryParse(dailyHireCost, out decimal dailyHireCostValue);
             DailyHireCost = dailyHireCostValue;
         }
     }

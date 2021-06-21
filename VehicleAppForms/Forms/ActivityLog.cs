@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using VehicleAppLibrary;
 
@@ -13,34 +7,27 @@ namespace VehicleAppForms
 {
     public partial class ActivityLog : Form
     {
+        private readonly Dictionary<string, Comparison<Activity>> _sortMethods;
 
-        Dictionary<string, Comparison<Activity>> sortMethods;
-
-        Comparison<Activity> currentSortMethod;
-
+        private Comparison<Activity> currentSortMethod;
 
         public ActivityLog()
         {
             InitializeComponent();
 
-            sortMethods = new Dictionary<string, Comparison<Activity>>()
+            _sortMethods = new Dictionary<string, Comparison<Activity>>() //Compares each entry in the list (a vs b) until desires sorting method is displayed correctly
         {
-            {"Activity ID", (a, b ) => a.ActivityID.CompareTo(b.ActivityID) },
-            {"Name", (a, b ) => a.ActivityName.CompareTo(b.ActivityName) },
-            {"Date", (a, b ) => a.GetDate().CompareTo(b.GetDate()) },
-            {"Highest Cost", (a, b ) => b.Cost.CompareTo(a.Cost) },
-            {"Activity Type", (a, b ) => Activity.GetActivityType(a).CompareTo(Activity.GetActivityType(b))}
+            {"Activity ID", (a, b ) => a.ActivityID.CompareTo(b.ActivityID) }, // sort by activity ID
+            {"Name", (a, b ) => a.ActivityName.CompareTo(b.ActivityName) }, // sort by activity name
+            {"Date", (a, b ) => a.GetDate().CompareTo(b.GetDate()) }, // sort by Date
+            {"Highest Cost", (a, b ) => b.Cost.CompareTo(a.Cost) }, // sort by Cost
+            {"Activity Type", (a, b ) => Activity.GetActivityType(a).CompareTo(Activity.GetActivityType(b))} // sort by activity type
         };
 
-            cmb_sortBy.SelectedIndex = 0; //Make sort by box displaye current sorting method
+            Cmb_SortBy.SelectedIndex = 0; //Make sort by box display the current sorting method as text
         }
 
-        private void btn_closeActivityLog_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void btn_addNewActivity_Click(object sender, EventArgs e)
+        private void Btn_AddNewActivity_Click(object sender, EventArgs e) // Add new activity, opens different form depending on activity type
         {
             if (SelectActivityType.ShowCreate() is Activity activity)
             {
@@ -49,12 +36,12 @@ namespace VehicleAppForms
             }
         }
 
-        private void btn_editSelectedActivity_Click(object sender, EventArgs e)
+        private void Btn_EditSelectedActivity_Click(object sender, EventArgs e) // Edit existing activity, opens different form depending on activity selected
         {
-            switch((Activity)lst_activityLog.SelectedItem)
+            switch((Activity)Lst_ActivityLog.SelectedItem)
             {
                 case HiringActivity activity:
-                    if(new HiringActivityForm().ShowEdit(activity) is Activity a)
+                    if(new HiringActivityForm().ShowEdit(activity) is Activity a) // if selected activity = hiring activity, ShowEdit of Hiring activity Form
                     {
                         DataAccess.CreateActivity(a);
                         ConnectLists();
@@ -62,7 +49,7 @@ namespace VehicleAppForms
                     break;
 
                 case ServiceActivity activity:
-                    if (new ServiceActivityForm().ShowEdit(activity) is Activity b)
+                    if (new ServiceActivityForm().ShowEdit(activity) is Activity b) // if selected activity = service activity, ShowEdit of Service activity Form
                     {
                         DataAccess.CreateActivity(b);
                         ConnectLists();
@@ -70,7 +57,7 @@ namespace VehicleAppForms
                     break;
 
                 case RelocationActivity activity:
-                    if (new RelocationActivityForm().ShowEdit(activity) is Activity c)
+                    if (new RelocationActivityForm().ShowEdit(activity) is Activity c) // if selected activity = relocation activity, ShowEdit of Relocation activity Form
                     {
                         DataAccess.CreateActivity(c);
                         ConnectLists();
@@ -79,37 +66,43 @@ namespace VehicleAppForms
             }
         }
 
-        private void ConnectLists()
+        private void Btn_DeleteSelectedActivity_Click(object sender, EventArgs e) // Delete activity from list
         {
-            lst_activityLog.DataSource = null;
-            List<Activity> source = DataAccess.GetVehicleActivities(MainForm.SelectedVehicle.RegistrationNumber);
-            source.Sort(currentSortMethod);
-            lst_activityLog.DataSource = source;
-
-            decimal total = 0;
-            foreach (Activity a in source)
-            {
-                total += a.GetTotalRevenue();
-            }
-
-            txt_vehicleActivityRevenueAmount.Text = total.ToString();
-
-        }
-
-        private void btn_deleteSelectedActivity_Click(object sender, EventArgs e)
-        {
-            if ((Activity)lst_activityLog.SelectedItem is Activity a)
+            if ((Activity)Lst_ActivityLog.SelectedItem is Activity a)
             {
                 DataAccess.DeleteActivity(a.ActivityID);
                 ConnectLists();
             }
         }
 
-        private void cmb_sortBy_SelectedIndexChanged(object sender, EventArgs e)
+        private void ConnectLists() // Connect activity listbox to Activity datasource
         {
-            string sortType = (string)cmb_sortBy.SelectedItem;
-            currentSortMethod = sortMethods[sortType];
+            Lst_ActivityLog.DataSource = null;
+            List<Activity> source = DataAccess.GetVehicleActivities(MainForm.SelectedVehicle.RegistrationNumber);
+            source.Sort(currentSortMethod);
+            Lst_ActivityLog.DataSource = source;
+
+            decimal total = 0;
+            foreach (Activity a in source)
+            {
+                total += a.GetTotalRevenue(); // For calculating the individual Vehicles activity revenue
+            }
+
+            Txt_VehicleActivityRevenueAmount.Text = total.ToString(); // update vehicles activity revenue (on form)
+
+        }
+
+        private void Cmb_SortBy_SelectedIndexChanged(object sender, EventArgs e) // Sort by selected sorting method
+        {
+            string sortType = (string)Cmb_SortBy.SelectedItem;
+            currentSortMethod = _sortMethods[sortType];
             ConnectLists();
         }
+
+        private void Btn_CloseActivityLog_Click(object sender, EventArgs e)
+        {
+            Close(); 
+        }
+
     }
 }

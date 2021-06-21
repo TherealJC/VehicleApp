@@ -7,87 +7,95 @@ namespace VehicleAppForms
     public partial class HiringActivityForm : Form, IActivityForm
     {
         Activity currentActivity;
-        private string resultMessage = ("The Hiring Activity has been successfully added to the database");
+
+        private string _resultMessage = ("The Hiring Activity has been successfully added to the database");
+        private string _errorMessage = ("This Form has invalid or missing information, Please check it and try again");
 
         public HiringActivityForm()
         {
             InitializeComponent();
         }
 
-        public Activity ShowCreate()
+        public Activity ShowCreate() // For showing or creating a new activity
         {
-            txt_activityID.Text = DataAccess.GetNextActivityID().ToString();
+            Txt_ActivityID.Text = DataAccess.GetNextActivityID().ToString();
             ShowDialog();
             return currentActivity;
         }
 
-        public Activity ShowEdit(HiringActivity activity)
+        public Activity ShowEdit(HiringActivity activity) // For opening a form to edit selected activity
         {
             FillForm(activity);
             ShowDialog();
             return currentActivity;
         }
 
-        private void FillForm(HiringActivity activity)
+        private void FillForm(HiringActivity activity) // Fill form textboxes with selected activities values
         {
-            txt_activityID.Text = activity.ActivityID.ToString();
-            txt_activityName.Text = activity.ActivityName;
-            txt_customerName.Text = activity.CustomerName;
-            dtp_startDate.Value = activity.StartDate;
-            dtp_endDate.Value = activity.EndDate;
-            txt_hiringCost.Text = activity.Cost.ToString();
+            Txt_ActivityID.Text = activity.ActivityID.ToString();
+            Txt_ActivityName.Text = activity.ActivityName;
+            Txt_CustomerName.Text = activity.CustomerName;
+            Dtp_StartDate.Value = activity.StartDate;
+            Dtp_EndDate.Value = activity.EndDate;
+            Txt_HiringCost.Text = activity.Cost.ToString();
 
-            btn_submitActivity.Text = "Update Activity";
+            Btn_SubmitActivity.Text = "Update Activity";
             Text = "Edit Hiring Activity";
-            resultMessage = "Vehicles hiring activity entry has been updated successfully";
+            _resultMessage = "Vehicles hiring activity entry has been updated successfully";
         }
 
-        private void btn_submitActivity_Click(object sender, EventArgs e)
+        private void Btn_SubmitActivity_Click(object sender, EventArgs e)
         {
-            if (ValidateForm())
+            if (ValidateForm()) // If validate form returns true
             {
-                currentActivity = new HiringActivity()
+                currentActivity = new HiringActivity() //create new hiring activity from input
                 {
-                   ActivityID = int.Parse(txt_activityID.Text),
-                   RegistrationNumber = MainForm.SelectedVehicle.RegistrationNumber,
-                   ActivityName = txt_activityName.Text,
-                   CustomerName = txt_customerName.Text,
-                   StartDate = dtp_startDate.Value,
-                   EndDate = dtp_endDate.Value,
-                   Cost = decimal.Parse(txt_hiringCost.Text)
+                   ActivityID = int.Parse(Txt_ActivityID.Text),
+                   RegistrationNumber = MainForm.SelectedVehicle.RegistrationNumber, //Get Vehicles registration number from main forms selected Vehicle
+                   ActivityName = Txt_ActivityName.Text,
+                   CustomerName = Txt_CustomerName.Text,
+                   StartDate = Dtp_StartDate.Value,
+                   EndDate = Dtp_EndDate.Value,
+                   Cost = decimal.Parse(Txt_HiringCost.Text)
                 };
 
-                MessageBox.Show(resultMessage);
+                MessageBox.Show(_resultMessage); //Successful activity addition
                 DialogResult = DialogResult.OK;
             }
-            else
+
+            else //If the validator fails/returns false
             {
-                MessageBox.Show("This Form has invalid or missing information, Please check it and try again");
+                MessageBox.Show(_errorMessage);
             }
         }
 
+        //Validate the input fields
         private bool ValidateForm()
         {
-            bool output = true;
-            decimal hiringCost = 0;
-            bool hiringCostValidNumber = decimal.TryParse(txt_hiringCost.Text, out hiringCost);
+            bool output = true; // start at true, if any validation fails, return false
 
-            if (txt_activityName.Text.Length == 0)
+            //Discards are local variables which you can assign but cannot read from. i.e. they are “write-only”
+            _ = decimal.TryParse(Txt_HiringCost.Text, out decimal hiringCost);
+
+            if (Txt_ActivityName.Text.Length == 0)
             {
-                output = false;
+                output = false; //If no text has been entered in the Activity Name field
+                _errorMessage = ("Please enter a Name for the activity");
             }
 
-            if (txt_customerName.Text.Length == 0)
+            if (Txt_CustomerName.Text.Length == 0) //If no text has been entered in the Customer Name field
             {
                 output = false;
+                _errorMessage = ("Please enter the Customer for this activity");
             }
 
             if (hiringCost <= 0)
             {
-                output = false;
+                output = false; //If no hiring costs is entered, or if entered cost is less than, or equal to 0
+                _errorMessage = ("Please enter a valid cost (more than zero)");
             }
 
-            return output;
+            return output; //return output (which = true, as set at the start of the method)
         }
     }
 }

@@ -6,8 +6,8 @@ namespace VehicleAppForms
 {
     public partial class CreateVehicleForm : Form
     {
-        private string resultMessage = ("The Vehicle has been successfully added to the TextFile Inventory");
-        private string errorMessage = ("This Form has invalid or missing information, Please check it and try again");
+        private string _resultMessage = ("The Vehicle has been successfully added to the TextFile Inventory");
+        private string _errorMessage = ("This Form has invalid or missing information, Please check it and try again");
 
         private Vehicle vehicle;
         private CreateVehicleForm()
@@ -18,17 +18,17 @@ namespace VehicleAppForms
         //Takes a Vehicle and fills in the text boxes. This is used for modify/edit Vehicle
         private void FillForm(Vehicle vm)
         {
-            txt_registrationNumber.Enabled = false;
+            Txt_RegistrationNumber.Enabled = false;
 
-            txt_registrationNumber.Text = vm.RegistrationNumber;
-            txt_make.Text = vm.Make;
-            txt_model.Text = vm.Model;
-            txt_year.Text = vm.Year.ToString();
-            txt_dailyHireCost.Text = vm.DailyHireCost.ToString();
+            Txt_RegistrationNumber.Text = vm.RegistrationNumber;
+            Txt_Make.Text = vm.Make;
+            Txt_Model.Text = vm.Model;
+            Txt_Year.Text = vm.Year.ToString();
+            Txt_DailyHireCost.Text = vm.DailyHireCost.ToString();
 
-            btn_addVehicle.Text = "Update Vehicle";
+            Btn_AddVehicle.Text = "Update Vehicle";
             Text = "Edit Vehicle";
-            resultMessage = "Vehicle entry has been updated successfully";
+            _resultMessage = "Vehicle entry has been updated successfully";
         }
 
         //Creates a new form with empty text boxes and creates a Vehicle
@@ -50,25 +50,25 @@ namespace VehicleAppForms
 
 
         //Set the events for when a user clicks on 'Add Vehicle' button
-        private void btn_addVehicle_Click(object sender, EventArgs e)
+        private void Btn_AddVehicle_Click(object sender, EventArgs e)
         {
             if (ValidateForm())    //If the validation has succeeded e.g. no improper data input
             {
                 vehicle = new Vehicle(  //Create a new vehicle from user input
-                    txt_registrationNumber.Text,
-                    txt_make.Text,
-                    txt_model.Text,
-                    txt_year.Text,
-                    txt_dailyHireCost.Text);
+                    Txt_RegistrationNumber.Text,
+                    Txt_Make.Text,
+                    Txt_Model.Text,
+                    Txt_Year.Text,
+                    Txt_DailyHireCost.Text);
 
                 //Display successful data entry message
-                MessageBox.Show(resultMessage);
+                MessageBox.Show(_resultMessage);
                 DialogResult = DialogResult.OK;
             }
             else
             {
                 //When Validator equals not true, e.g improper data format, return the error message
-                MessageBox.Show(errorMessage);
+                MessageBox.Show(_errorMessage);
             }
         }
 
@@ -77,52 +77,54 @@ namespace VehicleAppForms
         {
             bool output = true;
 
-            if (DataAccess.CheckVehicleExists(txt_registrationNumber.Text))
+            if (Txt_RegistrationNumber.Enabled) //If on the Create Vehicle Form, (Txt_RegistrationNumber is disabled on the Edit version of the form).
             {
-                output = false;
-                errorMessage = ("ERROR: A vehicle with this registration number already exists");
+                if (DataAccess.CheckVehicleExists(Txt_RegistrationNumber.Text)) //Check if registration number exists
+                {
+                    output = false;
+                    _errorMessage = ("ERROR: A vehicle with this registration number already exists");
+                }
             }
 
             decimal dailyHireCost = 0;
-            bool dailyHireCostValidNumber = decimal.TryParse(txt_dailyHireCost.Text, out dailyHireCost);
+            bool dailyHireCostValidNumber = decimal.TryParse(Txt_DailyHireCost.Text, out dailyHireCost);
 
-            int vehicleYear = 0;
-            bool vehicleYearValidNumber = int.TryParse(txt_year.Text, out vehicleYear);
+            bool vehicleYearValidNumber = int.TryParse(Txt_Year.Text, out int vehicleYear);
 
-            if (txt_registrationNumber.Text.Length == 0) //Check Rego #
+            if (Txt_RegistrationNumber.Text.Length == 0) //Check Rego #
             {
                 output = false;
-                errorMessage = ("Please enter a registration number for the Vehicle");
+                _errorMessage = ("Please enter a registration number for the Vehicle");
             }
 
-            if (txt_model.Text.Length == 0) //Check Model
+            if (Txt_Model.Text.Length == 0) //Check Model
             {
                 output = false;
-                errorMessage = ("Please enter a Model for the Vehicle");
+                _errorMessage = ("Please enter a Model for the Vehicle");
             }
 
-            if (txt_make.Text.Length == 0) //Check Make
+            if (Txt_Make.Text.Length == 0) //Check Make
             {
                 output = false;
-                errorMessage = ("Please enter a Make for the Vehicle");
+                _errorMessage = ("Please enter a Make for the Vehicle");
             }
 
             if (vehicleYear < 1800) //Check Year
             {
                 output = false;
-                errorMessage = ("Please enter The Year that the Vehicle was made (Cannot be more than 200 years ago)");
+                _errorMessage = ("Please enter The Year that the Vehicle was made (Cannot be more than 200 years ago)");
             }
 
             if (vehicleYear >= 2022) //Check Year
             {
                 output = false;
-                errorMessage = ("Please enter a valid Year for the Vehicle (Vehicle cannot exist before its creation date)");
+                _errorMessage = ("Please enter a valid Year for the Vehicle (Vehicle cannot exist before its creation date)");
             }
 
             if (dailyHireCost < 1) //if input value is less than 1
             {
                 output = false;
-                errorMessage = "Please enter the daily hiring cost for this vehicle (Must be more than 0)";
+                _errorMessage = "Please enter the daily hiring cost for this vehicle (Must be more than 0)";
             }
 
             return output;

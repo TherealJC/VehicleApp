@@ -7,85 +7,89 @@ namespace VehicleAppForms
     public partial class RelocationActivityForm : Form, IActivityForm
     {
         Activity currentActivity;
-        private string resultMessage = ("The Relocation Activity has been successfully added to the database");
+
+        private string _resultMessage = ("The Relocation Activity has been successfully added to the database");
+        private string _errorMessage = ("This Form has invalid or missing information, Please check it and try again");
 
         public RelocationActivityForm()
         {
             InitializeComponent();
         }
 
-        public Activity ShowCreate()
+        public Activity ShowCreate() // For showing or creating a new activity
         {
-            txt_activityID.Text = DataAccess.GetNextActivityID().ToString();
+            Txt_ActivityID.Text = DataAccess.GetNextActivityID().ToString();
             ShowDialog();
             return currentActivity;
         }
 
-        public Activity ShowEdit(RelocationActivity activity)
+        public Activity ShowEdit(RelocationActivity activity) // For opening a form to edit the selected activity
         {
             FillForm(activity);
             ShowDialog();
             return currentActivity;
         }
 
-        private void FillForm(RelocationActivity activity)
+        private void FillForm(RelocationActivity activity) // Fills the form with the selected activities values
         {
-            txt_activityID.Text = activity.ActivityID.ToString();
-            txt_activityName.Text = activity.ActivityName;
-            dtp_relocationDate.Value = activity.RelocationDate;
-            txt_kmsUsed.Text = activity.KmsUsed.ToString();
-            txt_relocationCost.Text = activity.Cost.ToString();
+            Txt_ActivityID.Text = activity.ActivityID.ToString();
+            Txt_ActivityName.Text = activity.ActivityName;
+            Dtp_RelocationDate.Value = activity.RelocationDate;
+            Txt_KmsUsed.Text = activity.KmsUsed.ToString();
+            Txt_RelocationCost.Text = activity.Cost.ToString();
 
-            btn_submitActivity.Text = "Update Activity";
+            Btn_SubmitActivity.Text = "Update Activity";
             Text = "Edit Relocation Activity";
-            resultMessage = "Vehicles relocation activity entry has been updated successfully";
+            _resultMessage = "Vehicles relocation activity entry has been updated successfully";
         }
 
-        private void btn_submitActivity_Click(object sender, EventArgs e)
+        private void Btn_SubmitActivity_Click(object sender, EventArgs e)
         {
             if (ValidateForm())
             {
                 currentActivity = new RelocationActivity()
                 {
-                    ActivityID = int.Parse(txt_activityID.Text),
+                    ActivityID = int.Parse(Txt_ActivityID.Text),
                     RegistrationNumber = MainForm.SelectedVehicle.RegistrationNumber,
-                    ActivityName = txt_activityName.Text,
-                    RelocationDate = dtp_relocationDate.Value,
-                    KmsUsed = int.Parse(txt_kmsUsed.Text),
-                    Cost = decimal.Parse(txt_relocationCost.Text)
+                    ActivityName = Txt_ActivityName.Text,
+                    RelocationDate = Dtp_RelocationDate.Value,
+                    KmsUsed = int.Parse(Txt_KmsUsed.Text),
+                    Cost = decimal.Parse(Txt_RelocationCost.Text)
                 };
 
-                MessageBox.Show(resultMessage);
+                MessageBox.Show(_resultMessage);
                 DialogResult = DialogResult.OK;
             }
             else
             {
-                MessageBox.Show("This Form has invalid or missing information, Please check it and try again");
+                MessageBox.Show(_errorMessage);
             }
         }
 
         private bool ValidateForm()
         {
             bool output = true;
-            decimal relocationCost = 0;
-            bool hiringCostValidNumber = decimal.TryParse(txt_relocationCost.Text, out relocationCost);
 
-            int kmCheck = 0;
-            bool kmCheckIfValid = int.TryParse(txt_kmsUsed.Text, out kmCheck);
+            _ = decimal.TryParse(Txt_RelocationCost.Text, out decimal relocationCost); //Used to check if relocation cost is valid
 
-            if (txt_activityName.Text.Length == 0)
+            _ = int.TryParse(Txt_KmsUsed.Text, out int kmCheck); //Used to check if KmsUsed is correct
+
+            if (Txt_ActivityName.Text.Length == 0)
             {
                 output = false;
+                _errorMessage = "Please enter a valid activity name";
             }
 
             if (kmCheck <= 0)
             {
                 output = false;
+                _errorMessage = "Please enter a valid Kilometre amount";
             }
 
             if (relocationCost <= 0)
             {
                 output = false;
+                _errorMessage = "Please enter a valid cost (more than 0)";
             }
 
             return output;

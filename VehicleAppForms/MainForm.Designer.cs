@@ -29,231 +29,231 @@ namespace VehicleAppForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_createVehicle = new System.Windows.Forms.Button();
-            this.btn_editVehicle = new System.Windows.Forms.Button();
-            this.btn_deleteVehicle = new System.Windows.Forms.Button();
-            this.lst_registration = new System.Windows.Forms.ListBox();
-            this.lbl_quickView = new System.Windows.Forms.Label();
-            this.lbl_totalRevenue = new System.Windows.Forms.Label();
-            this.lbl_displayTotalRevenue = new System.Windows.Forms.Label();
-            this.btn_viewActivityLog = new System.Windows.Forms.Button();
-            this.lbl_registrationNumber = new System.Windows.Forms.Label();
-            this.lbl_make = new System.Windows.Forms.Label();
-            this.lbl_model = new System.Windows.Forms.Label();
-            this.lbl_year = new System.Windows.Forms.Label();
-            this.lbl_dailyHireCost = new System.Windows.Forms.Label();
-            this.txt_registrationNumber = new System.Windows.Forms.TextBox();
-            this.txt_make = new System.Windows.Forms.TextBox();
-            this.txt_model = new System.Windows.Forms.TextBox();
-            this.txt_year = new System.Windows.Forms.TextBox();
-            this.txt_dailyHireCost = new System.Windows.Forms.TextBox();
-            this.lbl_vehicleInventory = new System.Windows.Forms.Label();
+            this.Btn_CreateVehicle = new System.Windows.Forms.Button();
+            this.Btn_EditVehicle = new System.Windows.Forms.Button();
+            this.Btn_DeleteVehicle = new System.Windows.Forms.Button();
+            this.Lst_Registration = new System.Windows.Forms.ListBox();
+            this.Lbl_QuickView = new System.Windows.Forms.Label();
+            this.Lbl_TotalRevenue = new System.Windows.Forms.Label();
+            this.Lbl_DisplayTotalRevenue = new System.Windows.Forms.Label();
+            this.Btn_ViewActivityLog = new System.Windows.Forms.Button();
+            this.Lbl_RegistrationNumber = new System.Windows.Forms.Label();
+            this.Lbl_Make = new System.Windows.Forms.Label();
+            this.Lbl_Model = new System.Windows.Forms.Label();
+            this.Lbl_Year = new System.Windows.Forms.Label();
+            this.Lbl_DailyHireCost = new System.Windows.Forms.Label();
+            this.Txt_RegistrationNumber = new System.Windows.Forms.TextBox();
+            this.Txt_Make = new System.Windows.Forms.TextBox();
+            this.Txt_Model = new System.Windows.Forms.TextBox();
+            this.Txt_Year = new System.Windows.Forms.TextBox();
+            this.Txt_DailyHireCost = new System.Windows.Forms.TextBox();
+            this.Lbl_VehicleInventory = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btn_createVehicle
+            // Btn_CreateVehicle
             // 
-            this.btn_createVehicle.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_createVehicle.Location = new System.Drawing.Point(23, 29);
-            this.btn_createVehicle.Name = "btn_createVehicle";
-            this.btn_createVehicle.Size = new System.Drawing.Size(156, 42);
-            this.btn_createVehicle.TabIndex = 0;
-            this.btn_createVehicle.Text = "Create New Vehicle";
-            this.btn_createVehicle.UseVisualStyleBackColor = false;
-            this.btn_createVehicle.Click += new System.EventHandler(this.btn_createVehicle_Click);
+            this.Btn_CreateVehicle.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_CreateVehicle.Location = new System.Drawing.Point(23, 29);
+            this.Btn_CreateVehicle.Name = "Btn_CreateVehicle";
+            this.Btn_CreateVehicle.Size = new System.Drawing.Size(156, 42);
+            this.Btn_CreateVehicle.TabIndex = 0;
+            this.Btn_CreateVehicle.Text = "Create New Vehicle";
+            this.Btn_CreateVehicle.UseVisualStyleBackColor = false;
+            this.Btn_CreateVehicle.Click += new System.EventHandler(this.Btn_CreateVehicle_Click);
             // 
-            // btn_editVehicle
+            // Btn_EditVehicle
             // 
-            this.btn_editVehicle.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_editVehicle.Location = new System.Drawing.Point(23, 88);
-            this.btn_editVehicle.Name = "btn_editVehicle";
-            this.btn_editVehicle.Size = new System.Drawing.Size(156, 42);
-            this.btn_editVehicle.TabIndex = 1;
-            this.btn_editVehicle.Text = "Edit Vehicle";
-            this.btn_editVehicle.UseVisualStyleBackColor = false;
-            this.btn_editVehicle.Click += new System.EventHandler(this.btn_editVehicle_Click);
+            this.Btn_EditVehicle.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_EditVehicle.Location = new System.Drawing.Point(23, 88);
+            this.Btn_EditVehicle.Name = "Btn_EditVehicle";
+            this.Btn_EditVehicle.Size = new System.Drawing.Size(156, 42);
+            this.Btn_EditVehicle.TabIndex = 1;
+            this.Btn_EditVehicle.Text = "Edit Vehicle";
+            this.Btn_EditVehicle.UseVisualStyleBackColor = false;
+            this.Btn_EditVehicle.Click += new System.EventHandler(this.Btn_EditVehicle_Click);
             // 
-            // btn_deleteVehicle
+            // Btn_DeleteVehicle
             // 
-            this.btn_deleteVehicle.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_deleteVehicle.Location = new System.Drawing.Point(23, 146);
-            this.btn_deleteVehicle.Name = "btn_deleteVehicle";
-            this.btn_deleteVehicle.Size = new System.Drawing.Size(156, 42);
-            this.btn_deleteVehicle.TabIndex = 2;
-            this.btn_deleteVehicle.Text = "Delete Vehicle";
-            this.btn_deleteVehicle.UseVisualStyleBackColor = false;
-            this.btn_deleteVehicle.Click += new System.EventHandler(this.btn_deleteVehicle_Click);
+            this.Btn_DeleteVehicle.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_DeleteVehicle.Location = new System.Drawing.Point(23, 146);
+            this.Btn_DeleteVehicle.Name = "Btn_DeleteVehicle";
+            this.Btn_DeleteVehicle.Size = new System.Drawing.Size(156, 42);
+            this.Btn_DeleteVehicle.TabIndex = 2;
+            this.Btn_DeleteVehicle.Text = "Delete Vehicle";
+            this.Btn_DeleteVehicle.UseVisualStyleBackColor = false;
+            this.Btn_DeleteVehicle.Click += new System.EventHandler(this.Btn_DeleteVehicle_Click);
             // 
-            // lst_registration
+            // Lst_Registration
             // 
-            this.lst_registration.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lst_registration.FormattingEnabled = true;
-            this.lst_registration.ItemHeight = 20;
-            this.lst_registration.Location = new System.Drawing.Point(219, 29);
-            this.lst_registration.Name = "lst_registration";
-            this.lst_registration.Size = new System.Drawing.Size(170, 224);
-            this.lst_registration.TabIndex = 3;
-            this.lst_registration.SelectedValueChanged += new System.EventHandler(this.lst_registration_SelectedValueChanged);
+            this.Lst_Registration.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lst_Registration.FormattingEnabled = true;
+            this.Lst_Registration.ItemHeight = 20;
+            this.Lst_Registration.Location = new System.Drawing.Point(219, 29);
+            this.Lst_Registration.Name = "Lst_Registration";
+            this.Lst_Registration.Size = new System.Drawing.Size(170, 224);
+            this.Lst_Registration.TabIndex = 3;
+            this.Lst_Registration.SelectedValueChanged += new System.EventHandler(this.Lst_Registration_SelectedValueChanged);
             // 
-            // lbl_quickView
+            // Lbl_QuickView
             // 
-            this.lbl_quickView.AutoSize = true;
-            this.lbl_quickView.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_quickView.Location = new System.Drawing.Point(200, 330);
-            this.lbl_quickView.Name = "lbl_quickView";
-            this.lbl_quickView.Size = new System.Drawing.Size(86, 20);
-            this.lbl_quickView.TabIndex = 4;
-            this.lbl_quickView.Text = "Quick View";
+            this.Lbl_QuickView.AutoSize = true;
+            this.Lbl_QuickView.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_QuickView.Location = new System.Drawing.Point(200, 330);
+            this.Lbl_QuickView.Name = "Lbl_QuickView";
+            this.Lbl_QuickView.Size = new System.Drawing.Size(86, 20);
+            this.Lbl_QuickView.TabIndex = 4;
+            this.Lbl_QuickView.Text = "Quick View";
             // 
-            // lbl_totalRevenue
+            // Lbl_TotalRevenue
             // 
-            this.lbl_totalRevenue.AutoSize = true;
-            this.lbl_totalRevenue.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_totalRevenue.Location = new System.Drawing.Point(200, 265);
-            this.lbl_totalRevenue.Name = "lbl_totalRevenue";
-            this.lbl_totalRevenue.Size = new System.Drawing.Size(174, 23);
-            this.lbl_totalRevenue.TabIndex = 6;
-            this.lbl_totalRevenue.Text = "Total Fleet Revenue $";
+            this.Lbl_TotalRevenue.AutoSize = true;
+            this.Lbl_TotalRevenue.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_TotalRevenue.Location = new System.Drawing.Point(200, 265);
+            this.Lbl_TotalRevenue.Name = "Lbl_TotalRevenue";
+            this.Lbl_TotalRevenue.Size = new System.Drawing.Size(174, 23);
+            this.Lbl_TotalRevenue.TabIndex = 6;
+            this.Lbl_TotalRevenue.Text = "Total Fleet Revenue $";
             // 
-            // lbl_displayTotalRevenue
+            // Lbl_DisplayTotalRevenue
             // 
-            this.lbl_displayTotalRevenue.AutoSize = true;
-            this.lbl_displayTotalRevenue.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_displayTotalRevenue.Location = new System.Drawing.Point(345, 265);
-            this.lbl_displayTotalRevenue.Name = "lbl_displayTotalRevenue";
-            this.lbl_displayTotalRevenue.Size = new System.Drawing.Size(41, 23);
-            this.lbl_displayTotalRevenue.TabIndex = 7;
-            this.lbl_displayTotalRevenue.Text = "0.00";
+            this.Lbl_DisplayTotalRevenue.AutoSize = true;
+            this.Lbl_DisplayTotalRevenue.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_DisplayTotalRevenue.Location = new System.Drawing.Point(345, 265);
+            this.Lbl_DisplayTotalRevenue.Name = "Lbl_DisplayTotalRevenue";
+            this.Lbl_DisplayTotalRevenue.Size = new System.Drawing.Size(41, 23);
+            this.Lbl_DisplayTotalRevenue.TabIndex = 7;
+            this.Lbl_DisplayTotalRevenue.Text = "0.00";
             // 
-            // btn_viewActivityLog
+            // Btn_ViewActivityLog
             // 
-            this.btn_viewActivityLog.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_viewActivityLog.Location = new System.Drawing.Point(36, 204);
-            this.btn_viewActivityLog.Name = "btn_viewActivityLog";
-            this.btn_viewActivityLog.Size = new System.Drawing.Size(128, 49);
-            this.btn_viewActivityLog.TabIndex = 8;
-            this.btn_viewActivityLog.Text = "View Vehicles Activity Log";
-            this.btn_viewActivityLog.UseVisualStyleBackColor = false;
-            this.btn_viewActivityLog.Click += new System.EventHandler(this.btn_viewActivityLog_Click);
+            this.Btn_ViewActivityLog.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_ViewActivityLog.Location = new System.Drawing.Point(36, 204);
+            this.Btn_ViewActivityLog.Name = "Btn_ViewActivityLog";
+            this.Btn_ViewActivityLog.Size = new System.Drawing.Size(128, 49);
+            this.Btn_ViewActivityLog.TabIndex = 8;
+            this.Btn_ViewActivityLog.Text = "View Vehicles Activity Log";
+            this.Btn_ViewActivityLog.UseVisualStyleBackColor = false;
+            this.Btn_ViewActivityLog.Click += new System.EventHandler(this.Btn_ViewActivityLog_Click);
             // 
-            // lbl_registrationNumber
+            // Lbl_RegistrationNumber
             // 
-            this.lbl_registrationNumber.AutoSize = true;
-            this.lbl_registrationNumber.Location = new System.Drawing.Point(42, 366);
-            this.lbl_registrationNumber.Name = "lbl_registrationNumber";
-            this.lbl_registrationNumber.Size = new System.Drawing.Size(147, 20);
-            this.lbl_registrationNumber.TabIndex = 9;
-            this.lbl_registrationNumber.Text = "Registration Number";
+            this.Lbl_RegistrationNumber.AutoSize = true;
+            this.Lbl_RegistrationNumber.Location = new System.Drawing.Point(42, 366);
+            this.Lbl_RegistrationNumber.Name = "Lbl_RegistrationNumber";
+            this.Lbl_RegistrationNumber.Size = new System.Drawing.Size(147, 20);
+            this.Lbl_RegistrationNumber.TabIndex = 9;
+            this.Lbl_RegistrationNumber.Text = "Registration Number";
             // 
-            // lbl_make
+            // Lbl_Make
             // 
-            this.lbl_make.AutoSize = true;
-            this.lbl_make.Location = new System.Drawing.Point(144, 407);
-            this.lbl_make.Name = "lbl_make";
-            this.lbl_make.Size = new System.Drawing.Size(45, 20);
-            this.lbl_make.TabIndex = 10;
-            this.lbl_make.Text = "Make";
+            this.Lbl_Make.AutoSize = true;
+            this.Lbl_Make.Location = new System.Drawing.Point(144, 407);
+            this.Lbl_Make.Name = "Lbl_Make";
+            this.Lbl_Make.Size = new System.Drawing.Size(45, 20);
+            this.Lbl_Make.TabIndex = 10;
+            this.Lbl_Make.Text = "Make";
             // 
-            // lbl_model
+            // Lbl_Model
             // 
-            this.lbl_model.AutoSize = true;
-            this.lbl_model.Location = new System.Drawing.Point(137, 446);
-            this.lbl_model.Name = "lbl_model";
-            this.lbl_model.Size = new System.Drawing.Size(52, 20);
-            this.lbl_model.TabIndex = 11;
-            this.lbl_model.Text = "Model";
+            this.Lbl_Model.AutoSize = true;
+            this.Lbl_Model.Location = new System.Drawing.Point(137, 446);
+            this.Lbl_Model.Name = "Lbl_Model";
+            this.Lbl_Model.Size = new System.Drawing.Size(52, 20);
+            this.Lbl_Model.TabIndex = 11;
+            this.Lbl_Model.Text = "Model";
             // 
-            // lbl_year
+            // Lbl_Year
             // 
-            this.lbl_year.AutoSize = true;
-            this.lbl_year.Location = new System.Drawing.Point(152, 485);
-            this.lbl_year.Name = "lbl_year";
-            this.lbl_year.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_year.Size = new System.Drawing.Size(37, 20);
-            this.lbl_year.TabIndex = 12;
-            this.lbl_year.Text = "Year";
+            this.Lbl_Year.AutoSize = true;
+            this.Lbl_Year.Location = new System.Drawing.Point(152, 485);
+            this.Lbl_Year.Name = "Lbl_Year";
+            this.Lbl_Year.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Lbl_Year.Size = new System.Drawing.Size(37, 20);
+            this.Lbl_Year.TabIndex = 12;
+            this.Lbl_Year.Text = "Year";
             // 
-            // lbl_dailyHireCost
+            // Lbl_DailyHireCost
             // 
-            this.lbl_dailyHireCost.AutoSize = true;
-            this.lbl_dailyHireCost.Location = new System.Drawing.Point(81, 522);
-            this.lbl_dailyHireCost.Name = "lbl_dailyHireCost";
-            this.lbl_dailyHireCost.Size = new System.Drawing.Size(108, 20);
-            this.lbl_dailyHireCost.TabIndex = 13;
-            this.lbl_dailyHireCost.Text = "Daily Hire Cost";
+            this.Lbl_DailyHireCost.AutoSize = true;
+            this.Lbl_DailyHireCost.Location = new System.Drawing.Point(81, 522);
+            this.Lbl_DailyHireCost.Name = "Lbl_DailyHireCost";
+            this.Lbl_DailyHireCost.Size = new System.Drawing.Size(108, 20);
+            this.Lbl_DailyHireCost.TabIndex = 13;
+            this.Lbl_DailyHireCost.Text = "Daily Hire Cost";
             // 
-            // txt_registrationNumber
+            // Txt_RegistrationNumber
             // 
-            this.txt_registrationNumber.Location = new System.Drawing.Point(204, 363);
-            this.txt_registrationNumber.Name = "txt_registrationNumber";
-            this.txt_registrationNumber.ReadOnly = true;
-            this.txt_registrationNumber.Size = new System.Drawing.Size(141, 27);
-            this.txt_registrationNumber.TabIndex = 14;
+            this.Txt_RegistrationNumber.Location = new System.Drawing.Point(204, 363);
+            this.Txt_RegistrationNumber.Name = "Txt_RegistrationNumber";
+            this.Txt_RegistrationNumber.ReadOnly = true;
+            this.Txt_RegistrationNumber.Size = new System.Drawing.Size(141, 27);
+            this.Txt_RegistrationNumber.TabIndex = 14;
             // 
-            // txt_make
+            // Txt_Make
             // 
-            this.txt_make.Location = new System.Drawing.Point(204, 404);
-            this.txt_make.Name = "txt_make";
-            this.txt_make.ReadOnly = true;
-            this.txt_make.Size = new System.Drawing.Size(195, 27);
-            this.txt_make.TabIndex = 15;
+            this.Txt_Make.Location = new System.Drawing.Point(204, 404);
+            this.Txt_Make.Name = "Txt_Make";
+            this.Txt_Make.ReadOnly = true;
+            this.Txt_Make.Size = new System.Drawing.Size(195, 27);
+            this.Txt_Make.TabIndex = 15;
             // 
-            // txt_model
+            // Txt_Model
             // 
-            this.txt_model.Location = new System.Drawing.Point(204, 443);
-            this.txt_model.Name = "txt_model";
-            this.txt_model.ReadOnly = true;
-            this.txt_model.Size = new System.Drawing.Size(195, 27);
-            this.txt_model.TabIndex = 16;
+            this.Txt_Model.Location = new System.Drawing.Point(204, 443);
+            this.Txt_Model.Name = "Txt_Model";
+            this.Txt_Model.ReadOnly = true;
+            this.Txt_Model.Size = new System.Drawing.Size(195, 27);
+            this.Txt_Model.TabIndex = 16;
             // 
-            // txt_year
+            // Txt_Year
             // 
-            this.txt_year.Location = new System.Drawing.Point(204, 485);
-            this.txt_year.Name = "txt_year";
-            this.txt_year.ReadOnly = true;
-            this.txt_year.Size = new System.Drawing.Size(165, 27);
-            this.txt_year.TabIndex = 17;
+            this.Txt_Year.Location = new System.Drawing.Point(204, 485);
+            this.Txt_Year.Name = "Txt_Year";
+            this.Txt_Year.ReadOnly = true;
+            this.Txt_Year.Size = new System.Drawing.Size(165, 27);
+            this.Txt_Year.TabIndex = 17;
             // 
-            // txt_dailyHireCost
+            // Txt_DailyHireCost
             // 
-            this.txt_dailyHireCost.Location = new System.Drawing.Point(204, 522);
-            this.txt_dailyHireCost.Name = "txt_dailyHireCost";
-            this.txt_dailyHireCost.ReadOnly = true;
-            this.txt_dailyHireCost.Size = new System.Drawing.Size(141, 27);
-            this.txt_dailyHireCost.TabIndex = 18;
+            this.Txt_DailyHireCost.Location = new System.Drawing.Point(204, 522);
+            this.Txt_DailyHireCost.Name = "Txt_DailyHireCost";
+            this.Txt_DailyHireCost.ReadOnly = true;
+            this.Txt_DailyHireCost.Size = new System.Drawing.Size(141, 27);
+            this.Txt_DailyHireCost.TabIndex = 18;
             // 
-            // lbl_vehicleInventory
+            // Lbl_VehicleInventory
             // 
-            this.lbl_vehicleInventory.AutoSize = true;
-            this.lbl_vehicleInventory.Location = new System.Drawing.Point(248, 9);
-            this.lbl_vehicleInventory.Name = "lbl_vehicleInventory";
-            this.lbl_vehicleInventory.Size = new System.Drawing.Size(121, 20);
-            this.lbl_vehicleInventory.TabIndex = 19;
-            this.lbl_vehicleInventory.Text = "Vehicle Inventory";
+            this.Lbl_VehicleInventory.AutoSize = true;
+            this.Lbl_VehicleInventory.Location = new System.Drawing.Point(248, 9);
+            this.Lbl_VehicleInventory.Name = "Lbl_VehicleInventory";
+            this.Lbl_VehicleInventory.Size = new System.Drawing.Size(121, 20);
+            this.Lbl_VehicleInventory.TabIndex = 19;
+            this.Lbl_VehicleInventory.Text = "Vehicle Inventory";
             // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(453, 584);
-            this.Controls.Add(this.lbl_vehicleInventory);
-            this.Controls.Add(this.txt_dailyHireCost);
-            this.Controls.Add(this.txt_year);
-            this.Controls.Add(this.txt_model);
-            this.Controls.Add(this.txt_make);
-            this.Controls.Add(this.txt_registrationNumber);
-            this.Controls.Add(this.lbl_dailyHireCost);
-            this.Controls.Add(this.lbl_year);
-            this.Controls.Add(this.lbl_model);
-            this.Controls.Add(this.lbl_make);
-            this.Controls.Add(this.lbl_registrationNumber);
-            this.Controls.Add(this.btn_viewActivityLog);
-            this.Controls.Add(this.lbl_displayTotalRevenue);
-            this.Controls.Add(this.lbl_totalRevenue);
-            this.Controls.Add(this.lbl_quickView);
-            this.Controls.Add(this.lst_registration);
-            this.Controls.Add(this.btn_deleteVehicle);
-            this.Controls.Add(this.btn_editVehicle);
-            this.Controls.Add(this.btn_createVehicle);
+            this.Controls.Add(this.Lbl_VehicleInventory);
+            this.Controls.Add(this.Txt_DailyHireCost);
+            this.Controls.Add(this.Txt_Year);
+            this.Controls.Add(this.Txt_Model);
+            this.Controls.Add(this.Txt_Make);
+            this.Controls.Add(this.Txt_RegistrationNumber);
+            this.Controls.Add(this.Lbl_DailyHireCost);
+            this.Controls.Add(this.Lbl_Year);
+            this.Controls.Add(this.Lbl_Model);
+            this.Controls.Add(this.Lbl_Make);
+            this.Controls.Add(this.Lbl_RegistrationNumber);
+            this.Controls.Add(this.Btn_ViewActivityLog);
+            this.Controls.Add(this.Lbl_DisplayTotalRevenue);
+            this.Controls.Add(this.Lbl_TotalRevenue);
+            this.Controls.Add(this.Lbl_QuickView);
+            this.Controls.Add(this.Lst_Registration);
+            this.Controls.Add(this.Btn_DeleteVehicle);
+            this.Controls.Add(this.Btn_EditVehicle);
+            this.Controls.Add(this.Btn_CreateVehicle);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainForm";
@@ -267,25 +267,25 @@ namespace VehicleAppForms
 
         #endregion
 
-        private System.Windows.Forms.Button btn_createVehicle;
-        private System.Windows.Forms.Button btn_editVehicle;
-        private System.Windows.Forms.Button btn_deleteVehicle;
-        private System.Windows.Forms.ListBox lst_registration;
-        private System.Windows.Forms.Label lbl_quickView;
-        private System.Windows.Forms.Label lbl_totalRevenue;
-        private System.Windows.Forms.Label lbl_displayTotalRevenue;
-        private System.Windows.Forms.Button btn_viewActivityLog;
-        private System.Windows.Forms.Label lbl_registrationNumber;
-        private System.Windows.Forms.Label lbl_make;
-        private System.Windows.Forms.Label lbl_model;
-        private System.Windows.Forms.Label lbl_year;
-        private System.Windows.Forms.Label lbl_dailyHireCost;
-        private System.Windows.Forms.TextBox txt_registrationNumber;
-        private System.Windows.Forms.TextBox txt_make;
-        private System.Windows.Forms.TextBox txt_model;
-        private System.Windows.Forms.TextBox txt_year;
-        private System.Windows.Forms.TextBox txt_dailyHireCost;
-        private System.Windows.Forms.Label lbl_vehicleInventory;
+        private System.Windows.Forms.Button Btn_CreateVehicle;
+        private System.Windows.Forms.Button Btn_EditVehicle;
+        private System.Windows.Forms.Button Btn_DeleteVehicle;
+        private System.Windows.Forms.ListBox Lst_Registration;
+        private System.Windows.Forms.Label Lbl_QuickView;
+        private System.Windows.Forms.Label Lbl_TotalRevenue;
+        private System.Windows.Forms.Label Lbl_DisplayTotalRevenue;
+        private System.Windows.Forms.Button Btn_ViewActivityLog;
+        private System.Windows.Forms.Label Lbl_RegistrationNumber;
+        private System.Windows.Forms.Label Lbl_Make;
+        private System.Windows.Forms.Label Lbl_Model;
+        private System.Windows.Forms.Label Lbl_Year;
+        private System.Windows.Forms.Label Lbl_DailyHireCost;
+        private System.Windows.Forms.TextBox Txt_RegistrationNumber;
+        private System.Windows.Forms.TextBox Txt_Make;
+        private System.Windows.Forms.TextBox Txt_Model;
+        private System.Windows.Forms.TextBox Txt_Year;
+        private System.Windows.Forms.TextBox Txt_DailyHireCost;
+        private System.Windows.Forms.Label Lbl_VehicleInventory;
     }
 }
 

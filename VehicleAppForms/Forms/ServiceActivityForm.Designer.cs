@@ -29,137 +29,137 @@ namespace VehicleAppForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.txt_activityID = new System.Windows.Forms.TextBox();
-            this.txt_activityName = new System.Windows.Forms.TextBox();
-            this.lbl_activityID = new System.Windows.Forms.Label();
-            this.lbl_activityName = new System.Windows.Forms.Label();
-            this.lbl_serviceDate = new System.Windows.Forms.Label();
-            this.lbl_description = new System.Windows.Forms.Label();
-            this.lbl_serviceCost = new System.Windows.Forms.Label();
-            this.dtp_serviceDate = new System.Windows.Forms.DateTimePicker();
-            this.txt_description = new System.Windows.Forms.TextBox();
-            this.txt_serviceCost = new System.Windows.Forms.TextBox();
-            this.btn_submitActivity = new System.Windows.Forms.Button();
+            this.Txt_ActivityID = new System.Windows.Forms.TextBox();
+            this.Txt_ActivityName = new System.Windows.Forms.TextBox();
+            this.Lbl_ActivityID = new System.Windows.Forms.Label();
+            this.Lbl_ActivityName = new System.Windows.Forms.Label();
+            this.Lbl_ServiceDate = new System.Windows.Forms.Label();
+            this.Lbl_Description = new System.Windows.Forms.Label();
+            this.Lbl_ServiceCost = new System.Windows.Forms.Label();
+            this.Dtp_ServiceDate = new System.Windows.Forms.DateTimePicker();
+            this.Txt_Description = new System.Windows.Forms.TextBox();
+            this.Txt_ServiceCost = new System.Windows.Forms.TextBox();
+            this.Btn_SubmitActivity = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txt_activityID
+            // Txt_ActivityID
             // 
-            this.txt_activityID.Location = new System.Drawing.Point(164, 21);
-            this.txt_activityID.Name = "txt_activityID";
-            this.txt_activityID.ReadOnly = true;
-            this.txt_activityID.Size = new System.Drawing.Size(157, 27);
-            this.txt_activityID.TabIndex = 0;
+            this.Txt_ActivityID.Location = new System.Drawing.Point(164, 21);
+            this.Txt_ActivityID.Name = "Txt_ActivityID";
+            this.Txt_ActivityID.ReadOnly = true;
+            this.Txt_ActivityID.Size = new System.Drawing.Size(157, 27);
+            this.Txt_ActivityID.TabIndex = 0;
             // 
-            // txt_activityName
+            // Txt_ActivityName
             // 
-            this.txt_activityName.Location = new System.Drawing.Point(164, 69);
-            this.txt_activityName.MaxLength = 30;
-            this.txt_activityName.Name = "txt_activityName";
-            this.txt_activityName.Size = new System.Drawing.Size(257, 27);
-            this.txt_activityName.TabIndex = 1;
+            this.Txt_ActivityName.Location = new System.Drawing.Point(164, 69);
+            this.Txt_ActivityName.MaxLength = 30;
+            this.Txt_ActivityName.Name = "Txt_ActivityName";
+            this.Txt_ActivityName.Size = new System.Drawing.Size(257, 27);
+            this.Txt_ActivityName.TabIndex = 1;
             // 
-            // lbl_activityID
+            // Lbl_ActivityID
             // 
-            this.lbl_activityID.AutoSize = true;
-            this.lbl_activityID.Font = new System.Drawing.Font("Segoe UI", 9.8F);
-            this.lbl_activityID.Location = new System.Drawing.Point(73, 23);
-            this.lbl_activityID.Name = "lbl_activityID";
-            this.lbl_activityID.Size = new System.Drawing.Size(87, 23);
-            this.lbl_activityID.TabIndex = 2;
-            this.lbl_activityID.Text = "Activity ID";
+            this.Lbl_ActivityID.AutoSize = true;
+            this.Lbl_ActivityID.Font = new System.Drawing.Font("Segoe UI", 9.8F);
+            this.Lbl_ActivityID.Location = new System.Drawing.Point(73, 23);
+            this.Lbl_ActivityID.Name = "Lbl_ActivityID";
+            this.Lbl_ActivityID.Size = new System.Drawing.Size(87, 23);
+            this.Lbl_ActivityID.TabIndex = 2;
+            this.Lbl_ActivityID.Text = "Activity ID";
             // 
-            // lbl_activityName
+            // Lbl_ActivityName
             // 
-            this.lbl_activityName.AutoSize = true;
-            this.lbl_activityName.Font = new System.Drawing.Font("Segoe UI", 9.8F);
-            this.lbl_activityName.Location = new System.Drawing.Point(12, 71);
-            this.lbl_activityName.Name = "lbl_activityName";
-            this.lbl_activityName.Size = new System.Drawing.Size(148, 23);
-            this.lbl_activityName.TabIndex = 3;
-            this.lbl_activityName.Text = "Workshop/Garage";
+            this.Lbl_ActivityName.AutoSize = true;
+            this.Lbl_ActivityName.Font = new System.Drawing.Font("Segoe UI", 9.8F);
+            this.Lbl_ActivityName.Location = new System.Drawing.Point(12, 71);
+            this.Lbl_ActivityName.Name = "Lbl_ActivityName";
+            this.Lbl_ActivityName.Size = new System.Drawing.Size(148, 23);
+            this.Lbl_ActivityName.TabIndex = 3;
+            this.Lbl_ActivityName.Text = "Workshop/Garage";
             // 
-            // lbl_serviceDate
+            // Lbl_ServiceDate
             // 
-            this.lbl_serviceDate.AutoSize = true;
-            this.lbl_serviceDate.Font = new System.Drawing.Font("Segoe UI", 9.8F);
-            this.lbl_serviceDate.Location = new System.Drawing.Point(54, 119);
-            this.lbl_serviceDate.Name = "lbl_serviceDate";
-            this.lbl_serviceDate.Size = new System.Drawing.Size(104, 23);
-            this.lbl_serviceDate.TabIndex = 4;
-            this.lbl_serviceDate.Text = "Service Date";
+            this.Lbl_ServiceDate.AutoSize = true;
+            this.Lbl_ServiceDate.Font = new System.Drawing.Font("Segoe UI", 9.8F);
+            this.Lbl_ServiceDate.Location = new System.Drawing.Point(54, 119);
+            this.Lbl_ServiceDate.Name = "Lbl_ServiceDate";
+            this.Lbl_ServiceDate.Size = new System.Drawing.Size(104, 23);
+            this.Lbl_ServiceDate.TabIndex = 4;
+            this.Lbl_ServiceDate.Text = "Service Date";
             // 
-            // lbl_description
+            // Lbl_Description
             // 
-            this.lbl_description.AutoSize = true;
-            this.lbl_description.Font = new System.Drawing.Font("Segoe UI", 9.8F);
-            this.lbl_description.Location = new System.Drawing.Point(62, 169);
-            this.lbl_description.Name = "lbl_description";
-            this.lbl_description.Size = new System.Drawing.Size(96, 23);
-            this.lbl_description.TabIndex = 5;
-            this.lbl_description.Text = "Description";
+            this.Lbl_Description.AutoSize = true;
+            this.Lbl_Description.Font = new System.Drawing.Font("Segoe UI", 9.8F);
+            this.Lbl_Description.Location = new System.Drawing.Point(62, 169);
+            this.Lbl_Description.Name = "Lbl_Description";
+            this.Lbl_Description.Size = new System.Drawing.Size(96, 23);
+            this.Lbl_Description.TabIndex = 5;
+            this.Lbl_Description.Text = "Description";
             // 
-            // lbl_serviceCost
+            // Lbl_ServiceCost
             // 
-            this.lbl_serviceCost.AutoSize = true;
-            this.lbl_serviceCost.Font = new System.Drawing.Font("Segoe UI", 9.8F);
-            this.lbl_serviceCost.Location = new System.Drawing.Point(56, 274);
-            this.lbl_serviceCost.Name = "lbl_serviceCost";
-            this.lbl_serviceCost.Size = new System.Drawing.Size(102, 23);
-            this.lbl_serviceCost.TabIndex = 6;
-            this.lbl_serviceCost.Text = "Service Cost";
+            this.Lbl_ServiceCost.AutoSize = true;
+            this.Lbl_ServiceCost.Font = new System.Drawing.Font("Segoe UI", 9.8F);
+            this.Lbl_ServiceCost.Location = new System.Drawing.Point(58, 278);
+            this.Lbl_ServiceCost.Name = "Lbl_ServiceCost";
+            this.Lbl_ServiceCost.Size = new System.Drawing.Size(102, 23);
+            this.Lbl_ServiceCost.TabIndex = 6;
+            this.Lbl_ServiceCost.Text = "Service Cost";
             // 
-            // dtp_serviceDate
+            // Dtp_ServiceDate
             // 
-            this.dtp_serviceDate.Location = new System.Drawing.Point(164, 119);
-            this.dtp_serviceDate.Name = "dtp_serviceDate";
-            this.dtp_serviceDate.Size = new System.Drawing.Size(257, 27);
-            this.dtp_serviceDate.TabIndex = 7;
+            this.Dtp_ServiceDate.Location = new System.Drawing.Point(164, 119);
+            this.Dtp_ServiceDate.Name = "Dtp_ServiceDate";
+            this.Dtp_ServiceDate.Size = new System.Drawing.Size(257, 27);
+            this.Dtp_ServiceDate.TabIndex = 7;
             // 
-            // txt_description
+            // Txt_Description
             // 
-            this.txt_description.Location = new System.Drawing.Point(164, 169);
-            this.txt_description.MaxLength = 200;
-            this.txt_description.Multiline = true;
-            this.txt_description.Name = "txt_description";
-            this.txt_description.Size = new System.Drawing.Size(257, 86);
-            this.txt_description.TabIndex = 8;
+            this.Txt_Description.Location = new System.Drawing.Point(164, 169);
+            this.Txt_Description.MaxLength = 200;
+            this.Txt_Description.Multiline = true;
+            this.Txt_Description.Name = "Txt_Description";
+            this.Txt_Description.Size = new System.Drawing.Size(257, 86);
+            this.Txt_Description.TabIndex = 8;
             // 
-            // txt_serviceCost
+            // Txt_ServiceCost
             // 
-            this.txt_serviceCost.Location = new System.Drawing.Point(164, 274);
-            this.txt_serviceCost.MaxLength = 7;
-            this.txt_serviceCost.Name = "txt_serviceCost";
-            this.txt_serviceCost.Size = new System.Drawing.Size(157, 27);
-            this.txt_serviceCost.TabIndex = 9;
+            this.Txt_ServiceCost.Location = new System.Drawing.Point(164, 274);
+            this.Txt_ServiceCost.MaxLength = 10;
+            this.Txt_ServiceCost.Name = "Txt_ServiceCost";
+            this.Txt_ServiceCost.Size = new System.Drawing.Size(157, 27);
+            this.Txt_ServiceCost.TabIndex = 9;
             // 
-            // btn_submitActivity
+            // Btn_SubmitActivity
             // 
-            this.btn_submitActivity.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_submitActivity.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btn_submitActivity.Location = new System.Drawing.Point(280, 319);
-            this.btn_submitActivity.Name = "btn_submitActivity";
-            this.btn_submitActivity.Size = new System.Drawing.Size(153, 48);
-            this.btn_submitActivity.TabIndex = 10;
-            this.btn_submitActivity.Text = "Submit Activity";
-            this.btn_submitActivity.UseVisualStyleBackColor = false;
-            this.btn_submitActivity.Click += new System.EventHandler(this.btn_submitActivity_Click);
+            this.Btn_SubmitActivity.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Btn_SubmitActivity.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Btn_SubmitActivity.Location = new System.Drawing.Point(294, 325);
+            this.Btn_SubmitActivity.Name = "Btn_SubmitActivity";
+            this.Btn_SubmitActivity.Size = new System.Drawing.Size(153, 48);
+            this.Btn_SubmitActivity.TabIndex = 10;
+            this.Btn_SubmitActivity.Text = "Submit Activity";
+            this.Btn_SubmitActivity.UseVisualStyleBackColor = false;
+            this.Btn_SubmitActivity.Click += new System.EventHandler(this.Btn_SubmitActivity_Click);
             // 
             // ServiceActivityForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(459, 385);
-            this.Controls.Add(this.btn_submitActivity);
-            this.Controls.Add(this.txt_serviceCost);
-            this.Controls.Add(this.txt_description);
-            this.Controls.Add(this.dtp_serviceDate);
-            this.Controls.Add(this.lbl_serviceCost);
-            this.Controls.Add(this.lbl_description);
-            this.Controls.Add(this.lbl_serviceDate);
-            this.Controls.Add(this.lbl_activityName);
-            this.Controls.Add(this.lbl_activityID);
-            this.Controls.Add(this.txt_activityName);
-            this.Controls.Add(this.txt_activityID);
+            this.Controls.Add(this.Btn_SubmitActivity);
+            this.Controls.Add(this.Txt_ServiceCost);
+            this.Controls.Add(this.Txt_Description);
+            this.Controls.Add(this.Dtp_ServiceDate);
+            this.Controls.Add(this.Lbl_ServiceCost);
+            this.Controls.Add(this.Lbl_Description);
+            this.Controls.Add(this.Lbl_ServiceDate);
+            this.Controls.Add(this.Lbl_ActivityName);
+            this.Controls.Add(this.Lbl_ActivityID);
+            this.Controls.Add(this.Txt_ActivityName);
+            this.Controls.Add(this.Txt_ActivityID);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Name = "ServiceActivityForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -171,16 +171,16 @@ namespace VehicleAppForms
 
         #endregion
 
-        private System.Windows.Forms.TextBox txt_activityID;
-        private System.Windows.Forms.TextBox txt_activityName;
-        private System.Windows.Forms.Label lbl_activityID;
-        private System.Windows.Forms.Label lbl_activityName;
-        private System.Windows.Forms.Label lbl_serviceDate;
-        private System.Windows.Forms.Label lbl_description;
-        private System.Windows.Forms.Label lbl_serviceCost;
-        private System.Windows.Forms.DateTimePicker dtp_serviceDate;
-        private System.Windows.Forms.TextBox txt_description;
-        private System.Windows.Forms.TextBox txt_serviceCost;
-        private System.Windows.Forms.Button btn_submitActivity;
+        private System.Windows.Forms.TextBox Txt_ActivityID;
+        private System.Windows.Forms.TextBox Txt_ActivityName;
+        private System.Windows.Forms.Label Lbl_ActivityID;
+        private System.Windows.Forms.Label Lbl_ActivityName;
+        private System.Windows.Forms.Label Lbl_ServiceDate;
+        private System.Windows.Forms.Label Lbl_Description;
+        private System.Windows.Forms.Label Lbl_ServiceCost;
+        private System.Windows.Forms.DateTimePicker Dtp_ServiceDate;
+        private System.Windows.Forms.TextBox Txt_Description;
+        private System.Windows.Forms.TextBox Txt_ServiceCost;
+        private System.Windows.Forms.Button Btn_SubmitActivity;
     }
 }
