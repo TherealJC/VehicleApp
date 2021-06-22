@@ -17,4 +17,4 @@ This app is a basic Vehicle/Activity data tracker. Data is saved to files locate
 
 ![Package Diagram](https://github.com/NMIT-GITHUB/sdv601-s1-21-project-TherealJC/blob/07a68897304166a75cbada4213e88eb118eec906/VehicleAppLibrary/Diagrams/SDV601%20Package%20Diagram.pdf)
 
-[<img src="https://github.com/NMIT-GITHUB/sdv601-s1-21-project-TherealJC/blob/07a68897304166a75cbada4213e88eb118eec906/VehicleAppLibrary/Diagrams/SDV601%20Package%20Diagram.pdf">](http://github.com)
+[<img src="https://github.com/NMIT-GITHUB/sdv601-s1-21-project-TherealJC/blob/07a68897304166a75cbada4213e88eb118eec906/VehicleAppLibrary/Diagrams/SDV601%20Package%20Diagram.pdf">](https://github.com/NMIT-GITHUB/sdv601-s1-21-project-TherealJC/blob/07a68897304166a75cbada4213e88eb118eec906/VehicleAppLibrary/Diagrams/SDV601%20Package%20Diagram.pdf")
