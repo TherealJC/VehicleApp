@@ -1,5 +1,11 @@
-﻿// Vehicle has been set as a struct, structs can be used to hold small data values that do not require inheritance 
-// e.g. key-value pairs, and complex data structure. This suits what we need for the 'Vehicle'
+﻿// Licensed to the .NET Foundation under one or more agreements.
+// The .NET Foundation licenses this file to you under the MIT license.
+// See the LICENSE file in the project root for more information.
+// Author : Jamie Crowther
+// Published Date : 22/06/2021
+
+// Vehicle has been set as a struct, structs can be used to hold small data values that do not require inheritance 
+// e.g. key-value pairs, and complex data structure. This suits what we need for the 'Vehicle' class functionality
 
 namespace VehicleAppLibrary
 {
