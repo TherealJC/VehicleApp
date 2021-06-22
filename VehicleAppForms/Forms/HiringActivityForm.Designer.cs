@@ -118,6 +118,7 @@ namespace VehicleAppForms
             this.Txt_HiringCost.Location = new System.Drawing.Point(186, 248);
             this.Txt_HiringCost.MaxLength = 10;
             this.Txt_HiringCost.Name = "Txt_HiringCost";
+            this.Txt_HiringCost.ReadOnly = true;
             this.Txt_HiringCost.Size = new System.Drawing.Size(129, 27);
             this.Txt_HiringCost.TabIndex = 11;
             // 
@@ -128,6 +129,7 @@ namespace VehicleAppForms
             this.Dtp_StartDate.Name = "Dtp_StartDate";
             this.Dtp_StartDate.Size = new System.Drawing.Size(257, 27);
             this.Dtp_StartDate.TabIndex = 12;
+            this.Dtp_StartDate.ValueChanged += new System.EventHandler(this.Dtp_StartDate_ValueChanged);
             // 
             // Dtp_EndDate
             // 
@@ -136,6 +138,7 @@ namespace VehicleAppForms
             this.Dtp_EndDate.Name = "Dtp_EndDate";
             this.Dtp_EndDate.Size = new System.Drawing.Size(257, 27);
             this.Dtp_EndDate.TabIndex = 13;
+            this.Dtp_EndDate.ValueChanged += new System.EventHandler(this.Dtp_EndDate_ValueChanged);
             // 
             // Btn_SubmitActivity
             // 

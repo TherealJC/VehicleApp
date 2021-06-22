@@ -25,6 +25,7 @@ namespace VehicleAppForms
         public Activity ShowCreate() // For showing or creating a new activity
         {
             Txt_ActivityID.Text = DataAccess.GetNextActivityID().ToString();
+            CalculateHiringCost();
             ShowDialog();
             return _currentActivity;
         }
@@ -102,6 +103,35 @@ namespace VehicleAppForms
             }
 
             return output; //return output (which = true, as set at the start of the method)
+        }
+
+        private void Dtp_StartDate_ValueChanged(object sender, EventArgs e)
+        {
+            // To make sure the start date is NEVER after the end date
+            if (Dtp_StartDate.Value > Dtp_EndDate.Value)
+            {
+                Dtp_StartDate.Value = Dtp_EndDate.Value;
+                _errorMessage = "The activities starting cannot be set after the ending date ";
+            }
+            CalculateHiringCost();
+        }
+
+        private void Dtp_EndDate_ValueChanged(object sender, EventArgs e)
+        {
+            // To make sure the end date is NEVER before the start date
+            if (Dtp_EndDate.Value < Dtp_StartDate.Value)
+            {
+                Dtp_EndDate.Value = Dtp_StartDate.Value;
+            }
+            CalculateHiringCost();
+        }
+
+        private void CalculateHiringCost()
+        {
+            // (DateTime - DateTime) returns a timespan
+            TimeSpan duration = Dtp_EndDate.Value - Dtp_StartDate.Value;
+            // Add one day because hiring a vehicle for one day will have a time span of 0 days, but should still be charged as a day
+            Txt_HiringCost.Text = ((duration.Days + 1) * MainForm.SelectedVehicle.DailyHireCost).ToString();
         }
     }
 }
