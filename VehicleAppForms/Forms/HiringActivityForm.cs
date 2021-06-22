@@ -107,18 +107,17 @@ namespace VehicleAppForms
 
         private void Dtp_StartDate_ValueChanged(object sender, EventArgs e)
         {
-            // To make sure the start date is NEVER after the end date
+            // Stops the user from entering a start date that is after the end date
             if (Dtp_StartDate.Value > Dtp_EndDate.Value)
             {
                 Dtp_StartDate.Value = Dtp_EndDate.Value;
-                _errorMessage = "The activities starting cannot be set after the ending date ";
             }
             CalculateHiringCost();
         }
 
         private void Dtp_EndDate_ValueChanged(object sender, EventArgs e)
         {
-            // To make sure the end date is NEVER before the start date
+            // Stops the user from entering an end date that is before the start date
             if (Dtp_EndDate.Value < Dtp_StartDate.Value)
             {
                 Dtp_EndDate.Value = Dtp_StartDate.Value;
