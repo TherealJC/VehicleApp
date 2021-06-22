@@ -7,7 +7,7 @@ This app is a basic Vehicle/Activity data tracker. Data is saved to files locate
 
 # UML Class Diagram
 
-![UML Class Diagram](https://github.com/NMIT-GITHUB/sdv601-s1-21-project-TherealJC/blob/d58dc530132e928ccde2d31393652634cdd18e20/VehicleAppLibrary/Diagrams/SDV601%20Class%20Diagram%20-%20Black&White.pdf)
+![UML Class Diagram](/Users/TheRealJc/VehicleAppLibrary/Diagrams/SDV601 Class Diagram - Black&White.pdf)
 
 # Class Diagram - In Colour
 
