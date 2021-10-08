@@ -14,7 +14,3 @@ This app is a basic Vehicle/Activity data tracker. Data is saved to files locate
 
 ![Package Diagram (link)](https://github.com/NMIT-GITHUB/sdv601-s1-21-project-TherealJC/blob/07a68897304166a75cbada4213e88eb118eec906/VehicleAppLibrary/Diagrams/SDV601%20Package%20Diagram.pdf)
 
-### Note
-Hiring cost isn't auto calculated, but the vehicles daily hire cost can still be seen when adding an activity. It just requires the user to perform the math of the vehiles daily hire cost x the amount of days the hiring activity is valid for.
-
-![adding a hiring activity](/VehicleAppLibrary/Diagrams/hiringCost.png)
